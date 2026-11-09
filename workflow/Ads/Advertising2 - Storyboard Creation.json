@@ -1,0 +1,906 @@
+{
+  "id": "91dff0a2-fa31-4347-996a-f6955b179370",
+  "revision": 0,
+  "last_node_id": 117,
+  "last_link_id": 270,
+  "nodes": [
+    {
+      "id": 25,
+      "type": "PrimitiveNode",
+      "pos": [
+        770,
+        130
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            25
+          ]
+        }
+      ],
+      "title": "STYLE PROMPT",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "Use the first input image as the equally divided 3 by 3 grid, generate black and white hand-sketched storyboards within each box, with simple scribble lines and no complicated details. Consistent style across all frames. Use the second input image as reference to aid the storyboard. Leave the box blank if it has less than nine shots. Storyboard is as following:"
+      ],
+      "widgets_values_named": {
+        "value": "Use the first input image as the equally divided 3 by 3 grid, generate black and white hand-sketched storyboards within each box, with simple scribble lines and no complicated details. Consistent style across all frames. Use the second input image as reference to aid the storyboard. Leave the box blank if it has less than nine shots. Storyboard is as following:"
+      }
+    },
+    {
+      "id": 27,
+      "type": "SaveImage",
+      "pos": [
+        1220,
+        30
+      ],
+      "size": [
+        1200,
+        1000
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 267
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "SAVE STORYBOARD",
+      "properties": {},
+      "widgets_values": [
+        "Storyboard"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Storyboard"
+      }
+    },
+    {
+      "id": 29,
+      "type": "StringConcatenate",
+      "pos": [
+        770,
+        180
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 25
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            270
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Use the first input image as the equally divided 3 by 3 grid, generate black and white hand-sketched storyboards within each box, with simple scribble lines and no complicated details. Consistent style across all frames. Use the second input image as reference to aid the storyboard. Leave the box blank if it has less than nine shots. Storyboard is as following:",
+        "Shot1 - A spotless retro-futuristic kitchen emerges from a soft fade. Curved cabinetry, chrome appliances with rounded edges, warm cream and sage tones. A bag of Comfy coffee sits on the counter, logo facing camera.\n\nShot2 - A hand scoop whole Arabica beans from the Comfy bag into a sleek retro grinder, in an unhurried motion. The beans are rich and glossy.\n\nShot3 - Dark espresso blooms into a rounded and matte ceramic cup. Steam curls upward against the clean kitchen backdrop.\n\nShot4 - Person holds the cup in both hands, standing at a large curved kitchen window. Soft morning light spills in. Eyes close briefly in comfort.\n\nShot5 - Hard cut to a clean studio card: the Comfy coffee bag centered on a tabletop. Logo fades in last. Hold.",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "Use the first input image as the equally divided 3 by 3 grid, generate black and white hand-sketched storyboards within each box, with simple scribble lines and no complicated details. Consistent style across all frames. Use the second input image as reference to aid the storyboard. Leave the box blank if it has less than nine shots. Storyboard is as following:",
+        "string_b": "Shot1 - A spotless retro-futuristic kitchen emerges from a soft fade. Curved cabinetry, chrome appliances with rounded edges, warm cream and sage tones. A bag of Comfy coffee sits on the counter, logo facing camera.\n\nShot2 - A hand scoop whole Arabica beans from the Comfy bag into a sleek retro grinder, in an unhurried motion. The beans are rich and glossy.\n\nShot3 - Dark espresso blooms into a rounded and matte ceramic cup. Steam curls upward against the clean kitchen backdrop.\n\nShot4 - Person holds the cup in both hands, standing at a large curved kitchen window. Soft morning light spills in. Eyes close briefly in comfort.\n\nShot5 - Hard cut to a clean studio card: the Comfy coffee bag centered on a tabletop. Logo fades in last. Hold.",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 30,
+      "type": "PrimitiveNode",
+      "pos": [
+        -110,
+        20
+      ],
+      "size": [
+        740,
+        400
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "links": [
+            26
+          ]
+        }
+      ],
+      "title": "SHOT LIST",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "Shot1 - A spotless retro-futuristic kitchen emerges from a soft fade. Curved cabinetry, chrome appliances with rounded edges, warm cream and sage tones. A bag of Comfy coffee sits on the counter, logo facing camera.\n\nShot2 - A hand scoop whole Arabica beans from the Comfy bag into a sleek retro grinder, in an unhurried motion. The beans are rich and glossy.\n\nShot3 - Dark espresso blooms into a rounded and matte ceramic cup. Steam curls upward against the clean kitchen backdrop.\n\nShot4 - Person holds the cup in both hands, standing at a large curved kitchen window. Soft morning light spills in. Eyes close briefly in comfort.\n\nShot5 - Hard cut to a clean studio card: the Comfy coffee bag centered on a tabletop. Logo fades in last. Hold."
+      ],
+      "widgets_values_named": {
+        "value": "Shot1 - A spotless retro-futuristic kitchen emerges from a soft fade. Curved cabinetry, chrome appliances with rounded edges, warm cream and sage tones. A bag of Comfy coffee sits on the counter, logo facing camera.\n\nShot2 - A hand scoop whole Arabica beans from the Comfy bag into a sleek retro grinder, in an unhurried motion. The beans are rich and glossy.\n\nShot3 - Dark espresso blooms into a rounded and matte ceramic cup. Steam curls upward against the clean kitchen backdrop.\n\nShot4 - Person holds the cup in both hands, standing at a large curved kitchen window. Soft morning light spills in. Eyes close briefly in comfort.\n\nShot5 - Hard cut to a clean studio card: the Comfy coffee bag centered on a tabletop. Logo fades in last. Hold."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 36,
+      "type": "LoadImage",
+      "pos": [
+        770,
+        20
+      ],
+      "size": [
+        225,
+        54
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            42
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "GRID",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "84fb1c6fa1d6687fbc106564d650b9d18424ea310a4798d5a4a32477b8981bd4.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "84fb1c6fa1d6687fbc106564d650b9d18424ea310a4798d5a4a32477b8981bd4.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 38,
+      "type": "BatchImagesNode",
+      "pos": [
+        770,
+        70
+      ],
+      "size": [
+        225,
+        86
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image0",
+          "name": "images.image0",
+          "type": "IMAGE",
+          "link": 42
+        },
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 53
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchImagesNode"
+      }
+    },
+    {
+      "id": 41,
+      "type": "LoadImage",
+      "pos": [
+        -110,
+        480
+      ],
+      "size": [
+        740,
+        550
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "PRODUCT IMAGE (OPTIONAL)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "e0559b182ad69bc89247f6bd1c0328f981b1c1c61ee6d7e1144ec9447f57d49b.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "e0559b182ad69bc89247f6bd1c0328f981b1c1c61ee6d7e1144ec9447f57d49b.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 46,
+      "type": "SaveImage",
+      "pos": [
+        1220,
+        1230
+      ],
+      "size": [
+        1200,
+        940
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Styleframe"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Styleframe"
+      }
+    },
+    {
+      "id": 51,
+      "type": "BatchImagesNode",
+      "pos": [
+        770,
+        1230
+      ],
+      "size": [
+        230,
+        120
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image0",
+          "name": "images.image0",
+          "type": "IMAGE",
+          "link": 69
+        },
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 63
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            71
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchImagesNode"
+      }
+    },
+    {
+      "id": 53,
+      "type": "LoadImage",
+      "pos": [
+        -110,
+        1800
+      ],
+      "size": [
+        740,
+        370
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            63
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "MOODBOARD (OPTIONAL)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "97e6af1310627fb80a1b1cb352ca08b041efaa690bcc735d3701ca3a90b6e434.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "97e6af1310627fb80a1b1cb352ca08b041efaa690bcc735d3701ca3a90b6e434.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 57,
+      "type": "LoadImage",
+      "pos": [
+        -110,
+        1210
+      ],
+      "size": [
+        740,
+        540
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            69
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "STORYBOARD SKETCH",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0081fda096443c316e109f795cc6327cd29437e2156699397601e21aa8673d55.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "0081fda096443c316e109f795cc6327cd29437e2156699397601e21aa8673d55.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 58,
+      "type": "MarkdownNote",
+      "pos": [
+        -110,
+        -340
+      ],
+      "size": [
+        610,
+        250
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "**STORYBOARD GENERATOR**\n<br> Generate 9-panel storyboard sketch at once from a shot list. Prompt with a shot list formatting similar to the example below.\n\n**STYLEFRAME GENERATOR** \n<br> Take a storyboard sketch and moodboard images to generate production quality still frames for pre-visualization\n\n**Choose the method to suit your use case, and bypass all nodes in the other method**"
+      ],
+      "widgets_values_named": {
+        "text": "**STORYBOARD GENERATOR**\n<br> Generate 9-panel storyboard sketch at once from a shot list. Prompt with a shot list formatting similar to the example below.\n\n**STYLEFRAME GENERATOR** \n<br> Take a storyboard sketch and moodboard images to generate production quality still frames for pre-visualization\n\n**Choose the method to suit your use case, and bypass all nodes in the other method**"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 60,
+      "type": "GeminiImage2Node",
+      "pos": [
+        770,
+        1400
+      ],
+      "size": [
+        400,
+        340
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 71
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            74
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiImage2Node"
+      },
+      "widgets_values": [
+        "Reimagine the storyboard sketch of the first image to high-end commercial production photography. And use any additional images as the aesthetic, lighting, and color grade inspirations.",
+        "gemini-3-pro-image-preview",
+        420367860759482,
+        "randomize",
+        "auto",
+        "1K",
+        "IMAGE+TEXT",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "Reimagine the storyboard sketch of the first image to high-end commercial production photography. And use any additional images as the aesthetic, lighting, and color grade inspirations.",
+        "model": "gemini-3-pro-image-preview",
+        "seed": 420367860759482,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "1K",
+        "response_modalities": "IMAGE+TEXT",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 107,
+      "type": "PreviewImage",
+      "pos": [
+        2710,
+        30
+      ],
+      "size": [
+        1150,
+        1000
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 264
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "SAVE INDIVIDUAL PANELS",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 116,
+      "type": "ImageGridtoBatch",
+      "pos": [
+        2450,
+        30
+      ],
+      "size": [
+        230,
+        140
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 268
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            264
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageGridtoBatch"
+      },
+      "widgets_values": [
+        3,
+        3
+      ],
+      "widgets_values_named": {
+        "columns": 3,
+        "rows": 3
+      }
+    },
+    {
+      "id": 117,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        770,
+        250
+      ],
+      "size": [
+        400,
+        494.625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 270
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            267,
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "2048x1152",
+        1024,
+        1024,
+        "auto",
+        "high",
+        1,
+        44918781,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "2048x1152",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "high",
+        "n": 1,
+        "seed": 44918781,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      25,
+      25,
+      0,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      26,
+      30,
+      0,
+      29,
+      1,
+      "STRING"
+    ],
+    [
+      71,
+      51,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      60,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      264,
+      116,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      267,
+      117,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      268,
+      117,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      36,
+      0,
+      38,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      41,
+      0,
+      38,
+      1,
+      "IMAGE"
+    ],
+    [
+      69,
+      57,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      63,
+      53,
+      0,
+      51,
+      1,
+      "IMAGE"
+    ],
+    [
+      270,
+      29,
+      0,
+      117,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "INPUT SKETCH + MOODBOARD",
+      "bounding": [
+        -160,
+        1110,
+        840,
+        1100
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "STYLEFRAME GENERATOR",
+      "bounding": [
+        730,
+        1110,
+        1730,
+        1100
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "INPUT SHOT LIST",
+      "bounding": [
+        -160,
+        -70,
+        840,
+        1130
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "STORYBOARD GENERATOR",
+      "bounding": [
+        730,
+        -70,
+        3170,
+        1140
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3115384615384615,
+      "offset": [
+        1211.4814814814813,
+        813.3333333333333
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

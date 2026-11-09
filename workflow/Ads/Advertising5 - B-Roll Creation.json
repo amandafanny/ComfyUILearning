@@ -1,0 +1,720 @@
+{
+  "id": "4e90b8e2-e180-4ceb-9f15-0771d78de86a",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 36,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "ByteDance2ReferenceNode",
+      "pos": [
+        -410,
+        5820
+      ],
+      "size": [
+        610,
+        496
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 31
+        },
+        {
+          "name": "model.reference_videos.video_2",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "Reference @video1 for all scene composition, lighting, and camera movement. Add a single blue morpho butterfly that enters from upper left, drifts and circles around the watch for a few seconds with wings catching the cold side light, then descends and lands on the leather strap. Wings open and close once after landing. No other changes. One continuous take, no cuts.",
+        "720p",
+        "16:9",
+        7,
+        false,
+        false,
+        524235495,
+        null,
+        false,
+        false
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "Reference @video1 for all scene composition, lighting, and camera movement. Add a single blue morpho butterfly that enters from upper left, drifts and circles around the watch for a few seconds with wings catching the cold side light, then descends and lands on the leather strap. Wings open and close once after landing. No other changes. One continuous take, no cuts.",
+        "model.resolution": "720p",
+        "model.ratio": "16:9",
+        "model.duration": 7,
+        "model.generate_audio": false,
+        "model.auto_downscale": false,
+        "model.auto_upscale": 524235495,
+        "seed": null,
+        "control_after_generate": false,
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 9,
+      "type": "ByteDance2ReferenceNode",
+      "pos": [
+        -410,
+        4730
+      ],
+      "size": [
+        620,
+        476
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "Use @image1 to match scene lighting, environment, color grade, and atmosphere. Use @image2 as the subject reference. The yellow canary bird flies in gracefully and lands on the wooden fence in the center of the frame. Camera slowly dollies in. One continuous take, no cuts, no camera shake.",
+        "720p",
+        "16:9",
+        7,
+        false,
+        false,
+        1543095325,
+        null,
+        false,
+        false
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "Use @image1 to match scene lighting, environment, color grade, and atmosphere. Use @image2 as the subject reference. The yellow canary bird flies in gracefully and lands on the wooden fence in the center of the frame. Camera slowly dollies in. One continuous take, no cuts, no camera shake.",
+        "model.resolution": "720p",
+        "model.ratio": "16:9",
+        "model.duration": 7,
+        "model.generate_audio": false,
+        "model.auto_downscale": false,
+        "model.auto_upscale": 1543095325,
+        "seed": null,
+        "control_after_generate": false,
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 17,
+      "type": "LoadImage",
+      "pos": [
+        -1200,
+        5120
+      ],
+      "size": [
+        760,
+        340
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "SUBJECT REFERENCE",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "bc7a7d3188c13ae0254143f281250d1a1679643105a749c39570e49c6dd4f1a6.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "bc7a7d3188c13ae0254143f281250d1a1679643105a749c39570e49c6dd4f1a6.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 19,
+      "type": "ByteDance2TextToVideoNode",
+      "pos": [
+        -410,
+        3900
+      ],
+      "size": [
+        620,
+        340.96875
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          },
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            36
+          ]
+        },
+        {
+          "name": "draft_task_id",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2TextToVideoNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "A whole apple and a whole orange fly in simultaneously from opposite sides of the frame at high velocity and collide directly at the center. On impact both fruits explode outward with the apple bursting into a spray of green and red skin fragments, white flesh chunks, and a mist of apple juice, while the orange simultaneously shatters into pulp, peel shards, and a burst of bright citrus juice. The two juice clouds billow and bleed into each other at the center in a slow hanging mist. Shot against a pure black seamless background. Soft directional studio light from above catching every fragment and juice droplet mid-air. Ultra slow motion, every phase of the impact visible — compression, burst, spray, and settle. Camera completely static. One continuous take, no cuts.",
+        "720p",
+        "16:9",
+        8,
+        true,
+        259718647,
+        "randomize",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "A whole apple and a whole orange fly in simultaneously from opposite sides of the frame at high velocity and collide directly at the center. On impact both fruits explode outward with the apple bursting into a spray of green and red skin fragments, white flesh chunks, and a mist of apple juice, while the orange simultaneously shatters into pulp, peel shards, and a burst of bright citrus juice. The two juice clouds billow and bleed into each other at the center in a slow hanging mist. Shot against a pure black seamless background. Soft directional studio light from above catching every fragment and juice droplet mid-air. Ultra slow motion, every phase of the impact visible — compression, burst, spray, and settle. Camera completely static. One continuous take, no cuts.",
+        "model.resolution": "720p",
+        "model.ratio": "16:9",
+        "model.duration": 8,
+        "model.generate_audio": true,
+        "seed": 259718647,
+        "control_after_generate": "randomize",
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 20,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1200,
+        3900
+      ],
+      "size": [
+        760,
+        660
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          },
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "DESCRIBE B-ROLL",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "A whole apple and a whole orange fly in simultaneously from opposite sides of the frame at high velocity and collide directly at the center. On impact both fruits explode outward with the apple bursting into a spray of green and red skin fragments, white flesh chunks, and a mist of apple juice, while the orange simultaneously shatters into pulp, peel shards, and a burst of bright citrus juice. The two juice clouds billow and bleed into each other at the center in a slow hanging mist. Shot against a pure black seamless background. Soft directional studio light from above catching every fragment and juice droplet mid-air. Ultra slow motion, every phase of the impact visible — compression, burst, spray, and settle. Camera completely static. One continuous take, no cuts."
+      ],
+      "widgets_values_named": {
+        "model.prompt": "A whole apple and a whole orange fly in simultaneously from opposite sides of the frame at high velocity and collide directly at the center. On impact both fruits explode outward with the apple bursting into a spray of green and red skin fragments, white flesh chunks, and a mist of apple juice, while the orange simultaneously shatters into pulp, peel shards, and a burst of bright citrus juice. The two juice clouds billow and bleed into each other at the center in a slow hanging mist. Shot against a pure black seamless background. Soft directional studio light from above catching every fragment and juice droplet mid-air. Ultra slow motion, every phase of the impact visible — compression, burst, spray, and settle. Camera completely static. One continuous take, no cuts."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 23,
+      "type": "LoadImage",
+      "pos": [
+        -1200,
+        4730
+      ],
+      "size": [
+        760,
+        340
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "SCENE TO MATCH",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "83d924cc23e989deb77f8385a5f4457f058fd7ad654a1ce6b0f725c251124def.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "83d924cc23e989deb77f8385a5f4457f058fd7ad654a1ce6b0f725c251124def.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 24,
+      "type": "LoadVideo",
+      "pos": [
+        -1210,
+        5640
+      ],
+      "size": [
+        770,
+        630
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "title": "INPUT VIDEO",
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "7ecb599f15e88d5c200493e50de1aeec5bfdcdd3d5a0696d75b02419cb81fd1b.mp4",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "7ecb599f15e88d5c200493e50de1aeec5bfdcdd3d5a0696d75b02419cb81fd1b.mp4",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 30,
+      "type": "Video Slice",
+      "pos": [
+        -410,
+        5640
+      ],
+      "size": [
+        260,
+        140
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Video Slice"
+      },
+      "widgets_values": [
+        0,
+        10,
+        false
+      ],
+      "widgets_values_named": {
+        "start_time": 0,
+        "duration": 10,
+        "strict_duration": false
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 31,
+      "type": "SaveVideo",
+      "pos": [
+        230,
+        5640
+      ],
+      "size": [
+        770,
+        660
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/Efdit",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/Efdit",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 32,
+      "type": "SaveVideo",
+      "pos": [
+        240,
+        4730
+      ],
+      "size": [
+        760,
+        660
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/Insert",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/Insert",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 33,
+      "type": "SaveVideo",
+      "pos": [
+        240,
+        3900
+      ],
+      "size": [
+        760,
+        660
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/B-Roll",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/B-Roll",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 34,
+      "type": "MarkdownNote",
+      "pos": [
+        -1240,
+        3530
+      ],
+      "size": [
+        610,
+        260
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "**METHOD 1 - PROMPT ONLY**\n<br> Input text prompt to generate a B-Roll shot\n\n**METHOD 2 - REFERENCE IMAGES**\n<br> Input a still frame from a video production and a product reference image to match the scene and generate an insert shot.\n\n**METHOD 3 - VIDEO EDIT**\n<br> Add special effects or alter objects from an existing shot\n\n**Choose the method for different production use cases, and bypass all nodes in the other two methods**"
+      ],
+      "widgets_values_named": {
+        "text": "**METHOD 1 - PROMPT ONLY**\n<br> Input text prompt to generate a B-Roll shot\n\n**METHOD 2 - REFERENCE IMAGES**\n<br> Input a still frame from a video production and a product reference image to match the scene and generate an insert shot.\n\n**METHOD 3 - VIDEO EDIT**\n<br> Add special effects or alter objects from an existing shot\n\n**Choose the method for different production use cases, and bypass all nodes in the other two methods**"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      30,
+      24,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      17,
+      20,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      7,
+      0,
+      31,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      9,
+      0,
+      32,
+      0,
+      "VIDEO"
+    ],
+    [
+      36,
+      19,
+      0,
+      33,
+      0,
+      "VIDEO"
+    ],
+    [
+      31,
+      30,
+      0,
+      7,
+      2,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "METHOD 1 - PROMPT ONLY",
+      "bounding": [
+        -1240,
+        3810,
+        2280,
+        780
+      ],
+      "color": "#8AA",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "METHOD 2 - REFERENCE IMAGES",
+      "bounding": [
+        -1240,
+        4630,
+        2280,
+        870
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "METHOD 3 - VIDEO EDIT",
+      "bounding": [
+        -1240,
+        5540,
+        2290,
+        790
+      ],
+      "color": "#88A",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1872179007812917,
+      "offset": [
+        721.556809204303,
+        -3569.5589681867386
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

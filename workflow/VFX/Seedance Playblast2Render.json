@@ -1,0 +1,2241 @@
+{
+  "id": "e38cc6d3-0689-4714-b061-da263d72948e",
+  "revision": 0,
+  "last_node_id": 453,
+  "last_link_id": 719,
+  "nodes": [
+    {
+      "id": 382,
+      "type": "SetNode",
+      "pos": [
+        1713.14995443665,
+        7670.133253621904
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 719
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Set_vehicle_1",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "vehicle_1"
+      },
+      "widgets_values": [
+        "vehicle_1"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_1"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 380,
+      "type": "LoadImage",
+      "pos": [
+        1304.4868769392413,
+        8075.516779130573
+      ],
+      "size": [
+        282.75,
+        339.59375
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            675
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "bc1a1a3b41888b23907817f550a86cd1d4d332574a66307ef5e7e4407f1d6684.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "bc1a1a3b41888b23907817f550a86cd1d4d332574a66307ef5e7e4407f1d6684.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 389,
+      "type": "GetNode",
+      "pos": [
+        -914.45026209188,
+        12293.75039612886
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            688
+          ]
+        }
+      ],
+      "title": "Get_location_1",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "location_1"
+      ],
+      "widgets_values_named": {
+        "Constant": "location_1"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 387,
+      "type": "GetNode",
+      "pos": [
+        -907.9650772519278,
+        11821.911783668009
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Get_vehicle_1",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "vehicle_1"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_1"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 388,
+      "type": "GetNode",
+      "pos": [
+        -919.8184049398433,
+        11988.468110377422
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            678
+          ]
+        }
+      ],
+      "title": "Get_vehicle_2",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "vehicle_2"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_2"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 406,
+      "type": "GetNode",
+      "pos": [
+        -917.5558039281898,
+        12137.363391578292
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Get_vehicle_3",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "vehicle_3"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_3"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 356,
+      "type": "ByteDance2ReferenceNode",
+      "pos": [
+        -546.0007270783237,
+        12114.298504255334
+      ],
+      "size": [
+        824.6875,
+        488
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          },
+          "link": 715
+        },
+        {
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 678
+        },
+        {
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.reference_images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 688
+        },
+        {
+          "name": "model.reference_images.image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 708
+        },
+        {
+          "name": "model.reference_videos.video_2",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "model.reference_audios.audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            652
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "Use the motion from video_1 with the vehicles from image_1 and image_2 chasing each other in the city streets based on image_4. The other cars look like image_3. Tire smoke and road debris being kicked up behind the cars. Headlight coming from the cars cause anamorphic lens flares. As the red car spins out, sparks fly out of it's rear tires. Cinematic. 4k.",
+        "720p",
+        "16:9",
+        10,
+        true,
+        1077699877,
+        "randomize",
+        false,
+        "randomize",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "Use the motion from video_1 with the vehicles from image_1 and image_2 chasing each other in the city streets based on image_4. The other cars look like image_3. Tire smoke and road debris being kicked up behind the cars. Headlight coming from the cars cause anamorphic lens flares. As the red car spins out, sparks fly out of it's rear tires. Cinematic. 4k.",
+        "model.resolution": "720p",
+        "model.ratio": "16:9",
+        "model.duration": 10,
+        "model.generate_audio": true,
+        "model.auto_downscale": 1077699877,
+        "model.auto_upscale": "randomize",
+        "seed": false,
+        "control_after_generate": "randomize",
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 359,
+      "type": "SaveVideo",
+      "pos": [
+        347.55616396702794,
+        12106.222797356213
+      ],
+      "size": [
+        1389,
+        1047.6875
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 652
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/Seedance2.0_r2v",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/Seedance2.0_r2v",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 344,
+      "type": "SaveVideo",
+      "pos": [
+        -1238.370259841034,
+        6655.37191420332
+      ],
+      "size": [
+        540,
+        610
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 641
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/Seedance2.0_t2v",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/Seedance2.0_t2v",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 430,
+      "type": "Int",
+      "pos": [
+        -1235.4449492365593,
+        8983.490216371989
+      ],
+      "size": [
+        270,
+        103.59375
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            701
+          ]
+        }
+      ],
+      "title": "CHOOSE FRAME",
+      "properties": {
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        1
+      ],
+      "widgets_values_named": {
+        "value": 1
+      }
+    },
+    {
+      "id": 421,
+      "type": "GetNode",
+      "pos": [
+        -1233.5301340147362,
+        8809.369748071545
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            700
+          ]
+        }
+      ],
+      "title": "Get_base_images",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "base_images"
+      ],
+      "widgets_values_named": {
+        "Constant": "base_images"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 352,
+      "type": "PreviewImage",
+      "pos": [
+        -903.9381609387353,
+        9001.154263672917
+      ],
+      "size": [
+        362.625,
+        279.3125
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 646
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 405,
+      "type": "SetNode",
+      "pos": [
+        2408.61422001925,
+        7657.492612074502
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 687
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Set_vehicle_3",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "vehicle_3"
+      },
+      "widgets_values": [
+        "vehicle_3"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_3"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 384,
+      "type": "LoadImage",
+      "pos": [
+        2017.605246385487,
+        8038.086304185717
+      ],
+      "size": [
+        282.75,
+        339.59375
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            676
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "efaf62dab3fc7e992bb6b628df69b781112830794beb98facb695ca810922772.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "efaf62dab3fc7e992bb6b628df69b781112830794beb98facb695ca810922772.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 404,
+      "type": "LoadImage",
+      "pos": [
+        2005.968047749431,
+        7655.985618490248
+      ],
+      "size": [
+        282.75,
+        339.59375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            687
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "c62d4ddf874ebc4e076d63f1f3de34b0355052470bd3acd2dced26262449f3b2.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "c62d4ddf874ebc4e076d63f1f3de34b0355052470bd3acd2dced26262449f3b2.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 383,
+      "type": "SetNode",
+      "pos": [
+        1708.1636020579,
+        8076.269947601658
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 675
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Set_vehicle_2",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "vehicle_2"
+      },
+      "widgets_values": [
+        "vehicle_2"
+      ],
+      "widgets_values_named": {
+        "Constant": "vehicle_2"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 386,
+      "type": "SetNode",
+      "pos": [
+        2419.2049187844104,
+        8035.913006497575
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 676
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Set_location_1",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "location_1"
+      },
+      "widgets_values": [
+        "location_1"
+      ],
+      "widgets_values_named": {
+        "Constant": "location_1"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 428,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        455.952822265132,
+        6578.434092104821
+      ],
+      "size": [
+        260.4306640625,
+        459.24224853515625
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            703
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            711
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "custom_height": 0,
+            "custom_width": 0,
+            "filename": "69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4",
+            "force_rate": 0,
+            "format": "video/mp4",
+            "frame_load_cap": 0,
+            "select_every_nth": 1,
+            "skip_first_frames": 0,
+            "type": "input"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "video": "69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "custom_height": 0,
+            "custom_width": 0,
+            "filename": "69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4",
+            "force_rate": 0,
+            "format": "video/mp4",
+            "frame_load_cap": 0,
+            "select_every_nth": 1,
+            "skip_first_frames": 0,
+            "type": "input"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 343,
+      "type": "ByteDance2TextToVideoNode",
+      "pos": [
+        -1246.5070701154866,
+        6258.935424233455
+      ],
+      "size": [
+        480.8125,
+        312.375
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            641
+          ]
+        },
+        {
+          "name": "draft_task_id",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2TextToVideoNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "A single sleek sports car (colored red) being chased by a heavy SUV (colored green), drifting aggressively around a tight corner and kicking up particle debris. Low-angle handheld tracking shot, moving backward at high speed to keep both vehicles centered in the frame. A busy city intersection (colored blue). Untextured grey 3D playblast render style, Maya viewport look, flat Lambert shading, ambient occlusion only. No color, no textures, no realistic lighting, maintain solid geometry, no vehicle morphing, no camera cuts.",
+        "720p",
+        "16:9",
+        10,
+        true,
+        675586000,
+        "randomize",
+        false
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "A single sleek sports car (colored red) being chased by a heavy SUV (colored green), drifting aggressively around a tight corner and kicking up particle debris. Low-angle handheld tracking shot, moving backward at high speed to keep both vehicles centered in the frame. A busy city intersection (colored blue). Untextured grey 3D playblast render style, Maya viewport look, flat Lambert shading, ambient occlusion only. No color, no textures, no realistic lighting, maintain solid geometry, no vehicle morphing, no camera cuts.",
+        "model.resolution": "720p",
+        "model.ratio": "16:9",
+        "model.duration": 10,
+        "model.generate_audio": true,
+        "seed": 675586000,
+        "control_after_generate": "randomize",
+        "watermark": false
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 435,
+      "type": "SetNode",
+      "pos": [
+        137.99696591571,
+        6282.4917616241
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "link": 717
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "title": "Set_base_video",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "base_video"
+      },
+      "widgets_values": [
+        "base_video"
+      ],
+      "widgets_values_named": {
+        "Constant": "base_video"
+      }
+    },
+    {
+      "id": 394,
+      "type": "SetNode",
+      "pos": [
+        1064.1459305228589,
+        6578.855680867504
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 703
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Set_base_images",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "base_images"
+      },
+      "widgets_values": [
+        "base_images"
+      ],
+      "widgets_values_named": {
+        "Constant": "base_images"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 395,
+      "type": "GetNode",
+      "pos": [
+        -911.5240773506894,
+        12465.381252868387
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            708
+          ]
+        }
+      ],
+      "title": "Get_base_video",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "base_video"
+      ],
+      "widgets_values_named": {
+        "Constant": "base_video"
+      }
+    },
+    {
+      "id": 364,
+      "type": "PreviewAny",
+      "pos": [
+        1238.8106613054586,
+        10133.053439468766
+      ],
+      "size": [
+        455.140625,
+        540.875
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 657
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 361,
+      "type": "GeminiNode",
+      "pos": [
+        686.300379341885,
+        10133.771243073292
+      ],
+      "size": [
+        462.953125,
+        933.125
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            657
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiNode"
+      },
+      "widgets_values": [
+        "I have a shot that I want to match the motion of, this is video_1. I want it to have the vehilces from image_1, 2, and 3 and the enviroment should look like image_4.",
+        "gemini-3-1-pro",
+        42,
+        "randomize",
+        "# 🧠 Seedance 2.0 Prompt Assistant\n\n## System Instructions\n\nYou are an expert AI video director and prompt engineer specializing in Seedance 2.0. Your role is to help the user design high-quality prompts for multimodal video generation, including text-to-video, image-to-video, reference-to-video, video-to-video, and audio-to-video workflows.\n\nYou must think like a film director, not a casual prompt writer.\n\n---\n\n## 🎯 Core Objective\n\nAlways generate prompts that:\n\n* Are structured using cinematic language\n* Describe filmable shots, not abstract ideas\n* Maintain subject consistency and motion clarity\n* Use constraints to reduce model drift\n* Are optimized for Seedance’s multimodal behavior\n\n---\n\n## 🧱 Universal Prompt Structure\n\nAlways follow this structure when generating prompts:\n\nSubject → Action → Camera → Scene → Style → Constraints → Timing\n\nDefinitions:\n\n* Subject: who or what is in the scene\n* Action: what is happening (single continuous action)\n* Camera: shot type, framing, and movement\n* Scene: environment and spatial context\n* Style: a single clear visual style reference\n* Constraints: rules to prevent artifacts or drift\n* Timing: optional shot sequencing or time-based structure\n\nDo not change this order.\n\n---\n\n## 🎬 Mode-Specific Behavior\n\n### 1. Text-to-Video (T2V)\n\n* Generate everything from scratch\n* Use a single subject and a single action\n* Avoid multiple ideas or branching events\n* Treat the prompt as one continuous shot unless explicitly told otherwise\n\n---\n\n### 2. Image-to-Video (I2V)\n\n* Assume the image defines identity\n* Do not redefine appearance in detail\n* Focus on motion, camera, and environment\n* Include constraints to preserve facial and structural consistency\n\nExample constraints:\n\n* maintain exact facial structure\n* preserve clothing and proportions\n\n---\n\n### 3. Reference-to-Video (Multi-input)\n\n* Assign clear roles to each input\n\nUse this pattern:\n\n* Image = identity\n* Video = motion reference\n* Audio = timing and emotion\n\nExplicitly describe how each input is used:\n\n* perform motion from reference video\n* maintain identity from reference image\n\n---\n\n### 4. Video-to-Video (V2V)\n\n* Preserve motion and timing from the source video\n* Only modify:\n\n  * subject\n  * environment\n  * style\n* Avoid redefining motion unless necessary\n\n---\n\n### 5. Audio-to-Video (A2V)\n\n* Use audio to drive:\n\n  * pacing\n  * rhythm\n  * emotional tone\n* Sync actions and camera movement to audio cues\n\n---\n\n## 🎥 Shot Design Rules\n\n* Default to a single shot unless multi-shot is requested\n* If multi-shot is used, structure clearly:\n\nShot 1:\nShot 2:\nShot 3:\n\nEach shot must follow the full prompt structure.\n\n---\n\n## 🎯 Constraints (Critical Requirement)\n\nAlways include constraints when generating prompts.\n\nTypes of constraints:\n\n* identity: no face distortion, consistent character\n* motion: no jitter, no morphing\n* camera: no cuts unless specified\n* environment: consistent lighting and geometry\n\nConstraints must be short, direct, and explicit.\n\n---\n\n## ⚖️ Prompt Quality Rules\n\n* Keep prompts between 30 and 120 words unless user asks otherwise\n* Use clear, literal language\n* Avoid vague descriptors like:\n\n  * cool\n  * cinematic (unless supported with specifics)\n  * dynamic\n\nReplace vague language with:\n\n* specific camera moves\n* lighting descriptions\n* physical actions\n\n---\n\n## 🎨 Style Rules\n\n* Use only ONE strong style anchor\n* Prefer:\n\n  * film references\n  * lighting styles\n  * real-world cinematography\n\nAvoid stacking multiple styles.\n\n---\n\n## 🎥 Camera Rules\n\nAlways define camera behavior when possible:\n\n* shot type: wide, medium, close-up\n* movement: dolly, pan, tilt, handheld\n* perspective: eye-level, low angle, overhead\n\nCamera language is more important than visual adjectives.\n\n---\n\n## 🧠 Iteration Strategy\n\nWhen refining prompts:\n\n* Change only one major variable at a time\n* Preserve working elements\n* Improve clarity, not complexity\n\n---\n\n## 🚫 What NOT to Do\n\nDo not:\n\n* write long narrative paragraphs\n* include multiple competing subjects\n* mix conflicting styles\n* omit camera direction\n* rely on abstract or emotional-only descriptions\n\n---\n\n## ✅ Output Format\n\nWhen the user asks for a prompt, return:\n\n1. Final Prompt (clean, ready to paste)\n2. Optional: Short explanation (if helpful)\n\nDo not over-explain unless asked.\n\n---\n\n## 🔥 Guiding Principle\n\nEvery prompt should describe something that could realistically be filmed on a set.\n\nIf it would not make sense to a cinematographer, rewrite it."
+      ],
+      "widgets_values_named": {
+        "prompt": "I have a shot that I want to match the motion of, this is video_1. I want it to have the vehilces from image_1, 2, and 3 and the enviroment should look like image_4.",
+        "model": "gemini-3-1-pro",
+        "seed": 42,
+        "control_after_generate": "randomize",
+        "system_prompt": "# 🧠 Seedance 2.0 Prompt Assistant\n\n## System Instructions\n\nYou are an expert AI video director and prompt engineer specializing in Seedance 2.0. Your role is to help the user design high-quality prompts for multimodal video generation, including text-to-video, image-to-video, reference-to-video, video-to-video, and audio-to-video workflows.\n\nYou must think like a film director, not a casual prompt writer.\n\n---\n\n## 🎯 Core Objective\n\nAlways generate prompts that:\n\n* Are structured using cinematic language\n* Describe filmable shots, not abstract ideas\n* Maintain subject consistency and motion clarity\n* Use constraints to reduce model drift\n* Are optimized for Seedance’s multimodal behavior\n\n---\n\n## 🧱 Universal Prompt Structure\n\nAlways follow this structure when generating prompts:\n\nSubject → Action → Camera → Scene → Style → Constraints → Timing\n\nDefinitions:\n\n* Subject: who or what is in the scene\n* Action: what is happening (single continuous action)\n* Camera: shot type, framing, and movement\n* Scene: environment and spatial context\n* Style: a single clear visual style reference\n* Constraints: rules to prevent artifacts or drift\n* Timing: optional shot sequencing or time-based structure\n\nDo not change this order.\n\n---\n\n## 🎬 Mode-Specific Behavior\n\n### 1. Text-to-Video (T2V)\n\n* Generate everything from scratch\n* Use a single subject and a single action\n* Avoid multiple ideas or branching events\n* Treat the prompt as one continuous shot unless explicitly told otherwise\n\n---\n\n### 2. Image-to-Video (I2V)\n\n* Assume the image defines identity\n* Do not redefine appearance in detail\n* Focus on motion, camera, and environment\n* Include constraints to preserve facial and structural consistency\n\nExample constraints:\n\n* maintain exact facial structure\n* preserve clothing and proportions\n\n---\n\n### 3. Reference-to-Video (Multi-input)\n\n* Assign clear roles to each input\n\nUse this pattern:\n\n* Image = identity\n* Video = motion reference\n* Audio = timing and emotion\n\nExplicitly describe how each input is used:\n\n* perform motion from reference video\n* maintain identity from reference image\n\n---\n\n### 4. Video-to-Video (V2V)\n\n* Preserve motion and timing from the source video\n* Only modify:\n\n  * subject\n  * environment\n  * style\n* Avoid redefining motion unless necessary\n\n---\n\n### 5. Audio-to-Video (A2V)\n\n* Use audio to drive:\n\n  * pacing\n  * rhythm\n  * emotional tone\n* Sync actions and camera movement to audio cues\n\n---\n\n## 🎥 Shot Design Rules\n\n* Default to a single shot unless multi-shot is requested\n* If multi-shot is used, structure clearly:\n\nShot 1:\nShot 2:\nShot 3:\n\nEach shot must follow the full prompt structure.\n\n---\n\n## 🎯 Constraints (Critical Requirement)\n\nAlways include constraints when generating prompts.\n\nTypes of constraints:\n\n* identity: no face distortion, consistent character\n* motion: no jitter, no morphing\n* camera: no cuts unless specified\n* environment: consistent lighting and geometry\n\nConstraints must be short, direct, and explicit.\n\n---\n\n## ⚖️ Prompt Quality Rules\n\n* Keep prompts between 30 and 120 words unless user asks otherwise\n* Use clear, literal language\n* Avoid vague descriptors like:\n\n  * cool\n  * cinematic (unless supported with specifics)\n  * dynamic\n\nReplace vague language with:\n\n* specific camera moves\n* lighting descriptions\n* physical actions\n\n---\n\n## 🎨 Style Rules\n\n* Use only ONE strong style anchor\n* Prefer:\n\n  * film references\n  * lighting styles\n  * real-world cinematography\n\nAvoid stacking multiple styles.\n\n---\n\n## 🎥 Camera Rules\n\nAlways define camera behavior when possible:\n\n* shot type: wide, medium, close-up\n* movement: dolly, pan, tilt, handheld\n* perspective: eye-level, low angle, overhead\n\nCamera language is more important than visual adjectives.\n\n---\n\n## 🧠 Iteration Strategy\n\nWhen refining prompts:\n\n* Change only one major variable at a time\n* Preserve working elements\n* Improve clarity, not complexity\n\n---\n\n## 🚫 What NOT to Do\n\nDo not:\n\n* write long narrative paragraphs\n* include multiple competing subjects\n* mix conflicting styles\n* omit camera direction\n* rely on abstract or emotional-only descriptions\n\n---\n\n## ✅ Output Format\n\nWhen the user asks for a prompt, return:\n\n1. Final Prompt (clean, ready to paste)\n2. Optional: Short explanation (if helpful)\n\nDo not over-explain unless asked.\n\n---\n\n## 🔥 Guiding Principle\n\nEvery prompt should describe something that could realistically be filmed on a set.\n\nIf it would not make sense to a cinematographer, rewrite it."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 347,
+      "type": "ImageFromBatch+",
+      "pos": [
+        -897.3448177668415,
+        8807.9784173002
+      ],
+      "size": [
+        270,
+        135.59375
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 700
+        },
+        {
+          "name": "start",
+          "type": "INT",
+          "widget": {
+            "name": "start"
+          },
+          "link": 701
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            646,
+            709
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch+"
+      },
+      "widgets_values": [
+        60,
+        1
+      ],
+      "widgets_values_named": {
+        "start": 60,
+        "length": 1
+      }
+    },
+    {
+      "id": 433,
+      "type": "PreviewImage",
+      "pos": [
+        810.6835867471052,
+        8801.469780957226
+      ],
+      "size": [
+        1117.8125,
+        775
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 705
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 436,
+      "type": "ImageBatchMulti",
+      "pos": [
+        -161.9984571133673,
+        8805.381491661454
+      ],
+      "size": [
+        270,
+        155.59375
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 709
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            710
+          ]
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        2,
+        null
+      ],
+      "widgets_values_named": {
+        "inputcount": 2,
+        "Update inputs": null
+      }
+    },
+    {
+      "id": 432,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        183.05851582509968,
+        8804.249440707528
+      ],
+      "size": [
+        571.4375,
+        540
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 710
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            705
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "Change this 3D render into a photorealistic, high quality, still frame of a sythnwave style environment.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        43,
+        "randomize",
+        "auto",
+        "1K",
+        "IMAGE",
+        "MINIMAL",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "Change this 3D render into a photorealistic, high quality, still frame of a sythnwave style environment.",
+        "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "seed": 43,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "1K",
+        "response_modalities": "IMAGE",
+        "thinking_level": "MINIMAL",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 431,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        -1190.3519770969938,
+        7578.211335283003
+      ],
+      "size": [
+        571.4375,
+        540
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            702
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "A stylized synthwave race car. Red.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        43,
+        "randomize",
+        "auto",
+        "1K",
+        "IMAGE",
+        "MINIMAL",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "A stylized synthwave race car. Red.",
+        "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "seed": 43,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "1K",
+        "response_modalities": "IMAGE",
+        "thinking_level": "MINIMAL",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 348,
+      "type": "GeminiNanoBanana2",
+      "pos": [
+        -379.68727989601064,
+        7613.946833744046
+      ],
+      "size": [
+        571.4375,
+        540.015625
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 30,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 702
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            718
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2"
+      },
+      "widgets_values": [
+        "make a 2x2 grid of this image showing different angles of the object on a white background. no text.",
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        43,
+        "randomize",
+        "auto",
+        "1K",
+        "IMAGE",
+        "MINIMAL",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "make a 2x2 grid of this image showing different angles of the object on a white background. no text.",
+        "model": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "seed": 43,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "1K",
+        "response_modalities": "IMAGE",
+        "thinking_level": "MINIMAL",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 437,
+      "type": "MarkdownNote",
+      "pos": [
+        443.66625115390775,
+        6350.492812409368
+      ],
+      "size": [
+        545.625,
+        113.953125
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Load your rendered playbast here."
+      ],
+      "widgets_values_named": {
+        "text": "# Load your rendered playbast here."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 438,
+      "type": "MarkdownNote",
+      "pos": [
+        -1827.545742008171,
+        7508.3317660534
+      ],
+      "size": [
+        545.625,
+        114
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Create your assets. For example, characters or vehicles here."
+      ],
+      "widgets_values_named": {
+        "text": "# Create your assets. For example, characters or vehicles here."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 439,
+      "type": "MarkdownNote",
+      "pos": [
+        -1847.7010190237224,
+        8731.06349096973
+      ],
+      "size": [
+        545.625,
+        219.59375
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# It's sometimes helpful to create style frames. Choose your frame in the \"Image from Batch\" and then load any references that you'd like Nano Banana to reference in the \"Image Batch Multi\". If you want more simple increase the input count."
+      ],
+      "widgets_values_named": {
+        "text": "# It's sometimes helpful to create style frames. Choose your frame in the \"Image from Batch\" and then load any references that you'd like Nano Banana to reference in the \"Image Batch Multi\". If you want more simple increase the input count."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 440,
+      "type": "MarkdownNote",
+      "pos": [
+        -65.78650842347338,
+        9988.066491955686
+      ],
+      "size": [
+        545.625,
+        114
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Create your Seedance 2 prompt! \nCustom System Instructions are included."
+      ],
+      "widgets_values_named": {
+        "text": "# Create your Seedance 2 prompt! \nCustom System Instructions are included."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 441,
+      "type": "MarkdownNote",
+      "pos": [
+        -987.2789985356355,
+        11494.405727979887
+      ],
+      "size": [
+        624.0625,
+        113.9375
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# Load your assets and your prompt for Seedance to use."
+      ],
+      "widgets_values_named": {
+        "text": "# Load your assets and your prompt for Seedance to use."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 443,
+      "type": "VHS_VideoInfo",
+      "pos": [
+        751.0580465052651,
+        6787.3248034718
+      ],
+      "size": [
+        261.328125,
+        295.125
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 711
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "links": [
+            713
+          ]
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoInfo"
+      },
+      "widgets_values": {}
+    },
+    {
+      "id": 445,
+      "type": "GetNode",
+      "pos": [
+        -906.797755237458,
+        12729.498458721573
+      ],
+      "size": [
+        225,
+        106.25
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            715
+          ]
+        }
+      ],
+      "title": "Get_duration",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "duration"
+      ],
+      "widgets_values_named": {
+        "Constant": "duration"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 447,
+      "type": "CM_FloatToInt",
+      "pos": [
+        1092.3564458218525,
+        6922.119617373206
+      ],
+      "size": [
+        270,
+        103.59375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "widget": {
+            "name": "a"
+          },
+          "link": 713
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            714
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CM_FloatToInt"
+      },
+      "widgets_values": [
+        0
+      ],
+      "widgets_values_named": {
+        "a": 0
+      }
+    },
+    {
+      "id": 448,
+      "type": "SetNode",
+      "pos": [
+        1083.2371424917508,
+        6981.428649270637
+      ],
+      "size": [
+        225,
+        107.578125
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 714
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "title": "Set_duration",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "duration"
+      },
+      "widgets_values": [
+        "duration"
+      ],
+      "widgets_values_named": {
+        "Constant": "duration"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 451,
+      "type": "LoadVideo",
+      "pos": [
+        -649.463040703067,
+        6658.003383774208
+      ],
+      "size": [
+        657.78125,
+        479.6875
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            717
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "video/69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4 [output]",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "video/69e04c97120a65e3f3739e9b68cdfa58e06addc39cfe1417ac56b4798828e2fe.mp4 [output]",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 452,
+      "type": "PreviewImage",
+      "pos": [
+        108.60974955251936,
+        7582.617591282978
+      ],
+      "size": [
+        1107.78125,
+        864
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 718
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 453,
+      "type": "LoadImage",
+      "pos": [
+        1303.9625013316484,
+        7673.937181218237
+      ],
+      "size": [
+        282.765625,
+        339.59375
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            719
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "56598a0bbd51a7ff5dc6f7557906032006c8e4b7c5d0c6e14cf8e019dc018761.png [output]",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "56598a0bbd51a7ff5dc6f7557906032006c8e4b7c5d0c6e14cf8e019dc018761.png [output]",
+        "upload": "image"
+      }
+    }
+  ],
+  "links": [
+    [
+      646,
+      347,
+      0,
+      352,
+      0,
+      "IMAGE"
+    ],
+    [
+      657,
+      361,
+      0,
+      364,
+      0,
+      "STRING"
+    ],
+    [
+      675,
+      380,
+      0,
+      383,
+      0,
+      "IMAGE"
+    ],
+    [
+      676,
+      384,
+      0,
+      386,
+      0,
+      "IMAGE"
+    ],
+    [
+      687,
+      404,
+      0,
+      405,
+      0,
+      "IMAGE"
+    ],
+    [
+      700,
+      421,
+      0,
+      347,
+      0,
+      "IMAGE"
+    ],
+    [
+      701,
+      430,
+      0,
+      347,
+      1,
+      "INT"
+    ],
+    [
+      702,
+      431,
+      0,
+      348,
+      0,
+      "IMAGE"
+    ],
+    [
+      703,
+      428,
+      0,
+      394,
+      0,
+      "IMAGE"
+    ],
+    [
+      705,
+      432,
+      0,
+      433,
+      0,
+      "IMAGE"
+    ],
+    [
+      709,
+      347,
+      0,
+      436,
+      0,
+      "IMAGE"
+    ],
+    [
+      710,
+      436,
+      0,
+      432,
+      0,
+      "IMAGE"
+    ],
+    [
+      711,
+      428,
+      3,
+      443,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      713,
+      443,
+      7,
+      447,
+      0,
+      "FLOAT"
+    ],
+    [
+      714,
+      447,
+      0,
+      448,
+      0,
+      "INT"
+    ],
+    [
+      717,
+      451,
+      0,
+      435,
+      0,
+      "VIDEO"
+    ],
+    [
+      718,
+      348,
+      0,
+      452,
+      0,
+      "IMAGE"
+    ],
+    [
+      719,
+      453,
+      0,
+      382,
+      0,
+      "IMAGE"
+    ],
+    [
+      652,
+      356,
+      0,
+      359,
+      0,
+      "VIDEO"
+    ],
+    [
+      641,
+      343,
+      0,
+      344,
+      0,
+      "VIDEO"
+    ],
+    [
+      715,
+      445,
+      0,
+      356,
+      0,
+      "INT"
+    ],
+    [
+      678,
+      388,
+      0,
+      356,
+      1,
+      "IMAGE"
+    ],
+    [
+      688,
+      389,
+      0,
+      356,
+      3,
+      "IMAGE"
+    ],
+    [
+      708,
+      395,
+      0,
+      356,
+      5,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "GENERATE FAUX-PLAYBLAST",
+      "bounding": [
+        -1256.506882724277,
+        6185.335556378999,
+        1657.053016055087,
+        1249.3356009811496
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "(OPTIONAL) GENERATE STYLE FRAMES",
+      "bounding": [
+        -1264.6151410943364,
+        8695.552863787474,
+        3253.5228544866127,
+        1071.1510377684845
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "GENERATE SHOT AND STYLE DESCRIPTION FOR SEEDANCE",
+      "bounding": [
+        512.9561413362285,
+        9957.152595260499,
+        1327.6253482072757,
+        1240.3687320652862
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "DIFFUSION RENDERER BASED ON REFERENCE IMAGES AND PLAYBLAST ANIMATION",
+      "bounding": [
+        -982.0457732355353,
+        11677.596963739747,
+        2754.9376476799825,
+        1570.67549374591
+      ],
+      "color": "#444",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "LOAD PLAYBLAST",
+      "bounding": [
+        435.87702015445745,
+        6489.717753652292,
+        908.6435189919566,
+        678.7176576349993
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "GENERATE INDIVIDUAL ASSETS",
+      "bounding": [
+        -1252.4981528711094,
+        7474.375866838889,
+        4034.573692743622,
+        1085.2848385505004
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "scale": 0.9969503298864073,
+      "offset": [
+        -365.851675401713,
+        -8450.246770346415
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "ue_links": [],
+    "workflowRendererVersion": "Vue-corrected"
+  },
+  "version": 0.4
+}

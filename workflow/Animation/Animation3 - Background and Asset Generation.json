@@ -1,0 +1,943 @@
+{
+  "id": "861353cc-3ab7-4980-8f15-9c39a18c1e3d",
+  "revision": 0,
+  "last_node_id": 27,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        600,
+        2460
+      ],
+      "size": [
+        730,
+        454.625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5,
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "Render the sketch in image1 as a painted background. Match the color palette, lighting, atmosphere, and painting style from image2. Background environment only, no characters, no foreground objects.",
+        "gpt-image-2",
+        "auto",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        1009712537,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "Render the sketch in image1 as a painted background. Match the color palette, lighting, atmosphere, and painting style from image2. Background environment only, no characters, no foreground objects.",
+        "model": "gpt-image-2",
+        "model.size": "auto",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 1009712537,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -430,
+        2460
+      ],
+      "size": [
+        940,
+        800
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT BACKGROUND SKETCH",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "c2f96ea09ac13eae9ac7ccaaf761d3167b41644bef0d332b78aeccad22b59c7f.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "c2f96ea09ac13eae9ac7ccaaf761d3167b41644bef0d332b78aeccad22b59c7f.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        600,
+        3440
+      ],
+      "size": [
+        730,
+        454.625
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "Render the sketch in image1 as a foreground prop. Match the line quality, color treatment, and rendering style from image2. Isolated object, white background.",
+        "gpt-image-2",
+        "auto",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        98443247,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "Render the sketch in image1 as a foreground prop. Match the line quality, color treatment, and rendering style from image2. Isolated object, white background.",
+        "model": "gpt-image-2",
+        "model.size": "auto",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 98443247,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -430,
+        3440
+      ],
+      "size": [
+        950,
+        800
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT PROP SKETCH",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "43ae6eb44d7ab5f60c1fffc014b249a6dfea229cdd5fcee6be892ad57e32c8dd.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "43ae6eb44d7ab5f60c1fffc014b249a6dfea229cdd5fcee6be892ad57e32c8dd.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        -1970,
+        2390
+      ],
+      "size": [
+        1480,
+        1910
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT PRODUCTION FRAME",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "6209626e18049b0c562dd0c9948fd74805a516359dde88276e57526d0fbf9f19.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "6209626e18049b0c562dd0c9948fd74805a516359dde88276e57526d0fbf9f19.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [
+        1440,
+        2460
+      ],
+      "size": [
+        1320,
+        810
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Background"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Background"
+      }
+    },
+    {
+      "id": 7,
+      "type": "SaveImage",
+      "pos": [
+        1420,
+        3440
+      ],
+      "size": [
+        1340,
+        810
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Subject"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Subject"
+      }
+    },
+    {
+      "id": 22,
+      "type": "c3a0dd02-bd03-44bc-b66b-242c522d881a",
+      "pos": [
+        1080,
+        4020
+      ],
+      "size": [
+        250,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "previewExposures": []
+      },
+      "widgets_values": [
+        "birefnet.safetensors"
+      ],
+      "widgets_values_named": {
+        "bg_removal_name": "birefnet.safetensors"
+      }
+    },
+    {
+      "id": 25,
+      "type": "ImageCompare",
+      "pos": [
+        2780,
+        2470
+      ],
+      "size": [
+        920,
+        800
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ImageCompare"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 26,
+      "type": "ImageCompare",
+      "pos": [
+        2780,
+        3440
+      ],
+      "size": [
+        920,
+        810
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ImageCompare"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 27,
+      "type": "MarkdownNote",
+      "pos": [
+        -460,
+        2080
+      ],
+      "size": [
+        610,
+        250
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "**BACKGROUND GENERATION**\n<br> Generate a finalized background illustration from a production frame and the background sketch\n\n**SUBJECT GENERATION** \n<br> Generate a finalized subject/prop illustration from a production frame and the subject sketch. The output will be alpha masked, bypass the Remove Background node if not needed.\n\n**Choose the method to suit your use case, and bypass all nodes in the other method**"
+      ],
+      "widgets_values_named": {
+        "text": "**BACKGROUND GENERATION**\n<br> Generate a finalized background illustration from a production frame and the background sketch\n\n**SUBJECT GENERATION** \n<br> Generate a finalized subject/prop illustration from a production frame and the subject sketch. The output will be alpha masked, bypass the Remove Background node if not needed.\n\n**Choose the method to suit your use case, and bypass all nodes in the other method**"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      5,
+      1,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      3,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      22,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      2,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      1,
+      0,
+      25,
+      1,
+      "IMAGE"
+    ],
+    [
+      24,
+      4,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      3,
+      0,
+      26,
+      1,
+      "IMAGE"
+    ],
+    [
+      4,
+      5,
+      0,
+      1,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      5,
+      0,
+      3,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "METHOD 1 - BACKGROUND GENERATION",
+      "bounding": [
+        -460,
+        2360,
+        4190,
+        960
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "METHOD 2 - SUBJECT GENERATION",
+      "bounding": [
+        -460,
+        3350,
+        4190,
+        950
+      ],
+      "color": "#8AA",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "c3a0dd02-bd03-44bc-b66b-242c522d881a",
+        "version": 1,
+        "state": {
+          "lastGroupId": 3,
+          "lastNodeId": 27,
+          "lastLinkId": 28,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Remove Background (BiRefNet)",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -6728.534070722246,
+            1475.2619799128663,
+            150.9140625,
+            88
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -6169.049695722246,
+            1475.2619799128663,
+            128,
+            88
+          ]
+        },
+        "inputs": [
+          {
+            "id": "7bc321cd-df31-4c39-aaf7-7f0d01326189",
+            "name": "image",
+            "type": "IMAGE",
+            "linkIds": [
+              28,
+              7
+            ],
+            "localized_name": "image",
+            "pos": [
+              -6601.620008222246,
+              1499.2619799128663
+            ]
+          },
+          {
+            "id": "e89d2cd8-daa3-4e29-8a69-851db85072cb",
+            "name": "bg_removal_name",
+            "type": "COMBO",
+            "linkIds": [
+              12
+            ],
+            "pos": [
+              -6601.620008222246,
+              1519.2619799128663
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "16e7863c-4c38-46c2-aa74-e82991fbfe8d",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              8
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              -6145.049695722246,
+              1499.2619799128663
+            ]
+          },
+          {
+            "id": "f7240c19-5b80-406e-a8e2-9b12440ee2d6",
+            "name": "mask",
+            "type": "MASK",
+            "linkIds": [
+              11
+            ],
+            "pos": [
+              -6145.049695722246,
+              1519.2619799128663
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 13,
+            "type": "RemoveBackground",
+            "pos": [
+              -6540,
+              1440
+            ],
+            "size": [
+              310,
+              80
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "背景移除模型",
+                "name": "bg_removal_model",
+                "type": "BACKGROUND_REMOVAL",
+                "link": 26
+              },
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 28
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "links": [
+                  11,
+                  27
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "RemoveBackground"
+            }
+          },
+          {
+            "id": 14,
+            "type": "LoadBackgroundRemovalModel",
+            "pos": [
+              -6540,
+              1300
+            ],
+            "size": [
+              320,
+              90
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "背景移除模型名称",
+                "name": "bg_removal_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "bg_removal_name"
+                },
+                "link": 12
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "bg_model",
+                "name": "bg_model",
+                "type": "BACKGROUND_REMOVAL",
+                "links": [
+                  26
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LoadBackgroundRemovalModel",
+              "models": [
+                {
+                  "directory": "background_removal",
+                  "name": "birefnet.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/BiRefNet/resolve/main/background_removal/birefnet.safetensors"
+                }
+              ]
+            },
+            "widgets_values": [
+              "birefnet.safetensors"
+            ],
+            "widgets_values_named": {
+              "bg_removal_name": "birefnet.safetensors"
+            }
+          },
+          {
+            "id": 15,
+            "type": "InvertMask",
+            "pos": [
+              -6530,
+              1570
+            ],
+            "size": [
+              290,
+              50
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "mask",
+                "type": "MASK",
+                "link": 27
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "MASK",
+                "type": "MASK",
+                "links": [
+                  6
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "InvertMask"
+            }
+          },
+          {
+            "id": 16,
+            "type": "JoinImageWithAlpha",
+            "pos": [
+              -6530,
+              1670
+            ],
+            "size": [
+              290,
+              80
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 7
+              },
+              {
+                "localized_name": "阿尔法",
+                "name": "alpha",
+                "type": "MASK",
+                "link": 6
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  8
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "JoinImageWithAlpha"
+            }
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 27,
+            "origin_id": 13,
+            "origin_slot": 0,
+            "target_id": 15,
+            "target_slot": 0,
+            "type": "MASK"
+          },
+          {
+            "id": 6,
+            "origin_id": 15,
+            "origin_slot": 0,
+            "target_id": 16,
+            "target_slot": 1,
+            "type": "MASK"
+          },
+          {
+            "id": 7,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 16,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 8,
+            "origin_id": 16,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 11,
+            "origin_id": 13,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "MASK"
+          },
+          {
+            "id": 12,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 14,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 28,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 13,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 26,
+            "origin_id": 14,
+            "origin_slot": 0,
+            "target_id": 13,
+            "target_slot": 0,
+            "type": "BACKGROUND_REMOVAL"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.2517482517482518,
+      "offset": [
+        2933.333333333333,
+        -1353.7361111111113
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

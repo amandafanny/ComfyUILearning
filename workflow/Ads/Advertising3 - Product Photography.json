@@ -1,0 +1,739 @@
+{
+  "id": "0ebc5846-69c0-4ea3-b14a-83ba95ed156c",
+  "revision": 0,
+  "last_node_id": 116,
+  "last_link_id": 269,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "SaveImage",
+      "pos": [
+        1110,
+        5930
+      ],
+      "size": [
+        550,
+        540
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 267
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Product_Edit"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Product_Edit"
+      }
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        50,
+        4570
+      ],
+      "size": [
+        410,
+        540
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "INPUT PRODUCT",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "image": "dd16d95625c95c7390fca4624644d65ffa4a218cdbd9a0485f058dc97184941b.png [input]"
+      },
+      "widgets_values": [
+        "fb62af506af863e4e580127b6596710ed9349a62214d60b1feea5e319af3fb05.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "fb62af506af863e4e580127b6596710ed9349a62214d60b1feea5e319af3fb05.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 13,
+      "type": "ImageCompare",
+      "pos": [
+        1690,
+        5930
+      ],
+      "size": [
+        510,
+        540
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 37
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 268
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ImageCompare"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 17,
+      "type": "SaveImage",
+      "pos": [
+        1120,
+        4910
+      ],
+      "size": [
+        550,
+        540
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 264
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "Product"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Product"
+      }
+    },
+    {
+      "id": 18,
+      "type": "ImageCompare",
+      "pos": [
+        1700,
+        4910
+      ],
+      "size": [
+        510,
+        540
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 265
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ImageCompare"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 21,
+      "type": "ByteDance2FirstLastFrameNode",
+      "pos": [
+        560,
+        6700
+      ],
+      "size": [
+        520,
+        436.96875
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 261
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "draft_task_id",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2FirstLastFrameNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "Camera slowly orbits left to right around the subject, one continuous take, no cuts.",
+        "720p",
+        "adaptive",
+        7,
+        false,
+        1401855032,
+        "randomize",
+        false,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "Seedance 2.0",
+        "model.prompt": "Camera slowly orbits left to right around the subject, one continuous take, no cuts.",
+        "model.resolution": "720p",
+        "model.ratio": "adaptive",
+        "model.duration": 7,
+        "model.generate_audio": false,
+        "seed": 1401855032,
+        "control_after_generate": "randomize",
+        "watermark": false,
+        "first_frame_asset_id": "",
+        "last_frame_asset_id": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 22,
+      "type": "SaveVideo",
+      "pos": [
+        1110,
+        6700
+      ],
+      "size": [
+        800,
+        530
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/Product_Video",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/Product_Video",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 29,
+      "type": "LoadImage",
+      "pos": [
+        60,
+        5160
+      ],
+      "size": [
+        400,
+        570
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            263
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT BACKGROUND (OPTIONAL)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "554142288b31f8cea9dd6fb55f088bd58ad00ed408e2505dd84268010e200d73.png [output]",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "554142288b31f8cea9dd6fb55f088bd58ad00ed408e2505dd84268010e200d73.png [output]",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 31,
+      "type": "LoadImage",
+      "pos": [
+        60,
+        5930
+      ],
+      "size": [
+        410,
+        540
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            37
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "INPUT IMAGE",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "image": "fdd6743167a5a253a78c96cc4a3c200c3b8f1930dfd84c0833964e2e892a7da1.png [input]"
+      },
+      "widgets_values": [
+        "fdd6743167a5a253a78c96cc4a3c200c3b8f1930dfd84c0833964e2e892a7da1.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "fdd6743167a5a253a78c96cc4a3c200c3b8f1930dfd84c0833964e2e892a7da1.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 33,
+      "type": "LoadImage",
+      "pos": [
+        60,
+        6700
+      ],
+      "size": [
+        410,
+        540
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            261
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "INPUT FRAME",
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "image": "2c6468738c833e1734eaf3669a8546021a4ca96dea6a52cb534ee0d1f0efb877.png [input]"
+      },
+      "widgets_values": [
+        "9a00b90337b2951d4965135f2bf35a48c620be82930380c4fe5759bce2b31234.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "9a00b90337b2951d4965135f2bf35a48c620be82930380c4fe5759bce2b31234.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 114,
+      "type": "MarkdownNote",
+      "pos": [
+        0,
+        4150
+      ],
+      "size": [
+        610,
+        280
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "**STEP 1 - PRODUCT PHOTOGRAPHY GENERATION**\n<br> Input a product reference image and an optional background to generate a product photography\n\n**STEP 2 - PRODUCT PHOTOGRAPHY EDITS**\n<br> Input a product photography. Then right click and \"open mask editor\" to draw circles or lines as art direction notes, and reflect them in text prompts to edit the photo\n\n**STEP 3 - PRODUCT VIDEO GENERATION**\n<br> Input the final product photography to generate a hero shot of the product\n\n**All three steps are optional and can be used independently. Before running a step, bypass all nodes in the other two steps.**"
+      ],
+      "widgets_values_named": {
+        "text": "**STEP 1 - PRODUCT PHOTOGRAPHY GENERATION**\n<br> Input a product reference image and an optional background to generate a product photography\n\n**STEP 2 - PRODUCT PHOTOGRAPHY EDITS**\n<br> Input a product photography. Then right click and \"open mask editor\" to draw circles or lines as art direction notes, and reflect them in text prompts to edit the photo\n\n**STEP 3 - PRODUCT VIDEO GENERATION**\n<br> Input the final product photography to generate a hero shot of the product\n\n**All three steps are optional and can be used independently. Before running a step, bypass all nodes in the other two steps.**"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 115,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        590,
+        4910
+      ],
+      "size": [
+        500,
+        454.625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 263
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            264,
+            265
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "Place the product in the first image to the scene in second image, and change the greenery to mint leaves.",
+        "gpt-image-2",
+        "auto",
+        1024,
+        1024,
+        "auto",
+        "high",
+        1,
+        515288000,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "Place the product in the first image to the scene in second image, and change the greenery to mint leaves.",
+        "model": "gpt-image-2",
+        "model.size": "auto",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "high",
+        "n": 1,
+        "seed": 515288000,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 116,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        580,
+        5930
+      ],
+      "size": [
+        500,
+        430.625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            267,
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "Remove the moss within the red circles. And add a strand of mint flowers within the blue circle",
+        "gpt-image-2",
+        "auto",
+        1024,
+        1024,
+        "auto",
+        "high",
+        1,
+        1873743837,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "Remove the moss within the red circles. And add a strand of mint flowers within the blue circle",
+        "model": "gpt-image-2",
+        "model.size": "auto",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "high",
+        "n": 1,
+        "seed": 1873743837,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      22,
+      12,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      31,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      264,
+      115,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      265,
+      115,
+      0,
+      18,
+      1,
+      "IMAGE"
+    ],
+    [
+      267,
+      116,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      268,
+      116,
+      0,
+      13,
+      1,
+      "IMAGE"
+    ],
+    [
+      261,
+      33,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      21,
+      0,
+      22,
+      0,
+      "VIDEO"
+    ],
+    [
+      263,
+      29,
+      0,
+      115,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "STEP 1 - PRODUCT PHOTOGRAPHY GENERATION",
+      "bounding": [
+        0,
+        4450,
+        2281.32716304948,
+        1343.1676641996046
+      ],
+      "color": "#8AA",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "STEP 2 - PRODUCT PHOTOGRAPHY EDITS",
+      "bounding": [
+        0,
+        5820,
+        2282.785878822732,
+        716.0009159039173
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "STEP 3 - PRODUCT VIDEO GENERATION",
+      "bounding": [
+        0,
+        6570,
+        2280.823511202766,
+        769.3875392867822
+      ],
+      "color": "#88A",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "scale": 0.2500472667059582,
+      "offset": [
+        2697.8811812248205,
+        -3570.1020767855357
+      ]
+    },
+    "frontendVersion": "1.59.8"
+  },
+  "version": 0.4
+}

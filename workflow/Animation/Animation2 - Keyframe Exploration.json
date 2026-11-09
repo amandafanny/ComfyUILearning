@@ -1,0 +1,703 @@
+{
+  "id": "f8255923-6cbb-4924-8655-c1160dfd2542",
+  "revision": 0,
+  "last_node_id": 19,
+  "last_link_id": 30,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        1810,
+        1590
+      ],
+      "size": [
+        400,
+        454.625
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 22
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "2048x1152",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        271134222,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "2048x1152",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 271134222,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "QwenMultiangleCameraNode",
+      "pos": [
+        620,
+        1580
+      ],
+      "size": [
+        790,
+        1030
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Prompt",
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "Camera Info",
+          "type": "LOAD3D_CAMERA",
+          "links": []
+        }
+      ],
+      "title": "Multiangle Camera",
+      "properties": {
+        "Node name for S&R": "QwenMultiangleCameraNode",
+        "cnr_id": "comfyui-qwenmultiangle",
+        "qwenCameraState": {
+          "azimuth": 47,
+          "cameraView": false,
+          "distance": 5.8,
+          "elevation": 11
+        },
+        "ver": "c264343add0423ca447a0ba8fb62e1d312f5370f"
+      },
+      "widgets_values": [
+        47,
+        11,
+        5.8,
+        false,
+        false,
+        ""
+      ],
+      "widgets_values_named": {
+        "horizontal_angle": 47,
+        "vertical_angle": 11,
+        "zoom": 5.8,
+        "default_prompts": false,
+        "camera_view": false,
+        "camera_preview": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "StringConcatenate",
+      "pos": [
+        1560,
+        1690
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        " of the character. ",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": " of the character. ",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [
+        2240,
+        1590
+      ],
+      "size": [
+        1440,
+        810
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "CharKeyframe"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "CharKeyframe"
+      }
+    },
+    {
+      "id": 9,
+      "type": "StringReplace",
+      "pos": [
+        1560,
+        1640
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            16,
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringReplace"
+      },
+      "widgets_values": [
+        "",
+        "<sks>",
+        ""
+      ],
+      "widgets_values_named": {
+        "string": "",
+        "find": "<sks>",
+        "replace": ""
+      }
+    },
+    {
+      "id": 11,
+      "type": "StringConcatenate",
+      "pos": [
+        1560,
+        1740
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 21
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            22,
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "The character is scratching his head and laughing awkwardly, a sweat drop on his forehead",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "The character is scratching his head and laughing awkwardly, a sweat drop on his forehead",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 12,
+      "type": "PrimitiveNode",
+      "pos": [
+        620,
+        2660
+      ],
+      "size": [
+        790,
+        620
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "links": [
+            24
+          ]
+        }
+      ],
+      "title": "ADDITIONAL ACTION (OPTIONAL)",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "The character is scratching his head and laughing awkwardly, a sweat drop on his forehead"
+      ],
+      "widgets_values_named": {
+        "value": "The character is scratching his head and laughing awkwardly, a sweat drop on his forehead"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "LoadImage",
+      "pos": [
+        -340,
+        1580
+      ],
+      "size": [
+        930,
+        1030
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT CHARACTER",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "50b615cdb4c1290d14cb33a21ad087745db5de70e5621ebf5da84be6d1656203.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "50b615cdb4c1290d14cb33a21ad087745db5de70e5621ebf5da84be6d1656203.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "StringConcatenate",
+      "pos": [
+        1560,
+        1590
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Use image_1 as the character sheet and image_2 as the environment reference if available. Generate a ",
+        " of the character",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "Use image_1 as the character sheet and image_2 as the environment reference if available. Generate a ",
+        "string_b": " of the character",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 16,
+      "type": "PreviewAny",
+      "pos": [
+        1560,
+        1790
+      ],
+      "size": [
+        230,
+        170
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 17,
+      "type": "LoadImage",
+      "pos": [
+        -340,
+        2670
+      ],
+      "size": [
+        930,
+        610
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT ENVIRONMENT (OPTIONAL)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "510dc724e9254b00e9cc06129fc854c92bb5bc76d6f427945642716cddaf6f23.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "510dc724e9254b00e9cc06129fc854c92bb5bc76d6f427945642716cddaf6f23.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 19,
+      "type": "MarkdownNote",
+      "pos": [
+        -360,
+        1230
+      ],
+      "size": [
+        610,
+        250
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "- Input character or character sheet\n- Adjust the Multiangle camera node and use the perspective prompts in the bottom as reference\n- Optionally input background environment and prompt character's action, or bypass them if not needed\n- Run workflow"
+      ],
+      "widgets_values_named": {
+        "text": "- Input character or character sheet\n- Adjust the Multiangle camera node and use the perspective prompts in the bottom as reference\n- Optionally input background environment and prompt character's action, or bypass them if not needed\n- Run workflow"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      6,
+      2,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      3,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      9,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      21,
+      4,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      24,
+      12,
+      0,
+      11,
+      1,
+      "STRING"
+    ],
+    [
+      26,
+      9,
+      0,
+      15,
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      11,
+      0,
+      16,
+      0,
+      "STRING"
+    ],
+    [
+      28,
+      14,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      11,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      30,
+      17,
+      0,
+      2,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "INPUT CHARACTER AND BACKGROUND",
+      "bounding": [
+        -360,
+        1500,
+        1810,
+        1810
+      ],
+      "color": "#8A8",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "GENERATE CONCEPT",
+      "bounding": [
+        1520,
+        1500,
+        2230,
+        960
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9324512996379934,
+      "offset": [
+        -439.6076981491401,
+        -1406.8780272535814
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

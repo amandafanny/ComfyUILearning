@@ -1,0 +1,1666 @@
+{
+  "id": "7fb3b5af-8b69-4a96-a222-5d1a02418684",
+  "revision": 0,
+  "last_node_id": 45,
+  "last_link_id": 73,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "StringConcatenate",
+      "pos": [
+        -870,
+        720
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 4
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "full body straight front perspective",
+        " of this character against white background, do not alter existing style. No texts or labels",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "full body straight front perspective",
+        "string_b": " of this character against white background, do not alter existing style. No texts or labels",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 7,
+      "type": "PrimitiveNode",
+      "pos": [
+        -870,
+        650
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "links": [
+            3,
+            21,
+            22,
+            40,
+            41
+          ]
+        }
+      ],
+      "title": "TEMPLATE",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        " of this character against white background, do not alter existing style. No texts or labels"
+      ],
+      "widgets_values_named": {
+        "value": " of this character against white background, do not alter existing style. No texts or labels"
+      }
+    },
+    {
+      "id": 8,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1420,
+        680
+      ],
+      "size": [
+        530,
+        190
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "PERSPECTIVE 1",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "full body straight front perspective"
+      ],
+      "widgets_values_named": {
+        "value": "full body straight front perspective"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        -2890,
+        470
+      ],
+      "size": [
+        1380,
+        1430
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT CONCEPT ART",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "18e381d4528878f9325c170dbe7a60d9a572ac5ffa476d6caa88ffcf13e4d036.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "18e381d4528878f9325c170dbe7a60d9a572ac5ffa476d6caa88ffcf13e4d036.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 13,
+      "type": "ImageStitch",
+      "pos": [
+        230,
+        540
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 57
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch"
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ],
+      "widgets_values_named": {
+        "direction": "right",
+        "match_image_size": true,
+        "spacing_width": 0,
+        "spacing_color": "white"
+      }
+    },
+    {
+      "id": 15,
+      "type": "ImageStitch",
+      "pos": [
+        230,
+        750
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch"
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ],
+      "widgets_values_named": {
+        "direction": "right",
+        "match_image_size": true,
+        "spacing_width": 0,
+        "spacing_color": "white"
+      }
+    },
+    {
+      "id": 16,
+      "type": "ImageStitch",
+      "pos": [
+        230,
+        1180
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch"
+      },
+      "widgets_values": [
+        "right",
+        true,
+        0,
+        "white"
+      ],
+      "widgets_values_named": {
+        "direction": "right",
+        "match_image_size": true,
+        "spacing_width": 0,
+        "spacing_color": "white"
+      }
+    },
+    {
+      "id": 17,
+      "type": "ImageStitch",
+      "pos": [
+        230,
+        960
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 60
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageStitch"
+      },
+      "widgets_values": [
+        "down",
+        true,
+        0,
+        "white"
+      ],
+      "widgets_values_named": {
+        "direction": "down",
+        "match_image_size": true,
+        "spacing_width": 0,
+        "spacing_color": "white"
+      }
+    },
+    {
+      "id": 18,
+      "type": "StringConcatenate",
+      "pos": [
+        -860,
+        1200
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 17
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "right side profile perspective",
+        " of this character against white background, do not alter existing style. No texts or labels",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "right side profile perspective",
+        "string_b": " of this character against white background, do not alter existing style. No texts or labels",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 19,
+      "type": "StringConcatenate",
+      "pos": [
+        -870,
+        1740
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 18
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "back perspective",
+        " of this character against white background, do not alter existing style. No texts or labels",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "back perspective",
+        "string_b": " of this character against white background, do not alter existing style. No texts or labels",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 20,
+      "type": "StringConcatenate",
+      "pos": [
+        -840,
+        2310
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 19
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 40
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "three-quarter close-up of the face with neutral expression",
+        " of this character against white background, do not alter existing style. No texts or labels",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "three-quarter close-up of the face with neutral expression",
+        "string_b": " of this character against white background, do not alter existing style. No texts or labels",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 22,
+      "type": "StringConcatenate",
+      "pos": [
+        -830,
+        2870
+      ],
+      "size": [
+        225,
+        34
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 20
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Face close-up with laughing expression",
+        " of this character against white background, do not alter existing style. No texts or labels",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "Face close-up with laughing expression",
+        "string_b": " of this character against white background, do not alter existing style. No texts or labels",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 23,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1420,
+        1180
+      ],
+      "size": [
+        530,
+        190
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "PERSPECTIVE 2",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "right side profile perspective"
+      ],
+      "widgets_values_named": {
+        "value": "right side profile perspective"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 24,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1420,
+        1690
+      ],
+      "size": [
+        530,
+        190
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            18
+          ]
+        }
+      ],
+      "title": "PERSPECTIVE 3",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "back perspective"
+      ],
+      "widgets_values_named": {
+        "value": "back perspective"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 25,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1430,
+        2280
+      ],
+      "size": [
+        530,
+        190
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            19
+          ]
+        }
+      ],
+      "title": "PERSPECTIVE 4",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "three-quarter close-up of the face with neutral expression"
+      ],
+      "widgets_values_named": {
+        "value": "three-quarter close-up of the face with neutral expression"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 26,
+      "type": "PrimitiveNode",
+      "pos": [
+        -1420,
+        2840
+      ],
+      "size": [
+        530,
+        190
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "PERSPECTIVE 5",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "Face close-up with laughing expression"
+      ],
+      "widgets_values_named": {
+        "value": "Face close-up with laughing expression"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 27,
+      "type": "SaveImage",
+      "pos": [
+        520,
+        540
+      ],
+      "size": [
+        1440,
+        810
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "CharSheet"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "CharSheet"
+      }
+    },
+    {
+      "id": 34,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        -580,
+        550
+      ],
+      "size": [
+        400,
+        430.625
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 47
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52,
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "1152x2048",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        171963481,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "1152x2048",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 171963481,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 35,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        -570,
+        1640
+      ],
+      "size": [
+        400,
+        430.625
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 49
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            54,
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "1152x2048",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        921764807,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "1152x2048",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 921764807,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 36,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        -580,
+        1090
+      ],
+      "size": [
+        400,
+        430.625
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 48
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53,
+            58
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "1152x2048",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        788987795,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "1152x2048",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 788987795,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 37,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        -560,
+        2190
+      ],
+      "size": [
+        400,
+        430.625
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 50
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55,
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "1024x1024",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        652196954,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "1024x1024",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 652196954,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 38,
+      "type": "OpenAIGPTImageNodeV2",
+      "pos": [
+        -560,
+        2730
+      ],
+      "size": [
+        400,
+        430.625
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 51
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56,
+            61
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenAIGPTImageNodeV2"
+      },
+      "widgets_values": [
+        "",
+        "gpt-image-2",
+        "1024x1024",
+        1024,
+        1024,
+        "auto",
+        "medium",
+        1,
+        262631855,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "gpt-image-2",
+        "model.size": "1024x1024",
+        "model.custom_width": 1024,
+        "model.custom_height": 1024,
+        "model.background": "auto",
+        "model.quality": "medium",
+        "n": 1,
+        "seed": 262631855,
+        "control_after_generate": "randomize"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 39,
+      "type": "PreviewImage",
+      "pos": [
+        -160,
+        550
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 40,
+      "type": "PreviewImage",
+      "pos": [
+        -160,
+        1090
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 41,
+      "type": "PreviewImage",
+      "pos": [
+        -150,
+        1640
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 42,
+      "type": "PreviewImage",
+      "pos": [
+        -140,
+        2190
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 43,
+      "type": "PreviewImage",
+      "pos": [
+        -140,
+        2730
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 45,
+      "type": "MarkdownNote",
+      "pos": [
+        -2890,
+        170
+      ],
+      "size": [
+        610,
+        250
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "Generate a character sheet based on the input character concept art.\n\nChange the perspective and angles when needed. Perspective 1-3 are full body poses, and perspective 4-5 are close ups."
+      ],
+      "widgets_values_named": {
+        "text": "Generate a character sheet based on the input character concept art.\n\nChange the perspective and angles when needed. Perspective 1-3 are full body poses, and perspective 4-5 are close ups."
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      3,
+      7,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      4,
+      8,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      9,
+      13,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      17,
+      0,
+      16,
+      1,
+      "IMAGE"
+    ],
+    [
+      17,
+      23,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      18,
+      24,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      19,
+      25,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      20,
+      26,
+      0,
+      22,
+      0,
+      "STRING"
+    ],
+    [
+      21,
+      7,
+      0,
+      18,
+      1,
+      "STRING"
+    ],
+    [
+      22,
+      7,
+      0,
+      19,
+      1,
+      "STRING"
+    ],
+    [
+      30,
+      16,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      7,
+      0,
+      20,
+      1,
+      "STRING"
+    ],
+    [
+      41,
+      7,
+      0,
+      22,
+      1,
+      "STRING"
+    ],
+    [
+      52,
+      34,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      36,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      35,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      55,
+      37,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      38,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      57,
+      34,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      36,
+      0,
+      13,
+      1,
+      "IMAGE"
+    ],
+    [
+      59,
+      35,
+      0,
+      15,
+      1,
+      "IMAGE"
+    ],
+    [
+      60,
+      37,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      38,
+      0,
+      17,
+      1,
+      "IMAGE"
+    ],
+    [
+      47,
+      6,
+      0,
+      34,
+      0,
+      "STRING"
+    ],
+    [
+      49,
+      19,
+      0,
+      35,
+      0,
+      "STRING"
+    ],
+    [
+      48,
+      18,
+      0,
+      36,
+      0,
+      "STRING"
+    ],
+    [
+      50,
+      20,
+      0,
+      37,
+      0,
+      "STRING"
+    ],
+    [
+      51,
+      22,
+      0,
+      38,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "GENERATE CHARACTER STYLE SHEET",
+      "bounding": [
+        -1480,
+        450,
+        1590,
+        2740
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "COMBINE AND SAVE CHARACTER SHEET",
+      "bounding": [
+        160,
+        450,
+        1860,
+        960
+      ],
+      "color": "#8AA",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "scale": 0.21425233644859812,
+      "offset": [
+        4210.697928026172,
+        545
+      ]
+    },
+    "frontendVersion": "1.59.8"
+  },
+  "version": 0.4
+}

@@ -1,0 +1,3386 @@
+{
+  "id": "49681c27-7502-4ed2-a2df-42c4d5b862aa",
+  "revision": 0,
+  "last_node_id": 100,
+  "last_link_id": 110,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "SetNode",
+      "pos": [368.64427530767966, -663.7904545067677],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_fps",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": ""
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "SetNode",
+      "pos": [365.98185074962794, -603.9979462799489],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_width",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "width"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 12,
+      "type": "SetNode",
+      "pos": [361.58185074962796, -551.1979462799488],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_height",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "height"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 13,
+      "type": "GetNode",
+      "pos": [893.1416125498264, -1019.7405494878234],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [11]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 15,
+      "type": "GetNode",
+      "pos": [2277.510287965926, -930.4366547642645],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [12]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 21,
+      "type": "GetNode",
+      "pos": [890.7918495883637, -305.8379089492058],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [20]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 22,
+      "type": "SetNode",
+      "pos": [189.43201341526247, -166.2575807497736],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_prompt",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "prompt"
+      },
+      "widgets_values": ["prompt"],
+      "widgets_values_named": {
+        "Constant": "prompt"
+      }
+    },
+    {
+      "id": 16,
+      "type": "SAM3VideoSegmentation",
+      "pos": [1088.3848508886913, -291.46721227809195],
+      "size": [277.4609375, 130],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "links": [16]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3VideoSegmentation",
+        "cnr_id": "comfyui-sam3",
+        "ver": "978bb763cfadcad41363eba016e57686b414c27b",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": ["text", "", 0, 0.3],
+      "widgets_values_named": {
+        "prompt_mode": "text",
+        "text_prompt": "",
+        "frame_idx": 0,
+        "score_threshold": 0.3
+      }
+    },
+    {
+      "id": 10,
+      "type": "GetNode",
+      "pos": [1133.5075302409234, 2628.4060176737653],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [8]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 38,
+      "type": "GetNode",
+      "pos": [950.2792179536682, 3264.4927285336325],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [36]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 40,
+      "type": "GetNode",
+      "pos": [2008.519938414176, 3421.0022796291364],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [37]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 44,
+      "type": "ImageResizeKJv2",
+      "pos": [1718.0269873946372, 3237.5524727854627],
+      "size": [270, 336],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 40
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 42
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [41]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 45,
+      "type": "GetNode",
+      "pos": [1577.340064804116, 3349.193825939289],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [42]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 46,
+      "type": "GetNode",
+      "pos": [1573.6590106989524, 3405.879448371113],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [43]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 37,
+      "type": "NormalCrafterNode",
+      "pos": [1169.925761478416, 3238.546256410068],
+      "size": [333.236328125, 246],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 36
+        },
+        {
+          "name": "pipe_override",
+          "shape": 7,
+          "type": "NORMALCRAFTER_PIPE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [40]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NormalCrafterNode"
+      },
+      "widgets_values": [
+        5794135798431254,
+        "randomize",
+        1024,
+        14,
+        10,
+        4,
+        true,
+        "auto"
+      ],
+      "widgets_values_named": {
+        "seed": 5794135798431254,
+        "control_after_generate": "randomize",
+        "max_res_dimension": 1024,
+        "window_size": 14,
+        "time_step_size": 10,
+        "decode_chunk_size": 4,
+        "offload_pipe_to_cpu_on_finish": true,
+        "use_xformers": "auto"
+      }
+    },
+    {
+      "id": 2,
+      "type": "DownloadAndLoadDepthAnythingV2Model",
+      "pos": [911.5622874206389, 2477.2798857911343],
+      "size": [323.577734375, 82],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "da_v2_model",
+          "type": "DAMODEL",
+          "links": [5]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadDepthAnythingV2Model"
+      },
+      "widgets_values": ["depth_anything_v2_vitl_fp32.safetensors", "auto"],
+      "widgets_values_named": {
+        "model": "depth_anything_v2_vitl_fp32.safetensors",
+        "precision": "auto"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 48,
+      "type": "GetNode",
+      "pos": [1595.880374905557, 2590.0633271852494],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [44]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 49,
+      "type": "GetNode",
+      "pos": [1592.1993208003933, 2646.7489496170733],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [45]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 8,
+      "type": "DepthAnything_V2",
+      "pos": [1334.3810110166862, 2478.6671023703875],
+      "size": [314.5963541666667, 60],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "da_model",
+          "type": "DAMODEL",
+          "link": 5
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [46]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DepthAnything_V2"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 5,
+      "type": "GetNode",
+      "pos": [2051.9166459059948, 2603.81640752544],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [3]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 32,
+      "type": "GetNode",
+      "pos": [3621.9886412908686, 591.7116181167761],
+      "size": [210, 50.00000000000006],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [30]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 51,
+      "type": "GetNode",
+      "pos": [3175.4899628021844, 572.4717601733511],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [48]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 52,
+      "type": "GetNode",
+      "pos": [3171.808908697021, 629.1573826051755],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [49]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 27,
+      "type": "GetNode",
+      "pos": [2994.148080224208, -196.79960257082135],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [26]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 25,
+      "type": "MaskToImage",
+      "pos": [2073.917447189373, -295.2070168582931],
+      "size": [193.2779296875, 26],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [54]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 57,
+      "type": "GetNode",
+      "pos": [1620.9690353825479, -932.0815135566148],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [56]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 58,
+      "type": "GetNode",
+      "pos": [1617.2879812773842, -875.3958911247909],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [57]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 56,
+      "type": "ImageResizeKJv2",
+      "pos": [1761.655957973069, -1043.722866710441],
+      "size": [270, 336],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 61
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 56
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [59]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 1,
+      "type": "SAM3Segment",
+      "pos": [1092.4784143673844, -1047.711224164474],
+      "size": [340, 440],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [60]
+        },
+        {
+          "name": "MASK_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3Segment"
+      },
+      "widgets_values": [
+        "",
+        "Merged",
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        "Auto",
+        false,
+        false,
+        "Alpha",
+        "#222222"
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "output_mode": "Merged",
+        "confidence_threshold": 0.5,
+        "max_segments": 0,
+        "segment_pick": 0,
+        "mask_blur": 0,
+        "mask_offset": 0,
+        "device": "Auto",
+        "invert_output": false,
+        "unload_model": false,
+        "background": "Alpha",
+        "background_color": "#222222"
+      },
+      "color": "#222e40",
+      "bgcolor": "#364254"
+    },
+    {
+      "id": 59,
+      "type": "MaskToImage",
+      "pos": [1506.4855809161388, -1034.4965889899092],
+      "size": [193.2779296875, 26],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [61]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 47,
+      "type": "ImageResizeKJv2",
+      "pos": [1736.567297496078, 2478.4219740314234],
+      "size": [270, 336],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 46
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 44
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [47]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 66,
+      "type": "GetNode",
+      "pos": [892.7648435848339, 1332.7895935113127],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [67]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 7,
+      "type": "VHS_VideoInfo",
+      "pos": [63.96462586562838, -692.8861355343388],
+      "size": [234.931640625, 220],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": [1]
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": [9]
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": [10]
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoInfo"
+      },
+      "widgets_values": {}
+    },
+    {
+      "id": 64,
+      "type": "GetNode",
+      "pos": [1772.3216255147072, 1529.6768919174692],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [65]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 67,
+      "type": "MaskToImage",
+      "pos": [1671.0587942220664, 1320.4530155455905],
+      "size": [193.2779296875, 26],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [69]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 65,
+      "type": "ImageResizeKJv2",
+      "pos": [1975.8542358555273, 1321.4225934298624],
+      "size": [270, 336],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 69
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 64
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [62]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 62,
+      "type": "GetNode",
+      "pos": [2353.4860567140017, 1461.4837440437593],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [63]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["fps"],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 54,
+      "type": "GetNode",
+      "pos": [2359.9225240204723, -188.45102656752667],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [52]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 55,
+      "type": "GetNode",
+      "pos": [2356.2414699153087, -131.76540413570274],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [53]
+        }
+      ],
+      "title": "Get_height",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["height"],
+      "widgets_values_named": {
+        "Constant": "height"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 53,
+      "type": "ImageResizeKJv2",
+      "pos": [2538.024838719043, -311.00514790525193],
+      "size": [270, 336],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 54
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 52
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [55]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 63,
+      "type": "GetNode",
+      "pos": [1770.566373757158, 1469.938205267486],
+      "size": [210, 34],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [64]
+        }
+      ],
+      "title": "Get_width",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["width"],
+      "widgets_values_named": {
+        "Constant": "width"
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 90,
+      "type": "ImageFromBatch",
+      "pos": [1224.8836232161439, 548.3112288758996],
+      "size": [210, 82],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [98]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch",
+        "cnr_id": "comfy-core",
+        "ver": "0.4.0"
+      },
+      "widgets_values": [0, 1],
+      "widgets_values_named": {
+        "batch_index": 0,
+        "length": 1
+      },
+      "shape": 1
+    },
+    {
+      "id": 91,
+      "type": "GetNode",
+      "pos": [893.3246733241941, 380.3316850379773],
+      "size": [210, 50],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [95, 99]
+        }
+      ],
+      "title": "Get_source",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 92,
+      "type": "LoadSAM3Model",
+      "pos": [2362.3757848927494, 374.1929611989485],
+      "size": [310, 82],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "sam3_model",
+          "type": "SAM3_MODEL",
+          "links": [93]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadSAM3Model",
+        "cnr_id": "comfyui-sam3",
+        "ver": "29ceca1e0692ea84700ccce1aeadadf2eb644322"
+      },
+      "widgets_values": ["models/sam3/sam3.pt"],
+      "widgets_values_named": {
+        "model_path": "models/sam3/sam3.pt"
+      },
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "VHS_VideoCombine",
+      "pos": [2198.793595202068, 2479.648291799183],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 47
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "DEPTH PASS",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "depth",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "bfa6070778e4fc3618dce8929dbccb3dd1e54e38bab5521d1def0a0ea298e4a7.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "depth_00001.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "depth",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "bfa6070778e4fc3618dce8929dbccb3dd1e54e38bab5521d1def0a0ea298e4a7.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "depth_00001.png"
+          },
+          "paused": false
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 39,
+      "type": "VHS_VideoCombine",
+      "pos": [2174.431342830427, 3232.9534982742343],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "NORMALS PASS",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "normals",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "cd861a3cda85eb0b35f037ffe5024e7a4adff7623cb04f018defcd96da9062d9.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "normals_00001.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "normals",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "cd861a3cda85eb0b35f037ffe5024e7a4adff7623cb04f018defcd96da9062d9.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "normals_00001.png"
+          },
+          "paused": false
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 14,
+      "type": "VHS_VideoCombine",
+      "pos": [2426.654779115697, -1043.1250952176965],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 59
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 12
+        },
+        {
+          "label": "Output Name (Prompt Matte 1):",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "MATTE 1",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_1",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "343edb1cbbb84d977e1dc528ef7d3fb29290861c227c1492b1bf94beb33e2529.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_1_00002.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_1",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "343edb1cbbb84d977e1dc528ef7d3fb29290861c227c1492b1bf94beb33e2529.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_1_00002.png"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 61,
+      "type": "VHS_VideoCombine",
+      "pos": [2540.5001440938927, 1315.865928747573],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 62
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 63
+        },
+        {
+          "label": "Output Name (Face Mattes):",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "BEAUTY MATTES",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_4",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "41461f3fa6ce223d016b56109436e494ae8cb0887de46286a3f112416ba27821.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_3_00004.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_4",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "41461f3fa6ce223d016b56109436e494ae8cb0887de46286a3f112416ba27821.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_3_00004.png"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "SetNode",
+      "pos": [320.69965235966635, -1019.404228962388],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_source",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "source"
+      },
+      "widgets_values": ["source"],
+      "widgets_values_named": {
+        "Constant": "source"
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 24,
+      "type": "GetNode",
+      "pos": [921.8145769915619, -947.3988072276909],
+      "size": [210, 58],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [24]
+        }
+      ],
+      "title": "Get_prompt",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["prompt"],
+      "widgets_values_named": {
+        "Constant": "prompt"
+      }
+    },
+    {
+      "id": 17,
+      "type": "TextBox1",
+      "pos": [-105.51401373222103, -271.53200753553193],
+      "size": [262.82421875, 152.5390625],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "What do you want to Matte?",
+          "name": "text1",
+          "type": "STRING",
+          "widget": {
+            "name": "text1"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text1",
+          "type": "STRING",
+          "links": [22]
+        }
+      ],
+      "title": "Object Prompt",
+      "properties": {
+        "Node name for S&R": "TextBox1",
+        "cnr_id": "RES4LYF",
+        "ver": "0dc91c00c4c3fb38e7874fcd7a2a327765e8882c",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": ["person"],
+      "widgets_values_named": {
+        "text1": "person"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "GetNode",
+      "pos": [885.2574479056234, -195.06255004982245],
+      "size": [210, 60],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [23]
+        }
+      ],
+      "title": "Get_prompt",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": ["prompt"],
+      "widgets_values_named": {
+        "Constant": "prompt"
+      }
+    },
+    {
+      "id": 19,
+      "type": "LoadSAM3Model",
+      "pos": [1436.2969160944867, -351.3384877081457],
+      "size": [270, 90],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "sam3_model",
+          "type": "SAM3_MODEL",
+          "links": [15]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadSAM3Model",
+        "cnr_id": "comfyui-sam3",
+        "ver": "978bb763cfadcad41363eba016e57686b414c27b",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": ["models/sam3/sam3.pt"],
+      "widgets_values_named": {
+        "model_path": "models/sam3/sam3.pt"
+      }
+    },
+    {
+      "id": 18,
+      "type": "SAM3Propagate",
+      "pos": [1403.1380462022125, -296.374772234957],
+      "size": [270, 205.546875],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam3_model",
+          "type": "SAM3_MODEL",
+          "link": 15
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "type": "SAM3_VIDEO_MASKS",
+          "links": [17]
+        },
+        {
+          "name": "scores",
+          "type": "SAM3_VIDEO_SCORES",
+          "links": [19]
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "links": [18]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3Propagate",
+        "cnr_id": "comfyui-sam3",
+        "ver": "978bb763cfadcad41363eba016e57686b414c27b",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [0, -1, "both", false],
+      "widgets_values_named": {
+        "start_frame": 0,
+        "end_frame": -1,
+        "direction": "both",
+        "offload_model": false
+      }
+    },
+    {
+      "id": 20,
+      "type": "SAM3VideoOutput",
+      "pos": [1752.9941378331655, -295.64953490468093],
+      "size": [270, 150],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "masks",
+          "type": "SAM3_VIDEO_MASKS",
+          "link": 17
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "link": 18
+        },
+        {
+          "name": "scores",
+          "shape": 7,
+          "type": "SAM3_VIDEO_SCORES",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "type": "MASK",
+          "links": [25]
+        },
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3VideoOutput",
+        "cnr_id": "comfyui-sam3",
+        "ver": "978bb763cfadcad41363eba016e57686b414c27b",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [-1, true],
+      "widgets_values_named": {
+        "obj_id": -1,
+        "plot_all_masks": true
+      }
+    },
+    {
+      "id": 26,
+      "type": "VHS_VideoCombine",
+      "pos": [3149.5286088222815, -322.7597969780932],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 55
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 26
+        },
+        {
+          "label": "Output Name (Prompt Matte 2):",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "MATTE 2",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_2",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "a5b65e0a1c14e11425419982e1d8bd6d0c276328609c7a0caf3fdb5cb74aed94.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_2_00001.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_2",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "a5b65e0a1c14e11425419982e1d8bd6d0c276328609c7a0caf3fdb5cb74aed94.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_2_00001.png"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 89,
+      "type": "SAM3PointCollector",
+      "pos": [1484.0835743880189, 543.1112166688683],
+      "size": [407.96493126532914, 358],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive_points",
+          "type": "SAM3_POINTS_PROMPT",
+          "links": [96]
+        },
+        {
+          "name": "negative_points",
+          "type": "SAM3_POINTS_PROMPT",
+          "links": [97]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3PointCollector",
+        "cnr_id": "comfyui-sam3",
+        "ver": "2ca51edf91962eacba4e102158b65b0cda8432dd"
+      },
+      "widgets_values": [
+        "{\"positive\":[{\"x\":639.3392401688973,\"y\":161.28468577884667},{\"x\":654.6042907591711,\"y\":281.71285378550704},{\"x\":590.1518549335707,\"y\":290.1937106873845},{\"x\":664.7809911526871,\"y\":376.69845108653493},{\"x\":732.6256604427927,\"y\":308.85159587151503}],\"negative\":[{\"x\":902.2373336680569,\"y\":229.1315409938666},{\"x\":1095.594641144858,\"y\":329.205652436021},{\"x\":1073.5451236255738,\"y\":505.6074759950728},{\"x\":919.1985009905834,\"y\":595.5045591549742},{\"x\":637.6431234366447,\"y\":624.3394726213577},{\"x\":369.6566797407273,\"y\":546.3155891240847},{\"x\":256.01685867980024,\"y\":412.3180500744204},{\"x\":218.7022905702421,\"y\":276.62433964438054},{\"x\":349.30327895369555,\"y\":173.15788544147514},{\"x\":328.9498781666639,\"y\":134.14594369283867},{\"x\":128.8081037608521,\"y\":193.51194200598113},{\"x\":473.1198004081384,\"y\":520.8730184184523}]}",
+        "[{\"x\":639.3392401688973,\"y\":161.28468577884667},{\"x\":654.6042907591711,\"y\":281.71285378550704},{\"x\":590.1518549335707,\"y\":290.1937106873845},{\"x\":664.7809911526871,\"y\":376.69845108653493},{\"x\":732.6256604427927,\"y\":308.85159587151503}]",
+        "[{\"x\":902.2373336680569,\"y\":229.1315409938666},{\"x\":1095.594641144858,\"y\":329.205652436021},{\"x\":1073.5451236255738,\"y\":505.6074759950728},{\"x\":919.1985009905834,\"y\":595.5045591549742},{\"x\":637.6431234366447,\"y\":624.3394726213577},{\"x\":369.6566797407273,\"y\":546.3155891240847},{\"x\":256.01685867980024,\"y\":412.3180500744204},{\"x\":218.7022905702421,\"y\":276.62433964438054},{\"x\":349.30327895369555,\"y\":173.15788544147514},{\"x\":328.9498781666639,\"y\":134.14594369283867},{\"x\":128.8081037608521,\"y\":193.51194200598113},{\"x\":473.1198004081384,\"y\":520.8730184184523}]",
+        ""
+      ],
+      "widgets_values_named": {
+        "points_store": "{\"positive\":[{\"x\":639.3392401688973,\"y\":161.28468577884667},{\"x\":654.6042907591711,\"y\":281.71285378550704},{\"x\":590.1518549335707,\"y\":290.1937106873845},{\"x\":664.7809911526871,\"y\":376.69845108653493},{\"x\":732.6256604427927,\"y\":308.85159587151503}],\"negative\":[{\"x\":902.2373336680569,\"y\":229.1315409938666},{\"x\":1095.594641144858,\"y\":329.205652436021},{\"x\":1073.5451236255738,\"y\":505.6074759950728},{\"x\":919.1985009905834,\"y\":595.5045591549742},{\"x\":637.6431234366447,\"y\":624.3394726213577},{\"x\":369.6566797407273,\"y\":546.3155891240847},{\"x\":256.01685867980024,\"y\":412.3180500744204},{\"x\":218.7022905702421,\"y\":276.62433964438054},{\"x\":349.30327895369555,\"y\":173.15788544147514},{\"x\":328.9498781666639,\"y\":134.14594369283867},{\"x\":128.8081037608521,\"y\":193.51194200598113},{\"x\":473.1198004081384,\"y\":520.8730184184523}]}",
+        "coordinates": "[{\"x\":639.3392401688973,\"y\":161.28468577884667},{\"x\":654.6042907591711,\"y\":281.71285378550704},{\"x\":590.1518549335707,\"y\":290.1937106873845},{\"x\":664.7809911526871,\"y\":376.69845108653493},{\"x\":732.6256604427927,\"y\":308.85159587151503}]",
+        "neg_coordinates": "[{\"x\":902.2373336680569,\"y\":229.1315409938666},{\"x\":1095.594641144858,\"y\":329.205652436021},{\"x\":1073.5451236255738,\"y\":505.6074759950728},{\"x\":919.1985009905834,\"y\":595.5045591549742},{\"x\":637.6431234366447,\"y\":624.3394726213577},{\"x\":369.6566797407273,\"y\":546.3155891240847},{\"x\":256.01685867980024,\"y\":412.3180500744204},{\"x\":218.7022905702421,\"y\":276.62433964438054},{\"x\":349.30327895369555,\"y\":173.15788544147514},{\"x\":328.9498781666639,\"y\":134.14594369283867},{\"x\":128.8081037608521,\"y\":193.51194200598113},{\"x\":473.1198004081384,\"y\":520.8730184184523}]",
+        "canvas": ""
+      },
+      "shape": 1
+    },
+    {
+      "id": 88,
+      "type": "SAM3VideoSegmentation",
+      "pos": [1974.8836232161445, 498.31122887589976],
+      "size": [270, 146],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "link": 95
+        },
+        {
+          "name": "positive_points",
+          "shape": 7,
+          "type": "SAM3_POINTS_PROMPT",
+          "link": 96
+        },
+        {
+          "name": "negative_points",
+          "shape": 7,
+          "type": "SAM3_POINTS_PROMPT",
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "links": [94]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3VideoSegmentation",
+        "cnr_id": "comfyui-sam3",
+        "ver": "2ca51edf91962eacba4e102158b65b0cda8432dd"
+      },
+      "widgets_values": ["point", 0.3, 0.3],
+      "widgets_values_named": {
+        "prompt_mode": "point",
+        "frame_idx": 0.3,
+        "score_threshold": 0.3
+      },
+      "shape": 1
+    },
+    {
+      "id": 87,
+      "type": "SAM3Propagate",
+      "pos": [2363.5912598000455, 433.2857627460268],
+      "size": [270, 170],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam3_model",
+          "type": "SAM3_MODEL",
+          "link": 93
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "type": "SAM3_VIDEO_MASKS",
+          "links": [90]
+        },
+        {
+          "name": "scores",
+          "type": "SAM3_VIDEO_SCORES",
+          "links": [92]
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "links": [91]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3Propagate",
+        "cnr_id": "comfyui-sam3",
+        "ver": "29ceca1e0692ea84700ccce1aeadadf2eb644322"
+      },
+      "widgets_values": [0, -1, "both", false],
+      "widgets_values_named": {
+        "start_frame": 0,
+        "end_frame": -1,
+        "direction": "both",
+        "offload_model": false
+      },
+      "shape": 1
+    },
+    {
+      "id": 86,
+      "type": "SAM3VideoOutput",
+      "pos": [2687.8887099080957, 433.56877924779394],
+      "size": [270, 122],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "masks",
+          "type": "SAM3_VIDEO_MASKS",
+          "link": 90
+        },
+        {
+          "name": "video_state",
+          "type": "SAM3_VIDEO_STATE",
+          "link": 91
+        },
+        {
+          "name": "scores",
+          "shape": 7,
+          "type": "SAM3_VIDEO_SCORES",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "type": "MASK",
+          "links": [89]
+        },
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "visualization",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAM3VideoOutput",
+        "cnr_id": "comfyui-sam3",
+        "ver": "2ca51edf91962eacba4e102158b65b0cda8432dd"
+      },
+      "widgets_values": [-1, true],
+      "widgets_values_named": {
+        "obj_id": -1,
+        "plot_all_masks": true
+      },
+      "shape": 1
+    },
+    {
+      "id": 85,
+      "type": "MaskToImage",
+      "pos": [3029.6979250174923, 431.9523623138242],
+      "size": [193.3166717529297, 26],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [100]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.70"
+      },
+      "shape": 1
+    },
+    {
+      "id": 50,
+      "type": "ImageResizeKJv2",
+      "pos": [3325.5470717757626, 432.71971382799615],
+      "size": [270, 336.00000000000006],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 100
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 48
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [51]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ],
+      "widgets_values_named": {
+        "width": 512,
+        "height": 512,
+        "upscale_method": "nearest-exact",
+        "keep_proportion": "stretch",
+        "pad_color": "0, 0, 0",
+        "crop_position": "center",
+        "divisible_by": 2,
+        "device": "cpu"
+      }
+    },
+    {
+      "id": 31,
+      "type": "VHS_VideoCombine",
+      "pos": [3791.0292940922427, 428.1286268598607],
+      "size": [319.1796875, 334],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 30
+        },
+        {
+          "label": "Output Name (Points Matte):",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "title": "MATTE 3",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_3",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "fed38a7045f8819255df152b4c2223d11f437dcad49dc72df2233f5c0b1691c7.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_3_00003.png"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "alpha_3",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 12,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "filename": "fed38a7045f8819255df152b4c2223d11f437dcad49dc72df2233f5c0b1691c7.mp4",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "fullpath": "",
+            "subfolder": "",
+            "type": "output",
+            "workflow": "alpha_3_00003.png"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 60,
+      "type": "FaceSegment",
+      "pos": [1213.2602827822204, 1302.3806129213142],
+      "size": [340, 580],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [68]
+        },
+        {
+          "name": "MASK_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceSegment"
+      },
+      "widgets_values": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        512,
+        0,
+        0,
+        false,
+        "Alpha",
+        "#222222"
+      ],
+      "widgets_values_named": {
+        "Skin": false,
+        "Nose": false,
+        "Eyeglasses": false,
+        "Left-eye": true,
+        "Right-eye": true,
+        "Left-eyebrow": true,
+        "Right-eyebrow": true,
+        "Left-ear": false,
+        "Right-ear": false,
+        "Mouth": false,
+        "Upper-lip": false,
+        "Lower-lip": false,
+        "Hair": false,
+        "Earring": false,
+        "Neck": false,
+        "process_res": 512,
+        "mask_blur": 0,
+        "mask_offset": 0,
+        "invert_output": false,
+        "background": "Alpha",
+        "background_color": "#222222"
+      },
+      "color": "#222e40",
+      "bgcolor": "#364254"
+    },
+    {
+      "id": 6,
+      "type": "VHS_LoadVideo",
+      "pos": [-304.8055507001955, -1049.3808618787298],
+      "size": [307.7604166666667, 482.2682291666667],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [7]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [4]
+        }
+      ],
+      "title": "SOURCE",
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "77fcc9512c2fd37409261685a39f805b8a735e5b4e85a8e9c80e543e6784d531.mp4",
+        "force_rate": 24,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "custom_height": 0,
+            "custom_width": 0,
+            "filename": "77fcc9512c2fd37409261685a39f805b8a735e5b4e85a8e9c80e543e6784d531.mp4",
+            "force_rate": 24,
+            "format": "video/mp4",
+            "frame_load_cap": 0,
+            "select_every_nth": 1,
+            "skip_first_frames": 0,
+            "type": "input"
+          },
+          "paused": false
+        }
+      },
+      "widgets_values_named": {
+        "video": "77fcc9512c2fd37409261685a39f805b8a735e5b4e85a8e9c80e543e6784d531.mp4",
+        "force_rate": 24,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "params": {
+            "custom_height": 0,
+            "custom_width": 0,
+            "filename": "77fcc9512c2fd37409261685a39f805b8a735e5b4e85a8e9c80e543e6784d531.mp4",
+            "force_rate": 24,
+            "format": "video/mp4",
+            "frame_load_cap": 0,
+            "select_every_nth": 1,
+            "skip_first_frames": 0,
+            "type": "input"
+          },
+          "paused": false
+        }
+      }
+    },
+    {
+      "id": 100,
+      "type": "MarkdownNote",
+      "pos": [-942.6692135870647, -1100.7568953888917],
+      "size": [545.6189607430179, 1185.706411697231],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "## VFX Utilities Workflow – Quick Guide\n\nA streamlined ComfyUI workflow for generating production-ready utility passes from footage or images. Designed to speed up compositing, look dev, and integration tasks.\n\n---\n\n## What This Workflow Generates\n\n### 1. Alpha Passes (3 Methods)\n\n* **RMBG (Prompt-Based Background Removal)**\n  Quickly isolates a subject using a text prompt\n  Best for clean, obvious foreground subjects\n\n* **SAM3 Prompt (Text-Based Segmentation)**\n  More precise segmentation using prompt-driven masking\n  Better control than RMBG for complex shapes\n\n* **SAM3 Points Editor (Interactive Selection)**\n  Uses positive and negative click points\n  Best for detailed, manual control and tricky edges\n\n---\n\n### 2. Normal Pass\n\n* Generates surface direction information\n* Useful for relighting, compositing, and 3D integration\n\n---\n\n### 3. Depth Pass\n\n* Creates a grayscale depth map\n* Used for depth of field, fog, atmosphere, and layering\n\n---\n\n## How to Use the Workflow\n\n### Step 1 – Load Your Plate\n\n* Import your image or frame sequence\n* This becomes the source for all generated passes\n\n---\n\n### Step 2 – Choose Your Alpha Method\n\n#### Option A – RMBG\n\n* Enter a simple prompt describing your subject\n  Example: `person`, `car`, `tree`\n* Run the workflow to generate a clean alpha\n\n#### Option B – SAM3 Prompt\n\n* Enter a more descriptive prompt\n  Example: `man wearing a hat`\n* Produces more refined segmentation\n\n#### Option C – SAM3 Points Editor\n\n* Add **positive points** on the subject\n* Add **negative points** on the background\n* Best for precision work\n\n---\n\n### Step 3 – Generate Utility Passes\n\n* Enable the passes you need:\n\n  * Alpha\n  * Normals\n  * Depth\n* Run the workflow\n\n---\n\n### Step 4 – Review Outputs\n\n* Outputs are generated as separate images:\n\n  * **Alpha Mask** (black and white matte)\n  * **Normal Map** (RGB directional data)\n  * **Depth Map** (grayscale distance)\n\n---\n\n## Key Tips\n\n* **Mask Quality Matters**\n  Cleaner alpha = better downstream results\n\n* **Use Points Editor for Hero Shots**\n  Especially when edges matter (hair, fingers, props)\n\n* **Normals + Depth = Power Combo**\n  Great for relighting and atmospheric effects in comp\n\n* **Iterate Quickly**\n  Prompts and points can be adjusted in seconds\n\n---\n\n## When to Use This\n\n* Rough Rotoscoping\n* Prepping utility elements for comp\n* Generating depth for different VFX use cases\n* Creating essential passes for relighting\n"
+      ],
+      "widgets_values_named": {
+        "text": "## VFX Utilities Workflow – Quick Guide\n\nA streamlined ComfyUI workflow for generating production-ready utility passes from footage or images. Designed to speed up compositing, look dev, and integration tasks.\n\n---\n\n## What This Workflow Generates\n\n### 1. Alpha Passes (3 Methods)\n\n* **RMBG (Prompt-Based Background Removal)**\n  Quickly isolates a subject using a text prompt\n  Best for clean, obvious foreground subjects\n\n* **SAM3 Prompt (Text-Based Segmentation)**\n  More precise segmentation using prompt-driven masking\n  Better control than RMBG for complex shapes\n\n* **SAM3 Points Editor (Interactive Selection)**\n  Uses positive and negative click points\n  Best for detailed, manual control and tricky edges\n\n---\n\n### 2. Normal Pass\n\n* Generates surface direction information\n* Useful for relighting, compositing, and 3D integration\n\n---\n\n### 3. Depth Pass\n\n* Creates a grayscale depth map\n* Used for depth of field, fog, atmosphere, and layering\n\n---\n\n## How to Use the Workflow\n\n### Step 1 – Load Your Plate\n\n* Import your image or frame sequence\n* This becomes the source for all generated passes\n\n---\n\n### Step 2 – Choose Your Alpha Method\n\n#### Option A – RMBG\n\n* Enter a simple prompt describing your subject\n  Example: `person`, `car`, `tree`\n* Run the workflow to generate a clean alpha\n\n#### Option B – SAM3 Prompt\n\n* Enter a more descriptive prompt\n  Example: `man wearing a hat`\n* Produces more refined segmentation\n\n#### Option C – SAM3 Points Editor\n\n* Add **positive points** on the subject\n* Add **negative points** on the background\n* Best for precision work\n\n---\n\n### Step 3 – Generate Utility Passes\n\n* Enable the passes you need:\n\n  * Alpha\n  * Normals\n  * Depth\n* Run the workflow\n\n---\n\n### Step 4 – Review Outputs\n\n* Outputs are generated as separate images:\n\n  * **Alpha Mask** (black and white matte)\n  * **Normal Map** (RGB directional data)\n  * **Depth Map** (grayscale distance)\n\n---\n\n## Key Tips\n\n* **Mask Quality Matters**\n  Cleaner alpha = better downstream results\n\n* **Use Points Editor for Hero Shots**\n  Especially when edges matter (hair, fingers, props)\n\n* **Normals + Depth = Power Combo**\n  Great for relighting and atmospheric effects in comp\n\n* **Iterate Quickly**\n  Prompts and points can be adjusted in seconds\n\n---\n\n## When to Use This\n\n* Rough Rotoscoping\n* Prepping utility elements for comp\n* Generating depth for different VFX use cases\n* Creating essential passes for relighting\n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [1, 7, 0, 3, 0, "FLOAT"],
+    [3, 5, 0, 4, 4, "FLOAT"],
+    [4, 6, 3, 7, 0, "VHS_VIDEOINFO"],
+    [5, 2, 0, 8, 0, "DAMODEL"],
+    [7, 6, 0, 9, 0, "IMAGE"],
+    [8, 10, 0, 8, 1, "IMAGE"],
+    [9, 7, 3, 11, 0, "INT"],
+    [10, 7, 4, 12, 0, "INT"],
+    [11, 13, 0, 1, 0, "IMAGE"],
+    [12, 15, 0, 14, 4, "FLOAT"],
+    [15, 19, 0, 18, 0, "SAM3_MODEL"],
+    [16, 16, 0, 18, 1, "SAM3_VIDEO_STATE"],
+    [17, 18, 0, 20, 0, "SAM3_VIDEO_MASKS"],
+    [18, 18, 2, 20, 1, "SAM3_VIDEO_STATE"],
+    [19, 18, 1, 20, 2, "SAM3_VIDEO_SCORES"],
+    [20, 21, 0, 16, 0, "IMAGE"],
+    [22, 17, 0, 22, 0, "STRING"],
+    [23, 23, 0, 16, 6, "STRING"],
+    [24, 24, 0, 1, 1, "STRING"],
+    [25, 20, 0, 25, 0, "MASK"],
+    [26, 27, 0, 26, 4, "FLOAT"],
+    [30, 32, 0, 31, 4, "FLOAT"],
+    [36, 38, 0, 37, 0, "IMAGE"],
+    [37, 40, 0, 39, 4, "FLOAT"],
+    [40, 37, 0, 44, 0, "IMAGE"],
+    [41, 44, 0, 39, 0, "IMAGE"],
+    [42, 45, 0, 44, 2, "INT"],
+    [43, 46, 0, 44, 3, "INT"],
+    [44, 48, 0, 47, 2, "INT"],
+    [45, 49, 0, 47, 3, "INT"],
+    [46, 8, 0, 47, 0, "IMAGE"],
+    [47, 47, 0, 4, 0, "IMAGE"],
+    [48, 51, 0, 50, 2, "INT"],
+    [49, 52, 0, 50, 3, "INT"],
+    [51, 50, 0, 31, 0, "IMAGE"],
+    [52, 54, 0, 53, 2, "INT"],
+    [53, 55, 0, 53, 3, "INT"],
+    [54, 25, 0, 53, 0, "IMAGE"],
+    [55, 53, 0, 26, 0, "IMAGE"],
+    [56, 57, 0, 56, 2, "INT"],
+    [57, 58, 0, 56, 3, "INT"],
+    [59, 56, 0, 14, 0, "IMAGE"],
+    [60, 1, 1, 59, 0, "MASK"],
+    [61, 59, 0, 56, 0, "IMAGE"],
+    [62, 65, 0, 61, 0, "IMAGE"],
+    [63, 62, 0, 61, 4, "FLOAT"],
+    [64, 63, 0, 65, 2, "INT"],
+    [65, 64, 0, 65, 3, "INT"],
+    [67, 66, 0, 60, 0, "IMAGE"],
+    [68, 60, 1, 67, 0, "MASK"],
+    [69, 67, 0, 65, 0, "IMAGE"],
+    [89, 86, 0, 85, 0, "MASK"],
+    [90, 87, 0, 86, 0, "SAM3_VIDEO_MASKS"],
+    [91, 87, 2, 86, 1, "SAM3_VIDEO_STATE"],
+    [92, 87, 1, 86, 2, "SAM3_VIDEO_SCORES"],
+    [93, 92, 0, 87, 0, "SAM3_MODEL"],
+    [94, 88, 0, 87, 1, "SAM3_VIDEO_STATE"],
+    [95, 91, 0, 88, 0, "IMAGE"],
+    [96, 89, 0, 88, 1, "SAM3_POINTS_PROMPT"],
+    [97, 89, 1, 88, 2, "SAM3_POINTS_PROMPT"],
+    [98, 90, 0, 89, 0, "IMAGE"],
+    [99, 91, 0, 90, 0, "IMAGE"],
+    [100, 85, 0, 50, 0, "IMAGE"]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "SOURCE",
+      "bounding": [
+        -327.125530558594, -1137.9408685925976, 818.5843344332219,
+        695.3604166666668
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "RMBG",
+      "bounding": [
+        844.5699896400769, -1145.8338657591037, 2086.4164804201737,
+        657.2322038389743
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "SET PROMPT",
+      "bounding": [
+        -204.53127585990617, -383.78419391858824, 597.0420962697975,
+        321.6424488830562
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "SAM3 PROMPT",
+      "bounding": [
+        842.5190244136733, -448.3230929081459, 2692.3029542737145,
+        671.5118956459677
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "SAM3 POINTS",
+      "bounding": [
+        840.0419318623607, 265.16692425144674, 3377.4542695668206,
+        806.2446640953162
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "DEPTH PASS",
+      "bounding": [
+        846.7289694083847, 2370.2704808577328, 1732.2717648901403,
+        699.6983128652439
+      ],
+      "color": "#8AA",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "NORMALS PASS",
+      "bounding": [
+        862.667385485712, 3100.8650501504558, 1708.2353606975191,
+        692.9432814033216
+      ],
+      "color": "#8AA",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "FACE SEGMENTATION",
+      "bounding": [
+        835.135518864588, 1199.400640508564, 2194.9119737838964,
+        733.7538155999998
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8978583955973066,
+      "offset": [-2543.0274695215767, -41.93023857102844]
+    },
+    "linearData": {
+      "inputs": [
+        [6, "choose video to upload"],
+        [17, "text1"],
+        [60, "Skin"],
+        [60, "Nose"],
+        [60, "Eyeglasses"],
+        [60, "Left-eye"],
+        [60, "Right-eye"],
+        [60, "Left-eyebrow"],
+        [60, "Right-eyebrow"],
+        [60, "Left-ear"],
+        [60, "Right-ear"],
+        [60, "Mouth"],
+        [60, "Upper-lip"],
+        [60, "Lower-lip"],
+        [60, "Hair"],
+        [60, "Earring"],
+        [60, "Neck"],
+        [89, "canvas"],
+        [61, "filename_prefix"],
+        [31, "filename_prefix"],
+        [26, "filename_prefix"],
+        [14, "filename_prefix"]
+      ],
+      "outputs": [14, 26, 31, 39, 61, 4]
+    },
+    "linearMode": false,
+    "reroutes": [
+      {
+        "id": 5,
+        "parentId": 6,
+        "pos": [1973.3246733241947, 370.3316850379773],
+        "linkIds": [95]
+      },
+      {
+        "id": 6,
+        "pos": [1213.324673324194, 370.3316850379773],
+        "linkIds": [95, 99]
+      }
+    ],
+    "linkExtensions": [
+      {
+        "id": 95,
+        "parentId": 5
+      },
+      {
+        "id": 99,
+        "parentId": 6
+      }
+    ],
+    "frontendVersion": "1.59.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
