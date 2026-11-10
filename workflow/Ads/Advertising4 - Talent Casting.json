@@ -7,14 +7,8 @@
     {
       "id": 1,
       "type": "SaveImage",
-      "pos": [
-        1530,
-        3720
-      ],
-      "size": [
-        990,
-        610
-      ],
+      "pos": [1530, 3720],
+      "size": [990, 610],
       "flags": {},
       "order": 13,
       "mode": 0,
@@ -33,9 +27,7 @@
         }
       ],
       "properties": {},
-      "widgets_values": [
-        "Casting_Previs"
-      ],
+      "widgets_values": ["Casting_Previs"],
       "widgets_values_named": {
         "filename_prefix": "Casting_Previs"
       }
@@ -43,14 +35,8 @@
     {
       "id": 11,
       "type": "LoadImage",
-      "pos": [
-        -580,
-        3630
-      ],
-      "size": [
-        930,
-        1040
-      ],
+      "pos": [-580, 3630],
+      "size": [930, 1040],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -59,10 +45,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            39,
-            45
-          ]
+          "links": [39, 45]
         },
         {
           "name": "MASK",
@@ -88,14 +71,8 @@
     {
       "id": 13,
       "type": "LoadImage",
-      "pos": [
-        720,
-        4050
-      ],
-      "size": [
-        280,
-        340
-      ],
+      "pos": [720, 4050],
+      "size": [280, 340],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -104,9 +81,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            40
-          ]
+          "links": [40]
         },
         {
           "name": "MASK",
@@ -132,14 +107,8 @@
     {
       "id": 14,
       "type": "PrimitiveNode",
-      "pos": [
-        440,
-        3760
-      ],
-      "size": [
-        560,
-        250
-      ],
+      "pos": [440, 3760],
+      "size": [560, 250],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -151,9 +120,7 @@
           "widget": {
             "name": "string_b"
           },
-          "links": [
-            23
-          ]
+          "links": [23]
         }
       ],
       "title": "DESCRIBE YOUR SCENE",
@@ -172,14 +139,8 @@
     {
       "id": 15,
       "type": "LoadImage",
-      "pos": [
-        440,
-        4050
-      ],
-      "size": [
-        270,
-        340
-      ],
+      "pos": [440, 4050],
+      "size": [270, 340],
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -188,10 +149,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            38,
-            50
-          ]
+          "links": [38, 50]
         },
         {
           "name": "MASK",
@@ -217,14 +175,8 @@
     {
       "id": 17,
       "type": "StringConcatenate",
-      "pos": [
-        1070,
-        3770
-      ],
-      "size": [
-        225,
-        34
-      ],
+      "pos": [1070, 3770],
+      "size": [225, 34],
       "flags": {
         "collapsed": true
       },
@@ -244,9 +196,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            41
-          ]
+          "links": [41]
         }
       ],
       "properties": {
@@ -266,14 +216,8 @@
     {
       "id": 18,
       "type": "ImageBatchMulti",
-      "pos": [
-        1070,
-        3720
-      ],
-      "size": [
-        225,
-        74
-      ],
+      "pos": [1070, 3720],
+      "size": [225, 74],
       "flags": {
         "collapsed": true
       },
@@ -302,16 +246,11 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "links": [
-            42
-          ]
+          "links": [42]
         }
       ],
       "properties": {},
-      "widgets_values": [
-        3,
-        null
-      ],
+      "widgets_values": [3, null],
       "widgets_values_named": {
         "inputcount": 3,
         "Update inputs": null
@@ -320,14 +259,8 @@
     {
       "id": 19,
       "type": "GeminiImage2Node",
-      "pos": [
-        1070,
-        3830
-      ],
-      "size": [
-        410,
-        380
-      ],
+      "pos": [1070, 3830],
+      "size": [410, 380],
       "flags": {},
       "order": 11,
       "mode": 0,
@@ -357,9 +290,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            43
-          ]
+          "links": [43]
         },
         {
           "name": "STRING",
@@ -396,14 +327,8 @@
     {
       "id": 20,
       "type": "KlingOmniProImageToVideoNode",
-      "pos": [
-        1080,
-        4720
-      ],
-      "size": [
-        400,
-        337
-      ],
+      "pos": [1080, 4720],
+      "size": [400, 337],
       "flags": {},
       "order": 12,
       "mode": 0,
@@ -426,9 +351,7 @@
         {
           "name": "VIDEO",
           "type": "VIDEO",
-          "links": [
-            49
-          ]
+          "links": [49]
         }
       ],
       "properties": {
@@ -462,14 +385,8 @@
     {
       "id": 22,
       "type": "LoadImage",
-      "pos": [
-        440,
-        4880
-      ],
-      "size": [
-        530,
-        490
-      ],
+      "pos": [440, 4880],
+      "size": [530, 490],
       "flags": {},
       "order": 4,
       "mode": 0,
@@ -478,9 +395,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            46
-          ]
+          "links": [46]
         },
         {
           "name": "MASK",
@@ -506,14 +421,8 @@
     {
       "id": 23,
       "type": "ImageBatchMulti",
-      "pos": [
-        1110,
-        4610
-      ],
-      "size": [
-        225,
-        74
-      ],
+      "pos": [1110, 4610],
+      "size": [225, 74],
       "flags": {
         "collapsed": true
       },
@@ -542,16 +451,11 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "links": [
-            44
-          ]
+          "links": [44]
         }
       ],
       "properties": {},
-      "widgets_values": [
-        3,
-        null
-      ],
+      "widgets_values": [3, null],
       "widgets_values_named": {
         "inputcount": 3,
         "Update inputs": null
@@ -560,14 +464,8 @@
     {
       "id": 24,
       "type": "StringConcatenate",
-      "pos": [
-        1110,
-        4660
-      ],
-      "size": [
-        225,
-        34
-      ],
+      "pos": [1110, 4660],
+      "size": [225, 34],
       "flags": {
         "collapsed": true
       },
@@ -587,9 +485,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            47
-          ]
+          "links": [47]
         }
       ],
       "properties": {
@@ -609,14 +505,8 @@
     {
       "id": 25,
       "type": "PrimitiveNode",
-      "pos": [
-        440,
-        4640
-      ],
-      "size": [
-        530,
-        190
-      ],
+      "pos": [440, 4640],
+      "size": [530, 190],
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -628,9 +518,7 @@
           "widget": {
             "name": "string_b"
           },
-          "links": [
-            48
-          ]
+          "links": [48]
         }
       ],
       "title": "DESCRIBE YOUR SCENE",
@@ -649,14 +537,8 @@
     {
       "id": 26,
       "type": "SaveVideo",
-      "pos": [
-        1530,
-        4600
-      ],
-      "size": [
-        1000,
-        740
-      ],
+      "pos": [1530, 4600],
+      "size": [1000, 740],
       "flags": {},
       "order": 14,
       "mode": 0,
@@ -675,12 +557,7 @@
         }
       ],
       "properties": {},
-      "widgets_values": [
-        "video/Casting_Previs",
-        "auto",
-        "auto",
-        "auto"
-      ],
+      "widgets_values": ["video/Casting_Previs", "auto", "auto", "auto"],
       "widgets_values_named": {
         "filename_prefix": "video/Casting_Previs",
         "format": "auto",
@@ -691,14 +568,8 @@
     {
       "id": 27,
       "type": "MarkdownNote",
-      "pos": [
-        -580,
-        3330
-      ],
-      "size": [
-        610,
-        250
-      ],
+      "pos": [-580, 3330],
+      "size": [610, 250],
       "flags": {},
       "order": 6,
       "mode": 0,
@@ -717,165 +588,47 @@
     }
   ],
   "links": [
-    [
-      23,
-      14,
-      0,
-      17,
-      0,
-      "STRING"
-    ],
-    [
-      38,
-      15,
-      0,
-      18,
-      1,
-      "IMAGE"
-    ],
-    [
-      39,
-      11,
-      0,
-      18,
-      0,
-      "IMAGE"
-    ],
-    [
-      40,
-      13,
-      0,
-      18,
-      2,
-      "IMAGE"
-    ],
-    [
-      41,
-      17,
-      0,
-      19,
-      2,
-      "STRING"
-    ],
-    [
-      42,
-      18,
-      0,
-      19,
-      0,
-      "IMAGE"
-    ],
-    [
-      43,
-      19,
-      0,
-      1,
-      0,
-      "IMAGE"
-    ],
-    [
-      45,
-      11,
-      0,
-      23,
-      1,
-      "IMAGE"
-    ],
-    [
-      46,
-      22,
-      0,
-      23,
-      0,
-      "IMAGE"
-    ],
-    [
-      48,
-      25,
-      0,
-      24,
-      0,
-      "STRING"
-    ],
-    [
-      50,
-      15,
-      0,
-      23,
-      2,
-      "IMAGE"
-    ],
-    [
-      44,
-      23,
-      0,
-      20,
-      0,
-      "IMAGE"
-    ],
-    [
-      47,
-      24,
-      0,
-      20,
-      1,
-      "STRING"
-    ],
-    [
-      49,
-      20,
-      0,
-      26,
-      0,
-      "VIDEO"
-    ]
+    [23, 14, 0, 17, 0, "STRING"],
+    [38, 15, 0, 18, 1, "IMAGE"],
+    [39, 11, 0, 18, 0, "IMAGE"],
+    [40, 13, 0, 18, 2, "IMAGE"],
+    [41, 17, 0, 19, 2, "STRING"],
+    [42, 18, 0, 19, 0, "IMAGE"],
+    [43, 19, 0, 1, 0, "IMAGE"],
+    [45, 11, 0, 23, 1, "IMAGE"],
+    [46, 22, 0, 23, 0, "IMAGE"],
+    [48, 25, 0, 24, 0, "STRING"],
+    [50, 15, 0, 23, 2, "IMAGE"],
+    [44, 23, 0, 20, 0, "IMAGE"],
+    [47, 24, 0, 20, 1, "STRING"],
+    [49, 20, 0, 26, 0, "VIDEO"]
   ],
   "groups": [
     {
       "id": 2,
       "title": "STEP 1 - PREVIS STILL FRAME",
-      "bounding": [
-        380,
-        3600,
-        2180,
-        850
-      ],
+      "bounding": [380, 3600, 2180, 850],
       "color": "#3f789e",
       "flags": {}
     },
     {
       "id": 3,
       "title": "STEP 2 - PREVIS VIDEO",
-      "bounding": [
-        380,
-        4480,
-        2180,
-        940
-      ],
+      "bounding": [380, 4480, 2180, 940],
       "color": "#3f789e",
       "flags": {}
     },
     {
       "id": 4,
       "title": "INPUT SCENE DESCRIPTION",
-      "bounding": [
-        410,
-        3670,
-        620,
-        750
-      ],
+      "bounding": [410, 3670, 620, 750],
       "color": "#8A8",
       "flags": {}
     },
     {
       "id": 5,
       "title": "INPUT SCENE DESCRIPTION",
-      "bounding": [
-        410,
-        4550,
-        620,
-        840
-      ],
+      "bounding": [410, 4550, 620, 840],
       "color": "#8A8",
       "flags": {}
     }
@@ -888,10 +641,7 @@
     "VHS_latentpreviewrate": 0,
     "ds": {
       "scale": 0.8644798176010873,
-      "offset": [
-        -73.21972063295107,
-        -4273.812964731779
-      ]
+      "offset": [-73.21972063295107, -4273.812964731779]
     },
     "frontendVersion": "1.59.8"
   },

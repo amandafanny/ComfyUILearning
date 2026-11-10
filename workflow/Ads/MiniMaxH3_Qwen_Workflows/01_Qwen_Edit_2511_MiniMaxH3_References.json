@@ -1,0 +1,1908 @@
+{
+  "id": "7a9b3788-924f-470a-9048-06dd57e89239",
+  "revision": 0,
+  "last_node_id": 33,
+  "last_link_id": 39,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        380,
+        80
+      ],
+      "size": [
+        350,
+        120
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "models": [
+          {
+            "name": "qwen_image_edit_2511_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_image_edit_2511_int8_convrot.safetensors",
+        "default"
+      ],
+      "title": "加载 Qwen Image Edit 2511 INT8"
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        380,
+        250
+      ],
+      "size": [
+        350,
+        150
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3,
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "models": [
+          {
+            "name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/HunyuanVideo_1.5_repackaged/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen_image",
+        "default"
+      ],
+      "title": "Qwen 图文编码器"
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        380,
+        450
+      ],
+      "size": [
+        350,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            5,
+            6,
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "models": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ],
+      "title": "Qwen 图像 VAE"
+    },
+    {
+      "id": 4,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        380,
+        610
+      ],
+      "size": [
+        350,
+        100
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        3.1
+      ],
+      "title": "Qwen 采样 shift = 3.1"
+    },
+    {
+      "id": 5,
+      "type": "CFGNorm",
+      "pos": [
+        380,
+        760
+      ],
+      "size": [
+        350,
+        110
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "patched_model",
+          "name": "patched_model",
+          "type": "MODEL",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CFGNorm",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        1,
+        false
+      ],
+      "title": "CFG Norm 1.0"
+    },
+    {
+      "id": 6,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        80
+      ],
+      "size": [
+        330,
+        310
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            8
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "UPLOAD_PERSON.png",
+        "image"
+      ],
+      "title": "参考图1：人物头像（请上传）"
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        440
+      ],
+      "size": [
+        330,
+        310
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9,
+            10
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "UPLOAD_PRODUCT.png",
+        "image"
+      ],
+      "title": "上传参考图 2：商品"
+    },
+    {
+      "id": 8,
+      "type": "LoadImage",
+      "pos": [
+        0,
+        800
+      ],
+      "size": [
+        330,
+        310
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            12
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "UPLOAD_ENVIRONMENT.png",
+        "image"
+      ],
+      "title": "上传参考图 3：环境"
+    },
+    {
+      "id": 9,
+      "type": "TextEncodeQwenImageEditPlus",
+      "pos": [
+        790,
+        80
+      ],
+      "size": [
+        500,
+        460
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "localized_name": "image1",
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "localized_name": "image2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "localized_name": "image3",
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "修改这里：首帧画面与三图角色",
+      "properties": {
+        "Node name for S&R": "TextEncodeQwenImageEditPlus",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "将参考图中的元素合成为一张完整、真实的横屏电影广告首帧，不要做拼贴。第1张图提供人物身份与脸部特征；第2张图提供饮料罐的外观、颜色、标识与比例；第3张图提供网球场环境。画面为中景：人物穿着白色网球服站在网球场球网旁，右手在胸前拿着饮料罐，尚未喝下，表情轻松愉快。保持人物身份与商品主要外观。调整人物姿态、服装、尺度和光线，使其自然融入场景。面部和饮料罐清晰可见，温暖侧光，真实手部，自然肤色，无字幕，无水印。"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 10,
+      "type": "TextEncodeQwenImageEditPlus",
+      "pos": [
+        790,
+        610
+      ],
+      "size": [
+        500,
+        270
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 4
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 6
+        },
+        {
+          "localized_name": "image1",
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "localized_name": "image2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "localized_name": "image3",
+          "name": "image3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextEncodeQwenImageEditPlus",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "title": "负面条件：同样接三参考图"
+    },
+    {
+      "id": 11,
+      "type": "FluxKontextMultiReferenceLatentMethod",
+      "pos": [
+        1350,
+        80
+      ],
+      "size": [
+        330,
+        110
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxKontextMultiReferenceLatentMethod",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "index_timestep_zero"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "title": "正面参考图位置方法"
+    },
+    {
+      "id": 12,
+      "type": "FluxKontextMultiReferenceLatentMethod",
+      "pos": [
+        1350,
+        250
+      ],
+      "size": [
+        330,
+        110
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxKontextMultiReferenceLatentMethod",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [
+        "index_timestep_zero"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "title": "负面参考图位置方法"
+    },
+    {
+      "id": 13,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        1350,
+        430
+      ],
+      "size": [
+        330,
+        150
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        576,
+        1
+      ],
+      "title": "首帧尺寸：修改时同步下方 H3"
+    },
+    {
+      "id": 14,
+      "type": "KSampler",
+      "pos": [
+        1350,
+        660
+      ],
+      "size": [
+        330,
+        420
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        },
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 16
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4"
+      },
+      "widgets_values": [
+        314159265,
+        "fixed",
+        40,
+        4,
+        "euler",
+        "simple",
+        1
+      ],
+      "title": "Qwen Edit 首帧采样：40步 / CFG4"
+    },
+    {
+      "id": 15,
+      "type": "VAEDecode",
+      "pos": [
+        1750,
+        80
+      ],
+      "size": [
+        280,
+        110
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 19
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            21,
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1"
+      },
+      "widgets_values": [],
+      "title": "Qwen 解码：输出首帧 IMAGE"
+    },
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": [
+        1750,
+        280
+      ],
+      "size": [
+        650,
+        650
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 21
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "MiniMaxH3/first_frame_qwen2511_edit"
+      ],
+      "title": "首帧预览与保存"
+    },
+    {
+      "id": 17,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        1420
+      ],
+      "size": [
+        380,
+        140
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            22,
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "title": "H3 视频模型"
+    },
+    {
+      "id": 18,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        1890
+      ],
+      "size": [
+        380,
+        120
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            25,
+            34
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_video_vae_int8_convrot.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_int8_convrot.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_int8_convrot.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+      },
+      "title": "H3 视频 VAE"
+    },
+    {
+      "id": 19,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        1640
+      ],
+      "size": [
+        380,
+        170
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      },
+      "title": "H3 文本与视觉编码器"
+    },
+    {
+      "id": 20,
+      "type": "RandomNoise",
+      "pos": [
+        1040,
+        1420
+      ],
+      "size": [
+        330,
+        120
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "NOISE",
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        42,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 42,
+        "control_after_generate": "fixed"
+      },
+      "title": "H3 随机种子"
+    },
+    {
+      "id": 21,
+      "type": "KSamplerSelect",
+      "pos": [
+        1040,
+        1860
+      ],
+      "size": [
+        330,
+        100
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "SAMPLER",
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "res_multistep"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "res_multistep"
+      },
+      "title": "H3 采样算法"
+    },
+    {
+      "id": 22,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        2090
+      ],
+      "size": [
+        380,
+        120
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "minimax_h3_audio_vae_fp32.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      },
+      "title": "H3 音频 VAE"
+    },
+    {
+      "id": 23,
+      "type": "BasicScheduler",
+      "pos": [
+        1040,
+        1620
+      ],
+      "size": [
+        330,
+        160
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "SIGMAS",
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        20,
+        1
+      ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps": 20,
+        "denoise": 1
+      },
+      "title": "H3 调度：20 步"
+    },
+    {
+      "id": 24,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        460,
+        1420
+      ],
+      "size": [
+        510,
+        520
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 24
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        },
+        {
+          "localized_name": "first_frame",
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 39
+        },
+        {
+          "localized_name": "last_frame",
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            26
+          ]
+        },
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
+      "widgets_values": [
+        "以输入图像为开场首帧，保持人物、服装、产品和环境一致。一个连续镜头：人物自然地端起手中的饮料轻啜一口，随后微笑着看向罐身。相机缓慢向前推进。动作自然克制，不切镜头。声音：安静的球场环境声、轻微衣物摩擦和饮水声，无对白、无背景音乐。",
+        1024,
+        576,
+        124
+      ],
+      "widgets_values_named": {
+        "prompt": "以输入图像为开场首帧，保持人物、服装、产品和环境一致。一个连续镜头：人物自然地端起手中的饮料轻啜一口，随后微笑着看向罐身。相机缓慢向前推进。动作自然克制，不切镜头。声音：安静的球场环境声、轻微衣物摩擦和饮水声，无对白、无背景音乐。",
+        "width": 1024,
+        "height": 576,
+        "length": 124
+      },
+      "title": "修改这里：动作、镜头、声音与视频尺寸",
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 25,
+      "type": "BasicGuider",
+      "pos": [
+        1040,
+        2040
+      ],
+      "size": [
+        330,
+        110
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 23
+        },
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "GUIDER",
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "BasicGuider"
+      },
+      "title": "H3 条件引导"
+    },
+    {
+      "id": 26,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1440,
+        1420
+      ],
+      "size": [
+        310,
+        250
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "noise",
+          "name": "noise",
+          "type": "NOISE",
+          "link": 28
+        },
+        {
+          "localized_name": "guider",
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 29
+        },
+        {
+          "localized_name": "sampler",
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 30
+        },
+        {
+          "localized_name": "sigmas",
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 31
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "output",
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            32,
+            33
+          ]
+        },
+        {
+          "localized_name": "denoised_output",
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "title": "H3 音视频联合采样"
+    },
+    {
+      "id": 27,
+      "type": "VAEDecode",
+      "pos": [
+        1820,
+        1420
+      ],
+      "size": [
+        300,
+        110
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 32
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "VAEDecode"
+      },
+      "title": "解码视频画面"
+    },
+    {
+      "id": 28,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        1820,
+        1630
+      ],
+      "size": [
+        300,
+        110
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 33
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "VAEDecodeAudio"
+      },
+      "title": "解码原生音频"
+    },
+    {
+      "id": 29,
+      "type": "CreateVideo",
+      "pos": [
+        1820,
+        1850
+      ],
+      "size": [
+        300,
+        260
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 36
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB",
+        "auto",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "chroma_subsampling": "auto",
+        "codec": "none"
+      },
+      "title": "合成 24 fps 视频"
+    },
+    {
+      "id": 30,
+      "type": "SaveVideo",
+      "pos": [
+        2200,
+        1420
+      ],
+      "size": [
+        700,
+        650
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0"
+      },
+      "widgets_values": [
+        "video/MiniMaxH3_QwenEdit2511",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/MiniMaxH3_QwenEdit2511",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      },
+      "title": "最终视频：静音此节点可只生成首帧"
+    },
+    {
+      "id": 31,
+      "type": "MarkdownNote",
+      "pos": [
+        0,
+        -310
+      ],
+      "size": [
+        1120,
+        250
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "开始使用",
+      "properties": {},
+      "widgets_values": [
+        "**人物 / 商品 / 环境 → Qwen Image Edit 2511 → 首帧 → MiniMax H3**\n\n请在 3 个 LoadImage 上传你的图片；占位文件并不存在。缺商品或环境参考时，删除对应 LoadImage 节点，并修改提示词中的参考图说明。\n\n三参考图只在首帧合成阶段读取。H3 接收合成后的单张首帧，不会再次独立读取这三张参考图。"
+      ],
+      "widgets_values_named": {
+        "text": "**人物 / 商品 / 环境 → Qwen Image Edit 2511 → 首帧 → MiniMax H3**\n\n请在 3 个 LoadImage 上传你的图片；占位文件并不存在。缺商品或环境参考时，删除对应 LoadImage 节点，并修改提示词中的参考图说明。\n\n三参考图只在首帧合成阶段读取。H3 接收合成后的单张首帧，不会再次独立读取这三张参考图。"
+      },
+      "color": "#223",
+      "bgcolor": "#334"
+    },
+    {
+      "id": 32,
+      "type": "MarkdownNote",
+      "pos": [
+        1200,
+        -310
+      ],
+      "size": [
+        1200,
+        250
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "先挑首帧 / 再制作视频",
+      "properties": {},
+      "widgets_values": [
+        "只跑首帧：将右下角 **SaveVideo** 设置为 **Mute / Never（静音）**，保留 SaveImage 启用。\n\n满意后恢复 SaveVideo 为 **Always**，保持图像 seed 为 fixed，再运行。只修改视频提示词时可复用图像缓存。\n\n首帧与 H3 都是 1024×576。改为竖屏时，两处同时改成 576×1024。H3 长度 124 帧、24 fps，约 5.17 秒。"
+      ],
+      "widgets_values_named": {
+        "text": "只跑首帧：将右下角 **SaveVideo** 设置为 **Mute / Never（静音）**，保留 SaveImage 启用。\n\n满意后恢复 SaveVideo 为 **Always**，保持图像 seed 为 fixed，再运行。只修改视频提示词时可复用图像缓存。\n\n首帧与 H3 都是 1024×576。改为竖屏时，两处同时改成 576×1024。H3 长度 124 帧、24 fps，约 5.17 秒。"
+      },
+      "color": "#223",
+      "bgcolor": "#334"
+    },
+    {
+      "id": 33,
+      "type": "MarkdownNote",
+      "pos": [
+        460,
+        2020
+      ],
+      "size": [
+        510,
+        250
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "模型边界与检查范围",
+      "properties": {},
+      "widgets_values": [
+        "两个阶段只通过 **IMAGE** 连接。Qwen 与 H3 使用各自的文本编码器、VAE 和潜在空间；不要直接连接两者 LATENT。\n\nH3 使用 fl2va 首帧模型，保留原生音频。ref2va 需要另一套参考视频条件节点，不能只替换模型名。\n\n此工作流基于官方模板与节点源码组装，已做 JSON、类型、连接与拓扑静态检查；尚未在你的 ComfyUI / GPU 上实际生成。"
+      ],
+      "widgets_values_named": {
+        "text": "两个阶段只通过 **IMAGE** 连接。Qwen 与 H3 使用各自的文本编码器、VAE 和潜在空间；不要直接连接两者 LATENT。\n\nH3 使用 fl2va 首帧模型，保留原生音频。ref2va 需要另一套参考视频条件节点，不能只替换模型名。\n\n此工作流基于官方模板与节点源码组装，已做 JSON、类型、连接与拓扑静态检查；尚未在你的 ComfyUI / GPU 上实际生成。"
+      },
+      "color": "#223",
+      "bgcolor": "#334"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      2,
+      0,
+      9,
+      0,
+      "CLIP"
+    ],
+    [
+      4,
+      2,
+      0,
+      10,
+      0,
+      "CLIP"
+    ],
+    [
+      5,
+      3,
+      0,
+      9,
+      1,
+      "VAE"
+    ],
+    [
+      6,
+      3,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      7,
+      6,
+      0,
+      9,
+      2,
+      "IMAGE"
+    ],
+    [
+      8,
+      6,
+      0,
+      10,
+      2,
+      "IMAGE"
+    ],
+    [
+      9,
+      7,
+      0,
+      9,
+      3,
+      "IMAGE"
+    ],
+    [
+      10,
+      7,
+      0,
+      10,
+      3,
+      "IMAGE"
+    ],
+    [
+      11,
+      8,
+      0,
+      9,
+      4,
+      "IMAGE"
+    ],
+    [
+      12,
+      8,
+      0,
+      10,
+      4,
+      "IMAGE"
+    ],
+    [
+      13,
+      9,
+      0,
+      11,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      10,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      5,
+      0,
+      14,
+      0,
+      "MODEL"
+    ],
+    [
+      16,
+      11,
+      0,
+      14,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      12,
+      0,
+      14,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      13,
+      0,
+      14,
+      3,
+      "LATENT"
+    ],
+    [
+      19,
+      14,
+      0,
+      15,
+      0,
+      "LATENT"
+    ],
+    [
+      20,
+      3,
+      0,
+      15,
+      1,
+      "VAE"
+    ],
+    [
+      21,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      17,
+      0,
+      23,
+      0,
+      "MODEL"
+    ],
+    [
+      23,
+      17,
+      0,
+      25,
+      0,
+      "MODEL"
+    ],
+    [
+      24,
+      19,
+      0,
+      24,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      18,
+      0,
+      24,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      24,
+      0,
+      25,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      27,
+      24,
+      1,
+      26,
+      4,
+      "LATENT"
+    ],
+    [
+      28,
+      20,
+      0,
+      26,
+      0,
+      "NOISE"
+    ],
+    [
+      29,
+      25,
+      0,
+      26,
+      1,
+      "GUIDER"
+    ],
+    [
+      30,
+      21,
+      0,
+      26,
+      2,
+      "SAMPLER"
+    ],
+    [
+      31,
+      23,
+      0,
+      26,
+      3,
+      "SIGMAS"
+    ],
+    [
+      32,
+      26,
+      0,
+      27,
+      0,
+      "LATENT"
+    ],
+    [
+      33,
+      26,
+      0,
+      28,
+      0,
+      "LATENT"
+    ],
+    [
+      34,
+      18,
+      0,
+      27,
+      1,
+      "VAE"
+    ],
+    [
+      35,
+      22,
+      0,
+      28,
+      1,
+      "VAE"
+    ],
+    [
+      36,
+      27,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      28,
+      0,
+      29,
+      1,
+      "AUDIO"
+    ],
+    [
+      38,
+      29,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      39,
+      15,
+      0,
+      24,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "01 · 三参考图合成首帧",
+      "bounding": [
+        -40,
+        0,
+        2480,
+        1180
+      ],
+      "color": "#3f789e",
+      "font_size": 30,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "02 · MiniMax H3 首帧生成音视频",
+      "bounding": [
+        -40,
+        1320,
+        2980,
+        1020
+      ],
+      "color": "#8b7054",
+      "font_size": 30,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.43,
+      "offset": [
+        80,
+        330
+      ]
+    },
+    "workflow_name": "Qwen Edit 2511 + MiniMax H3",
+    "workflow_notes": "Prepared 2026-11-10. Static validation only; no GPU inference has been performed."
+  },
+  "version": 0.4
+}
