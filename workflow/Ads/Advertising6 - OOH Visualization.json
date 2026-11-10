@@ -1,0 +1,2782 @@
+{
+  "id": "01be5a77-29a2-4a32-a677-385292bea600",
+  "revision": 0,
+  "last_node_id": 284,
+  "last_link_id": 551,
+  "nodes": [
+    {
+      "id": 66,
+      "type": "LoadImage",
+      "pos": [
+        -1580.001240074469,
+        2769.9995235385186
+      ],
+      "size": [
+        1420,
+        1720
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            522,
+            523,
+            529,
+            530
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "INPUT POSTER",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "19e71f06bc6c5cb8cf6784e6972e8d8bfee693069c724256a4979a7ecc73dea0.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "19e71f06bc6c5cb8cf6784e6972e8d8bfee693069c724256a4979a7ecc73dea0.png",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 127,
+      "type": "GeminiImage2Node",
+      "pos": [
+        1279.9973198892444,
+        2829.9995572577704
+      ],
+      "size": [
+        470,
+        340
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 522
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 539
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            524
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiImage2Node"
+      },
+      "widgets_values": [
+        "Large-format bulletin billboard showing the poster artwork fitted \nacross its full horizontal face, urban street corner with city \nbuildings, shot from across the road at a slight upward angle, \nwarm golden hour light, photorealistic high-end advertising \nphotography, crisp detail on the billboard face, \nsoft background depth of field",
+        "gemini-3-pro-image-preview",
+        1057199877960818,
+        "randomize",
+        "auto",
+        "2K",
+        "IMAGE+TEXT",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "Large-format bulletin billboard showing the poster artwork fitted \nacross its full horizontal face, urban street corner with city \nbuildings, shot from across the road at a slight upward angle, \nwarm golden hour light, photorealistic high-end advertising \nphotography, crisp detail on the billboard face, \nsoft background depth of field",
+        "model": "gemini-3-pro-image-preview",
+        "seed": 1057199877960818,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "response_modalities": "IMAGE+TEXT",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 129,
+      "type": "SaveImage",
+      "pos": [
+        1799.9968688738277,
+        2829.9995572577704
+      ],
+      "size": [
+        980,
+        480
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 524
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "MockupA"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "MockupA"
+      }
+    },
+    {
+      "id": 135,
+      "type": "BatchImagesNode",
+      "pos": [
+        1280,
+        4720
+      ],
+      "size": [
+        230,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image0",
+          "name": "images.image0",
+          "type": "IMAGE",
+          "link": 282
+        },
+        {
+          "label": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 471
+        },
+        {
+          "label": "image2",
+          "name": "images.image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            272
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchImagesNode"
+      }
+    },
+    {
+      "id": 138,
+      "type": "GeminiImage2Node",
+      "pos": [
+        1279.9973198892444,
+        4769.998492091675
+      ],
+      "size": [
+        460,
+        410
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 272
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            550
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiImage2Node"
+      },
+      "widgets_values": [
+        "replace the billboard of the first image to the poster of the second image",
+        "gemini-3-pro-image-preview",
+        820859391435514,
+        "randomize",
+        "auto",
+        "2K",
+        "IMAGE+TEXT",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "replace the billboard of the first image to the poster of the second image",
+        "model": "gemini-3-pro-image-preview",
+        "seed": 820859391435514,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "response_modalities": "IMAGE+TEXT",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 142,
+      "type": "LoadImage",
+      "pos": [
+        -80.0019579159316,
+        4629.9986363881
+      ],
+      "size": [
+        980,
+        1100
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            282
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "CUSTOM IMAGE",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "a97310d97857fcfd7be9d99bf123dab798da817fcdeebdea998c9bc9c90574e9.png [output]",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "a97310d97857fcfd7be9d99bf123dab798da817fcdeebdea998c9bc9c90574e9.png [output]",
+        "upload": "image"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 235,
+      "type": "ae42e662-5e2b-4f52-b31d-267bd68f1c6f",
+      "pos": [
+        1290,
+        4640
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 523
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            471
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "previewExposures": [
+          {
+            "name": "$$canvas-image-preview",
+            "sourceNodeId": "233",
+            "sourcePreviewName": "$$canvas-image-preview"
+          },
+          {
+            "name": "$$canvas-image-preview_1",
+            "sourceNodeId": "232",
+            "sourcePreviewName": "$$canvas-image-preview"
+          },
+          {
+            "name": "$$canvas-image-preview_2",
+            "sourceNodeId": "234",
+            "sourcePreviewName": "$$canvas-image-preview"
+          }
+        ]
+      },
+      "widgets_values": [
+        "1:1 (Perfect Square)"
+      ],
+      "widgets_values_named": {
+        "aspect_ratio": "1:1 (Perfect Square)"
+      }
+    },
+    {
+      "id": 237,
+      "type": "MarkdownNote",
+      "pos": [
+        -1580.001240074469,
+        2459.99972094685
+      ],
+      "size": [
+        610,
+        250
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Quick Intro",
+      "properties": {},
+      "widgets_values": [
+        "**METHOD 1 - PROMPT SCENARIOS** \n<br> Visualize a poster or artwork to three Out of Home scenarios using prompt inputs\n\n**METHOD 2 - CUSTOM IMAGE** \n<br> Visualize a poster or artwork to an Out of Home scenarios using a custom image as the canvas and background\n\n**All methods can be used independently. Before running a method, bypass all nodes in the other one.**"
+      ],
+      "widgets_values_named": {
+        "text": "**METHOD 1 - PROMPT SCENARIOS** \n<br> Visualize a poster or artwork to three Out of Home scenarios using prompt inputs\n\n**METHOD 2 - CUSTOM IMAGE** \n<br> Visualize a poster or artwork to an Out of Home scenarios using a custom image as the canvas and background\n\n**All methods can be used independently. Before running a method, bypass all nodes in the other one.**"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 265,
+      "type": "SaveImage",
+      "pos": [
+        1799.9968688738277,
+        4629.9986363881
+      ],
+      "size": [
+        980,
+        1100
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 550
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "MockupCustom"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "MockupCustom"
+      }
+    },
+    {
+      "id": 266,
+      "type": "GeminiImage2Node",
+      "pos": [
+        1289.997288346673,
+        3379.9993089142126
+      ],
+      "size": [
+        460,
+        340
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 529
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 537
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            527
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiImage2Node"
+      },
+      "widgets_values": [
+        "Backlit bus shelter panel showing the poster artwork fitted across \nits full vertical face, city pavement with soft pedestrian movement \nin background, straight-on eye-level perspective, overcast natural \ndaylight, photorealistic high-end advertising photography, \ncrisp detail on the panel face, soft background depth of field",
+        "gemini-3-pro-image-preview",
+        991516952120837,
+        "randomize",
+        "auto",
+        "2K",
+        "IMAGE+TEXT",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "Backlit bus shelter panel showing the poster artwork fitted across \nits full vertical face, city pavement with soft pedestrian movement \nin background, straight-on eye-level perspective, overcast natural \ndaylight, photorealistic high-end advertising photography, \ncrisp detail on the panel face, soft background depth of field",
+        "model": "gemini-3-pro-image-preview",
+        "seed": 991516952120837,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "response_modalities": "IMAGE+TEXT",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 267,
+      "type": "PrimitiveNode",
+      "pos": [
+        -80.0019579159316,
+        2829.9995572577704
+      ],
+      "size": [
+        530,
+        370
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            548
+          ]
+        }
+      ],
+      "title": "SCENARIO A",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "large-format long bulletin billboard on the side of a modern highway, contemporary city skyline softly in the background"
+      ],
+      "widgets_values_named": {
+        "value": "large-format long bulletin billboard on the side of a modern highway, contemporary city skyline softly in the background"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 268,
+      "type": "GeminiImage2Node",
+      "pos": [
+        1289.997288346673,
+        3949.9989974855125
+      ],
+      "size": [
+        460,
+        340
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 530
+        },
+        {
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 535
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            528
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GeminiImage2Node"
+      },
+      "widgets_values": [
+        "Large-scale building wrap showing the poster artwork fitted across \nthe full building facade, urban city block with street and \nsurrounding buildings visible below, shot from street level at a \ndramatic upward angle, overcast midday light, photorealistic \nhigh-end advertising photography, crisp detail on the building \nfacade, soft background depth of field",
+        "gemini-3-pro-image-preview",
+        788561966921087,
+        "randomize",
+        "auto",
+        "2K",
+        "IMAGE+TEXT",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      ],
+      "widgets_values_named": {
+        "prompt": "Large-scale building wrap showing the poster artwork fitted across \nthe full building facade, urban city block with street and \nsurrounding buildings visible below, shot from street level at a \ndramatic upward angle, overcast midday light, photorealistic \nhigh-end advertising photography, crisp detail on the building \nfacade, soft background depth of field",
+        "model": "gemini-3-pro-image-preview",
+        "seed": 788561966921087,
+        "control_after_generate": "randomize",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "response_modalities": "IMAGE+TEXT",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 269,
+      "type": "PrimitiveNode",
+      "pos": [
+        -80.0019579159316,
+        3949.9989974855125
+      ],
+      "size": [
+        550,
+        410
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            541
+          ]
+        }
+      ],
+      "title": "SCENARIO C",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "large-scale building wrap across a full building facade on an urban city block."
+      ],
+      "widgets_values_named": {
+        "value": "large-scale building wrap across a full building facade on an urban city block."
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 270,
+      "type": "SaveImage",
+      "pos": [
+        1799.9968688738277,
+        3369.9991918069973
+      ],
+      "size": [
+        980,
+        520
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 527
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "MockupB"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "MockupB"
+      }
+    },
+    {
+      "id": 271,
+      "type": "SaveImage",
+      "pos": [
+        1799.9968688738277,
+        3949.9989974855125
+      ],
+      "size": [
+        980,
+        510
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 528
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "MockupC"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "MockupC"
+      }
+    },
+    {
+      "id": 272,
+      "type": "StringConcatenate",
+      "pos": [
+        1040,
+        4130
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 540
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            534
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Reformat this poster to fit a",
+        "large-format bulletin billboard on an urban street corner with city buildings",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "Reformat this poster to fit a",
+        "string_b": "large-format bulletin billboard on an urban street corner with city buildings",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 273,
+      "type": "PrimitiveNode",
+      "pos": [
+        519.9976360276537,
+        3359.9992233495686
+      ],
+      "size": [
+        380,
+        390
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "links": [
+            542,
+            544,
+            547
+          ]
+        }
+      ],
+      "title": "ADDITIONAL DETAIL FOR ALL (OPTIONAL)",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "eye-level perspective with sunny daylight"
+      ],
+      "widgets_values_named": {
+        "value": "eye-level perspective with sunny daylight"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 274,
+      "type": "StringConcatenate",
+      "pos": [
+        1040,
+        4180
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 534
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            535
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        " photorealistic high-end advertising photography.",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": " photorealistic high-end advertising photography.",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 275,
+      "type": "StringConcatenate",
+      "pos": [
+        1030,
+        3540
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 543
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            536
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Reformat this poster to fit a",
+        "large-format bulletin billboard on an urban street corner with city buildings",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "Reformat this poster to fit a",
+        "string_b": "large-format bulletin billboard on an urban street corner with city buildings",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 276,
+      "type": "StringConcatenate",
+      "pos": [
+        1030,
+        3590
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 536
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            537
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        " photorealistic high-end advertising photography.",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": " photorealistic high-end advertising photography.",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 277,
+      "type": "StringConcatenate",
+      "pos": [
+        1020,
+        3000
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 546
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            538
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Reformat this poster to fit a",
+        "large-format bulletin billboard on an urban street corner with city buildings",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "Reformat this poster to fit a",
+        "string_b": "large-format bulletin billboard on an urban street corner with city buildings",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 278,
+      "type": "StringConcatenate",
+      "pos": [
+        1020,
+        3050
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 538
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            539
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        " photorealistic high-end advertising photography.",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": " photorealistic high-end advertising photography.",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 279,
+      "type": "StringConcatenate",
+      "pos": [
+        1040,
+        4080
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 541
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 542
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            540
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "large-scale building wrap across a full building facade on an urban city block.",
+        "eye-level perspective with sunny daylight",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "large-scale building wrap across a full building facade on an urban city block.",
+        "string_b": "eye-level perspective with sunny daylight",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 280,
+      "type": "StringConcatenate",
+      "pos": [
+        1030,
+        3490
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 545
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 544
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            543
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "a bus stop panel on a city pavement with soft pedestrian movement in the background",
+        "eye-level perspective with sunny daylight",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "a bus stop panel on a city pavement with soft pedestrian movement in the background",
+        "string_b": "eye-level perspective with sunny daylight",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 282,
+      "type": "PrimitiveNode",
+      "pos": [
+        -80.0019579159316,
+        3359.9992233495686
+      ],
+      "size": [
+        530,
+        390
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "links": [
+            545
+          ]
+        }
+      ],
+      "title": "SCENARIO B",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "a bus stop panel on a city pavement with soft pedestrian movement in the background"
+      ],
+      "widgets_values_named": {
+        "value": "a bus stop panel on a city pavement with soft pedestrian movement in the background"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 283,
+      "type": "StringConcatenate",
+      "pos": [
+        1020,
+        2950
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 548
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 547
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            546
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "large-format long bulletin billboard on the side of a modern highway, contemporary city skyline softly in the background",
+        "eye-level perspective with sunny daylight",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "large-format long bulletin billboard on the side of a modern highway, contemporary city skyline softly in the background",
+        "string_b": "eye-level perspective with sunny daylight",
+        "delimiter": " "
+      }
+    }
+  ],
+  "links": [
+    [
+      272,
+      135,
+      0,
+      138,
+      0,
+      "IMAGE"
+    ],
+    [
+      522,
+      66,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      523,
+      66,
+      0,
+      235,
+      0,
+      "IMAGE"
+    ],
+    [
+      524,
+      127,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      527,
+      266,
+      0,
+      270,
+      0,
+      "IMAGE"
+    ],
+    [
+      528,
+      268,
+      0,
+      271,
+      0,
+      "IMAGE"
+    ],
+    [
+      529,
+      66,
+      0,
+      266,
+      0,
+      "IMAGE"
+    ],
+    [
+      530,
+      66,
+      0,
+      268,
+      0,
+      "IMAGE"
+    ],
+    [
+      534,
+      272,
+      0,
+      274,
+      0,
+      "STRING"
+    ],
+    [
+      535,
+      274,
+      0,
+      268,
+      2,
+      "STRING"
+    ],
+    [
+      536,
+      275,
+      0,
+      276,
+      0,
+      "STRING"
+    ],
+    [
+      537,
+      276,
+      0,
+      266,
+      2,
+      "STRING"
+    ],
+    [
+      538,
+      277,
+      0,
+      278,
+      0,
+      "STRING"
+    ],
+    [
+      539,
+      278,
+      0,
+      127,
+      2,
+      "STRING"
+    ],
+    [
+      540,
+      279,
+      0,
+      272,
+      0,
+      "STRING"
+    ],
+    [
+      541,
+      269,
+      0,
+      279,
+      0,
+      "STRING"
+    ],
+    [
+      542,
+      273,
+      0,
+      279,
+      1,
+      "STRING"
+    ],
+    [
+      543,
+      280,
+      0,
+      275,
+      0,
+      "STRING"
+    ],
+    [
+      544,
+      273,
+      0,
+      280,
+      1,
+      "STRING"
+    ],
+    [
+      545,
+      282,
+      0,
+      280,
+      0,
+      "STRING"
+    ],
+    [
+      546,
+      283,
+      0,
+      277,
+      0,
+      "STRING"
+    ],
+    [
+      547,
+      273,
+      0,
+      283,
+      1,
+      "STRING"
+    ],
+    [
+      548,
+      267,
+      0,
+      283,
+      0,
+      "STRING"
+    ],
+    [
+      550,
+      138,
+      0,
+      265,
+      0,
+      "IMAGE"
+    ],
+    [
+      282,
+      142,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      471,
+      235,
+      0,
+      135,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "METHOD 1 - INPUT PROMPTS",
+      "bounding": [
+        -120,
+        2740,
+        2930,
+        1750
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "METHOD 2 - INPUT CUSTOM IMAGE",
+      "bounding": [
+        -120,
+        4530,
+        2930,
+        1230
+      ],
+      "color": "#88A",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "ae42e662-5e2b-4f52-b31d-267bd68f1c6f",
+        "version": 1,
+        "state": {
+          "lastGroupId": 10,
+          "lastNodeId": 284,
+          "lastLinkId": 551,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Image Extender",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -2390,
+            610,
+            120,
+            60
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            110.99131176844276,
+            366.6738400794415,
+            120,
+            80
+          ]
+        },
+        "inputs": [
+          {
+            "id": "190e929c-5f4a-4ae7-8294-b948fcc0806d",
+            "name": "image",
+            "type": "IMAGE",
+            "linkIds": [
+              429,
+              430
+            ],
+            "localized_name": "image",
+            "pos": [
+              -2290,
+              630
+            ]
+          },
+          {
+            "id": "82235b95-ffc8-43c1-9763-4dfe3e452ebc",
+            "name": "aspect_ratio",
+            "type": "COMBO",
+            "linkIds": [
+              551
+            ],
+            "pos": [
+              0,
+              0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "df58d266-37ca-4c0a-a9bb-db0887941c34",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              275,
+              275
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              130.99131176844276,
+              386.6738400794415
+            ]
+          },
+          {
+            "id": "844db080-9f93-4ca2-ab10-bb75acec9f2c",
+            "name": "MASK",
+            "type": "MASK",
+            "linkIds": [
+              442
+            ],
+            "pos": [
+              130.99131176844276,
+              406.6738400794415
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 153,
+            "type": "ImageToMask",
+            "pos": [
+              -820,
+              220
+            ],
+            "size": [
+              350,
+              100
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 249
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "MASK",
+                "type": "MASK",
+                "slot_index": 0,
+                "links": [
+                  260
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageToMask",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.39",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "red"
+            ],
+            "widgets_values_named": {
+              "channel": "red"
+            }
+          },
+          {
+            "id": 229,
+            "type": "LayerUtility: ColorImage V2",
+            "pos": [
+              -1260,
+              20
+            ],
+            "size": [
+              330,
+              210
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "size_as",
+                "name": "size_as",
+                "shape": 7,
+                "type": "*",
+                "link": null
+              },
+              {
+                "localized_name": "custom_width",
+                "name": "custom_width",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_width"
+                },
+                "link": 460
+              },
+              {
+                "localized_name": "custom_height",
+                "name": "custom_height",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_height"
+                },
+                "link": 461
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "links": [
+                  447,
+                  448
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LayerUtility: ColorImage V2"
+            },
+            "widgets_values": [
+              "custom",
+              512,
+              512,
+              "#ffffff"
+            ],
+            "widgets_values_named": {
+              "size": "custom",
+              "custom_width": 512,
+              "custom_height": 512,
+              "color": "#ffffff"
+            },
+            "color": "rgba(38, 73, 116, 0.7)"
+          },
+          {
+            "id": 158,
+            "type": "ImageToMask",
+            "pos": [
+              -1250,
+              770
+            ],
+            "size": [
+              330,
+              100
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 456
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "MASK",
+                "type": "MASK",
+                "slot_index": 0,
+                "links": [
+                  358
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageToMask",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.39",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "red"
+            ],
+            "widgets_values_named": {
+              "channel": "red"
+            }
+          },
+          {
+            "id": 230,
+            "type": "LayerUtility: ColorImage V2",
+            "pos": [
+              -1260,
+              270
+            ],
+            "size": [
+              330,
+              210
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "size_as",
+                "name": "size_as",
+                "shape": 7,
+                "type": "*",
+                "link": null
+              },
+              {
+                "localized_name": "custom_width",
+                "name": "custom_width",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_width"
+                },
+                "link": 464
+              },
+              {
+                "localized_name": "custom_height",
+                "name": "custom_height",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_height"
+                },
+                "link": 465
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "links": [
+                  451
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LayerUtility: ColorImage V2"
+            },
+            "widgets_values": [
+              "custom",
+              512,
+              512,
+              "#000000"
+            ],
+            "widgets_values_named": {
+              "size": "custom",
+              "custom_width": 512,
+              "custom_height": 512,
+              "color": "#000000"
+            },
+            "color": "rgba(38, 73, 116, 0.7)"
+          },
+          {
+            "id": 152,
+            "type": "Paste By Mask",
+            "pos": [
+              -820,
+              20
+            ],
+            "size": [
+              350,
+              180
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image_base",
+                "name": "image_base",
+                "type": "IMAGE",
+                "link": 451
+              },
+              {
+                "localized_name": "image_to_paste",
+                "name": "image_to_paste",
+                "type": "IMAGE",
+                "link": 447
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "IMAGE",
+                "link": 448
+              },
+              {
+                "localized_name": "mask_mapping_optional",
+                "name": "mask_mapping_optional",
+                "shape": 7,
+                "type": "MASK_MAPPING",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  249,
+                  267,
+                  462
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Paste By Mask",
+              "cnr_id": "masquerade-nodes-comfyui",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "keep_ratio_fit"
+            ],
+            "widgets_values_named": {
+              "resize_behavior": "keep_ratio_fit"
+            }
+          },
+          {
+            "id": 231,
+            "type": "LayerUtility: ColorImage V2",
+            "pos": [
+              -1250,
+              530
+            ],
+            "size": [
+              330,
+              210
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "size_as",
+                "name": "size_as",
+                "shape": 7,
+                "type": "*",
+                "link": null
+              },
+              {
+                "localized_name": "custom_width",
+                "name": "custom_width",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_width"
+                },
+                "link": 467
+              },
+              {
+                "localized_name": "custom_height",
+                "name": "custom_height",
+                "type": "INT",
+                "widget": {
+                  "name": "custom_height"
+                },
+                "link": 468
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "links": [
+                  454,
+                  456,
+                  466
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "LayerUtility: ColorImage V2"
+            },
+            "widgets_values": [
+              "custom",
+              512,
+              512,
+              "#ffffff"
+            ],
+            "widgets_values_named": {
+              "size": "custom",
+              "custom_width": 512,
+              "custom_height": 512,
+              "color": "#ffffff"
+            },
+            "color": "rgba(38, 73, 116, 0.7)"
+          },
+          {
+            "id": 168,
+            "type": "MaskComposite",
+            "pos": [
+              -380,
+              190
+            ],
+            "size": [
+              320,
+              180
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "目标",
+                "name": "destination",
+                "type": "MASK",
+                "link": 358
+              },
+              {
+                "localized_name": "源",
+                "name": "source",
+                "type": "MASK",
+                "link": 270
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "MASK",
+                "type": "MASK",
+                "slot_index": 0,
+                "links": [
+                  442
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "MaskComposite",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.39",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              0,
+              0,
+              "add"
+            ],
+            "widgets_values_named": {
+              "x": 0,
+              "y": 0,
+              "operation": "add"
+            }
+          },
+          {
+            "id": 165,
+            "type": "Paste By Mask",
+            "pos": [
+              -810,
+              420
+            ],
+            "size": [
+              350,
+              180
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image_base",
+                "name": "image_base",
+                "type": "IMAGE",
+                "link": 454
+              },
+              {
+                "localized_name": "image_to_paste",
+                "name": "image_to_paste",
+                "type": "IMAGE",
+                "link": 430
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "IMAGE",
+                "link": 267
+              },
+              {
+                "localized_name": "mask_mapping_optional",
+                "name": "mask_mapping_optional",
+                "shape": 7,
+                "type": "MASK_MAPPING",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  263
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Paste By Mask",
+              "cnr_id": "masquerade-nodes-comfyui",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "keep_ratio_fit"
+            ],
+            "widgets_values_named": {
+              "resize_behavior": "keep_ratio_fit"
+            }
+          },
+          {
+            "id": 163,
+            "type": "Get Image Size",
+            "pos": [
+              -1550,
+              60
+            ],
+            "size": [
+              230,
+              100
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 429
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "slot_index": 0,
+                "links": [
+                  460
+                ]
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "slot_index": 1,
+                "links": [
+                  461
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Get Image Size",
+              "cnr_id": "masquerade-nodes-comfyui",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+              "widget_ue_connectable": {}
+            }
+          },
+          {
+            "id": 228,
+            "type": "MarkdownNote",
+            "pos": [
+              -1580,
+              450
+            ],
+            "size": [
+              260,
+              180
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Change Fill Color",
+            "properties": {},
+            "widgets_values": [
+              "## Tips\n\n- If your image doesn't have enough contrast to the empty area, change the background color here 👉"
+            ],
+            "widgets_values_named": {
+              "text": "## Tips\n\n- If your image doesn't have enough contrast to the empty area, change the background color here 👉"
+            },
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 159,
+            "type": "InvertMask",
+            "pos": [
+              -610,
+              360
+            ],
+            "size": [
+              300,
+              60
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "mask",
+                "type": "MASK",
+                "link": 260
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "遮罩",
+                "name": "MASK",
+                "type": "MASK",
+                "slot_index": 0,
+                "links": [
+                  270
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "InvertMask",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.39",
+              "widget_ue_connectable": {}
+            }
+          },
+          {
+            "id": 162,
+            "type": "ImageRemoveAlpha+",
+            "pos": [
+              -370,
+              420
+            ],
+            "size": [
+              300,
+              80
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 263
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  275,
+                  459
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageRemoveAlpha+",
+              "cnr_id": "comfyui_essentials",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "1.1.0",
+              "widget_ue_connectable": {}
+            }
+          },
+          {
+            "id": 191,
+            "type": "FluxResolutionNode",
+            "pos": [
+              -2010,
+              390
+            ],
+            "size": [
+              360,
+              320
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "aspect_ratio",
+                "name": "aspect_ratio",
+                "type": "COMBO",
+                "widget": {
+                  "name": "aspect_ratio"
+                },
+                "link": 551
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "links": [
+                  464,
+                  467
+                ]
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "links": [
+                  465,
+                  468
+                ]
+              },
+              {
+                "localized_name": "resolution",
+                "name": "resolution",
+                "type": "STRING",
+                "links": null
+              },
+              {
+                "localized_name": "preview",
+                "name": "preview",
+                "type": "IMAGE",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "FluxResolutionNode",
+              "cnr_id": "controlaltai-nodes",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "1.1.1",
+              "widget_ue_connectable": {}
+            },
+            "widgets_values": [
+              "2.1",
+              "1:1 (Perfect Square)",
+              "8",
+              false,
+              "1:1"
+            ],
+            "widgets_values_named": {
+              "megapixel": "2.1",
+              "aspect_ratio": "1:1 (Perfect Square)",
+              "divisible_by": "8",
+              "custom_ratio": false,
+              "custom_aspect_ratio": "1:1"
+            }
+          },
+          {
+            "id": 233,
+            "type": "PreviewImage",
+            "pos": [
+              240,
+              0
+            ],
+            "size": [
+              380,
+              420
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 462
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "PreviewImage"
+            }
+          },
+          {
+            "id": 232,
+            "type": "PreviewImage",
+            "pos": [
+              250,
+              520
+            ],
+            "size": [
+              380,
+              420
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 459
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "PreviewImage"
+            }
+          },
+          {
+            "id": 234,
+            "type": "PreviewImage",
+            "pos": [
+              -390,
+              520
+            ],
+            "size": [
+              380,
+              420
+            ],
+            "flags": {},
+            "order": 15,
+            "mode": 4,
+            "inputs": [
+              {
+                "localized_name": "图像",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 466
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "links": null
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "PreviewImage"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "id": 4,
+            "title": "autoExtend",
+            "bounding": [
+              -1620,
+              -60,
+              1680,
+              1030
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 249,
+            "origin_id": 152,
+            "origin_slot": 0,
+            "target_id": 153,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 358,
+            "origin_id": 158,
+            "origin_slot": 0,
+            "target_id": 168,
+            "target_slot": 0,
+            "type": "MASK"
+          },
+          {
+            "id": 270,
+            "origin_id": 159,
+            "origin_slot": 0,
+            "target_id": 168,
+            "target_slot": 1,
+            "type": "MASK"
+          },
+          {
+            "id": 260,
+            "origin_id": 153,
+            "origin_slot": 0,
+            "target_id": 159,
+            "target_slot": 0,
+            "type": "MASK"
+          },
+          {
+            "id": 267,
+            "origin_id": 152,
+            "origin_slot": 0,
+            "target_id": 165,
+            "target_slot": 2,
+            "type": "IMAGE"
+          },
+          {
+            "id": 263,
+            "origin_id": 165,
+            "origin_slot": 0,
+            "target_id": 162,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 429,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 163,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 430,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 165,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 275,
+            "origin_id": 162,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 442,
+            "origin_id": 168,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "MASK"
+          },
+          {
+            "id": 447,
+            "origin_id": 229,
+            "origin_slot": 0,
+            "target_id": 152,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 448,
+            "origin_id": 229,
+            "origin_slot": 0,
+            "target_id": 152,
+            "target_slot": 2,
+            "type": "IMAGE"
+          },
+          {
+            "id": 451,
+            "origin_id": 230,
+            "origin_slot": 0,
+            "target_id": 152,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 454,
+            "origin_id": 231,
+            "origin_slot": 0,
+            "target_id": 165,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 456,
+            "origin_id": 231,
+            "origin_slot": 0,
+            "target_id": 158,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 459,
+            "origin_id": 162,
+            "origin_slot": 0,
+            "target_id": 232,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 460,
+            "origin_id": 163,
+            "origin_slot": 0,
+            "target_id": 229,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 461,
+            "origin_id": 163,
+            "origin_slot": 1,
+            "target_id": 229,
+            "target_slot": 2,
+            "type": "INT"
+          },
+          {
+            "id": 462,
+            "origin_id": 152,
+            "origin_slot": 0,
+            "target_id": 233,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 464,
+            "origin_id": 191,
+            "origin_slot": 0,
+            "target_id": 230,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 465,
+            "origin_id": 191,
+            "origin_slot": 1,
+            "target_id": 230,
+            "target_slot": 2,
+            "type": "INT"
+          },
+          {
+            "id": 466,
+            "origin_id": 231,
+            "origin_slot": 0,
+            "target_id": 234,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 467,
+            "origin_id": 191,
+            "origin_slot": 0,
+            "target_id": 231,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 468,
+            "origin_id": 191,
+            "origin_slot": 1,
+            "target_id": 231,
+            "target_slot": 2,
+            "type": "INT"
+          },
+          {
+            "id": 551,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 191,
+            "target_slot": 0,
+            "type": "COMBO"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "scale": 0.20529849912675618,
+      "offset": [
+        4061.1179531538896,
+        -1861.6665079728887
+      ]
+    },
+    "frontendVersion": "1.59.8",
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}
