@@ -1,0 +1,1871 @@
+{
+  "id": "a2f04000-6000-4000-8000-000000000004",
+  "revision": 0,
+  "last_node_id": 118,
+  "last_link_id": 185,
+  "nodes": [
+    {
+      "id": 75,
+      "type": "UNETLoader",
+      "pos": [
+        -980,
+        -430
+      ],
+      "size": [
+        450,
+        100
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors",
+            "directory": "diffusion_models"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors",
+        "default"
+      ],
+      "title": "高噪声专用模型"
+    },
+    {
+      "id": 90,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -440,
+        -240
+      ],
+      "size": [
+        450,
+        100
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 177
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            176
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+            "directory": "loras"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+        1
+      ],
+      "title": "低噪声 4 步 LoRA"
+    },
+    {
+      "id": 88,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -440,
+        -430
+      ],
+      "size": [
+        450,
+        100
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 173
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            174
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+            "directory": "loras"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+        1
+      ],
+      "title": "高噪声 4 步 LoRA"
+    },
+    {
+      "id": 72,
+      "type": "UNETLoader",
+      "pos": [
+        -980,
+        -240
+      ],
+      "size": [
+        450,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            177
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors",
+            "directory": "diffusion_models"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors",
+        "default"
+      ],
+      "title": "低噪声专用模型"
+    },
+    {
+      "id": 80,
+      "type": "WanCameraImageToVideo",
+      "pos": [
+        560,
+        -40
+      ],
+      "size": [
+        360,
+        330
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 161
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 162
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 163
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 181
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 182
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 183
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "name": "clip_vision_output",
+          "type": "CLIP_VISION_OUTPUT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "start_image",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": 164
+        },
+        {
+          "name": "camera_conditions",
+          "type": "WAN_CAMERA_EMBEDDING",
+          "shape": 7,
+          "link": 180
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            150,
+            158
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            151,
+            159
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            152
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanCameraImageToVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        832,
+        480,
+        81,
+        1
+      ],
+      "title": "③ Wan Camera I2V · 显式机位"
+    },
+    {
+      "id": 74,
+      "type": "CLIPTextEncode",
+      "pos": [
+        80,
+        220
+      ],
+      "size": [
+        400,
+        280
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            162
+          ]
+        }
+      ],
+      "title": "负向文本",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 76,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        80,
+        -430
+      ],
+      "size": [
+        280,
+        100
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 174
+        },
+        {
+          "name": "shift",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        8
+      ],
+      "title": "高噪声 Sampling Shift"
+    },
+    {
+      "id": 77,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        80,
+        -240
+      ],
+      "size": [
+        280,
+        100
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 176
+        },
+        {
+          "name": "shift",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            157
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        8
+      ],
+      "title": "低噪声 Sampling Shift"
+    },
+    {
+      "id": 82,
+      "type": "VAEDecode",
+      "pos": [
+        1810,
+        -40
+      ],
+      "size": [
+        280,
+        100
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 170
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 171
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [],
+      "title": "⑥ VAE 解码"
+    },
+    {
+      "id": 83,
+      "type": "CreateVideo",
+      "pos": [
+        1810,
+        150
+      ],
+      "size": [
+        280,
+        200
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 172
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 184
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "bit_depth"
+          },
+          "link": null
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "color_space"
+          },
+          "link": null
+        },
+        {
+          "name": "chroma_subsampling",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "chroma_subsampling"
+          },
+          "link": null
+        },
+        {
+          "name": "codec",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            153
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo",
+        "cnr_id": "comfy-core"
+      },
+      "widgets_values": [
+        16,
+        "auto",
+        "sRGB",
+        "auto",
+        "none"
+      ],
+      "title": "视频封装 · 继承 FPS"
+    },
+    {
+      "id": 73,
+      "type": "SaveVideo",
+      "pos": [
+        2170,
+        -40
+      ],
+      "size": [
+        520,
+        550
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "OmniCam/Wan_Fun_Camera",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "title": "⑦ 保存视频",
+      "widgets_values_named": {
+        "filename_prefix": "OmniCam/Wan_Fun_Camera",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 85,
+      "type": "CLIPLoader",
+      "pos": [
+        -1500,
+        -430
+      ],
+      "size": [
+        440,
+        125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "name": "device",
+          "type": "COMBO",
+          "shape": 7,
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            154,
+            169
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ],
+      "title": "文本编码器"
+    },
+    {
+      "id": 86,
+      "type": "VAELoader",
+      "pos": [
+        -1500,
+        -240
+      ],
+      "size": [
+        440,
+        100
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            163,
+            171
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "models": [
+          {
+            "name": "wan_2.1_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+            "directory": "vae"
+          }
+        ],
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors"
+      ],
+      "title": "Wan VAE"
+    },
+    {
+      "id": 71,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1010,
+        -40
+      ],
+      "size": [
+        330,
+        550
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 149
+        },
+        {
+          "name": "add_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "add_noise"
+          },
+          "link": null
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 150
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 151
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 152
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "start_at_step"
+          },
+          "link": null
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "end_at_step"
+          },
+          "link": null
+        },
+        {
+          "name": "return_with_leftover_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "return_with_leftover_noise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            160
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "enable",
+        20261112,
+        "fixed",
+        4,
+        1,
+        "euler",
+        "simple",
+        0,
+        2,
+        "enable"
+      ],
+      "title": "④ 采样前半程 · 高噪声"
+    },
+    {
+      "id": 78,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1410,
+        -40
+      ],
+      "size": [
+        330,
+        550
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 157
+        },
+        {
+          "name": "add_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "add_noise"
+          },
+          "link": null
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 158
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 159
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 160
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "start_at_step"
+          },
+          "link": null
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "widget": {
+            "name": "end_at_step"
+          },
+          "link": null
+        },
+        {
+          "name": "return_with_leftover_noise",
+          "type": "COMBO",
+          "widget": {
+            "name": "return_with_leftover_noise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            170
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "disable",
+        0,
+        "fixed",
+        4,
+        1,
+        "euler",
+        "simple",
+        2,
+        4,
+        "disable"
+      ],
+      "title": "⑤ 采样后半程 · 低噪声"
+    },
+    {
+      "id": 81,
+      "type": "CLIPTextEncode",
+      "pos": [
+        80,
+        -40
+      ],
+      "size": [
+        400,
+        180
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 185
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            161
+          ]
+        }
+      ],
+      "title": "正向文本：来自 Monitor",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 110,
+      "type": "MarkdownNote",
+      "pos": [
+        80,
+        650
+      ],
+      "size": [
+        800,
+        650
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# 官方资料\n\n[ComfyUI Wan2.2 Fun Camera 教程](https://docs.comfy.org/tutorials/video/wan/wan2-2-fun-camera)\n\n\n- [wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_camera_high_noise_14B_fp8_scaled.safetensors)\n- [wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_camera_low_noise_14B_fp8_scaled.safetensors)\n\n**LoRA**\n- [wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors)\n- [wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors)\n\n**VAE**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\n\n模型放置目录与完整来源见 `notes/wan_build.md`。"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "title": "模型下载与官方资料"
+    },
+    {
+      "id": 79,
+      "type": "LoadImage",
+      "pos": [
+        -620,
+        480
+      ],
+      "size": [
+        460,
+        440
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            164
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.39.0"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "title": "首帧：请上传你的图片"
+    },
+    {
+      "type": "MajoorOmniCamDirector",
+      "pos": [
+        -1500,
+        -40
+      ],
+      "size": [
+        820,
+        660
+      ],
+      "inputs": [
+        {
+          "name": "state_json",
+          "type": "STRING",
+          "widget": {
+            "name": "state_json"
+          },
+          "link": null
+        },
+        {
+          "name": "recording_path",
+          "type": "STRING",
+          "widget": {
+            "name": "recording_path"
+          },
+          "link": null
+        },
+        {
+          "name": "card_asset",
+          "type": "STRING",
+          "widget": {
+            "name": "card_asset"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "fps",
+          "type": "INT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": null
+        },
+        {
+          "name": "duration_seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration_seconds"
+          },
+          "link": null
+        },
+        {
+          "name": "render_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "render_mode"
+          },
+          "link": null
+        },
+        {
+          "name": "image",
+          "type": "VIDEO,IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "video",
+          "type": "VIDEO,IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "scene_3d",
+          "type": "*",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "camera_info",
+          "type": "LOAD3D_CAMERA",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "solved_scene",
+          "type": "OMNICAM_MOTION_SCENE",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "motion_scene",
+          "type": "OMNICAM_MOTION_SCENE",
+          "links": [
+            178
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "playblast_video",
+          "type": "VIDEO",
+          "links": null,
+          "slot_index": 1
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MajoorOmniCamDirector"
+      },
+      "widgets_values": [
+        "{\"schema_version\":1,\"fps\":16,\"duration_frames\":80,\"width\":832,\"height\":480,\"render_mode\":\"graybox\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":20,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":40,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":59,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":79,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":20,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":40,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":59,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":79,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"\",\"duration_frames\":80,\"width\":832,\"height\":480}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[0,1.5,0],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"OmniCam 白模运镜示例 · 缓慢前推并轻微右移\"},\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":0,\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":true,\"editor_views\":{\"perspective\":{\"position\":[8,6,8],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,79],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"wan_camera_native\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
+        "",
+        "",
+        832,
+        480,
+        16,
+        5,
+        "graybox"
+      ],
+      "id": 116,
+      "flags": {},
+      "mode": 0,
+      "order": 6,
+      "title": "① OmniCam Director · 白模与相机轨迹"
+    },
+    {
+      "type": "MajoorOmniCamMonitor",
+      "pos": [
+        -620,
+        -40
+      ],
+      "size": [
+        480,
+        450
+      ],
+      "inputs": [
+        {
+          "name": "motion_scene",
+          "type": "OMNICAM_MOTION_SCENE",
+          "link": 178
+        },
+        {
+          "name": "target_profile",
+          "type": "COMBO",
+          "widget": {
+            "name": "target_profile"
+          },
+          "link": null
+        },
+        {
+          "name": "target_width",
+          "type": "INT",
+          "widget": {
+            "name": "target_width"
+          },
+          "link": null
+        },
+        {
+          "name": "target_height",
+          "type": "INT",
+          "widget": {
+            "name": "target_height"
+          },
+          "link": null
+        },
+        {
+          "name": "duration_seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration_seconds"
+          },
+          "link": null
+        },
+        {
+          "name": "target_fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "target_fps"
+          },
+          "link": null
+        },
+        {
+          "name": "guide_reference_index",
+          "type": "INT",
+          "widget": {
+            "name": "guide_reference_index"
+          },
+          "link": null
+        },
+        {
+          "name": "guide_style",
+          "type": "COMBO",
+          "widget": {
+            "name": "guide_style"
+          },
+          "link": null
+        },
+        {
+          "name": "playblast_video",
+          "type": "VIDEO,IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "base_prompt",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "base_prompt"
+          },
+          "link": null
+        },
+        {
+          "name": "reference_plan_json",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "reference_plan_json"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "final_prompt",
+          "type": "STRING",
+          "links": [
+            185
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "reference_video",
+          "type": "VIDEO",
+          "links": null,
+          "slot_index": 1
+        },
+        {
+          "name": "reference_frames",
+          "type": "IMAGE",
+          "links": null,
+          "slot_index": 2
+        },
+        {
+          "name": "camera_embedding",
+          "type": "WAN_CAMERA_EMBEDDING",
+          "links": [
+            180
+          ],
+          "slot_index": 3
+        },
+        {
+          "name": "native_tracks",
+          "type": "TRACKS",
+          "links": null,
+          "slot_index": 4
+        },
+        {
+          "name": "tracks_json",
+          "type": "STRING",
+          "links": null,
+          "slot_index": 5
+        },
+        {
+          "name": "target_width",
+          "type": "INT",
+          "links": [
+            181
+          ],
+          "slot_index": 6
+        },
+        {
+          "name": "target_height",
+          "type": "INT",
+          "links": [
+            182
+          ],
+          "slot_index": 7
+        },
+        {
+          "name": "target_length",
+          "type": "INT",
+          "links": [
+            183
+          ],
+          "slot_index": 8
+        },
+        {
+          "name": "h3edit_options",
+          "type": "H3EDIT_OPTIONS",
+          "links": null,
+          "slot_index": 9
+        },
+        {
+          "name": "target_fps",
+          "type": "FLOAT",
+          "links": [
+            184
+          ],
+          "slot_index": 10
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MajoorOmniCamMonitor"
+      },
+      "widgets_values": [
+        "wan_camera_native",
+        832,
+        480,
+        0,
+        0,
+        1,
+        "auto",
+        "A photorealistic cinematic shot. Preserve the subject identity, proportions, object placement, and lighting of the input image. Natural subtle motion, coherent surroundings, no subtitles or watermarks.",
+        ""
+      ],
+      "id": 117,
+      "flags": {},
+      "mode": 0,
+      "order": 11,
+      "title": "② OmniCam Monitor · Wan 相机编码"
+    },
+    {
+      "type": "Note",
+      "pos": [
+        -1500,
+        700
+      ],
+      "size": [
+        800,
+        680
+      ],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "用途：把 OmniCam 的三维相机轨迹编码为 WAN_CAMERA_EMBEDDING，使用专用 Wan2.2 Fun Camera 模型生成视频。\n\n1. 在“首帧：请上传你的图片”节点上传自己的成品首帧。图片输入默认为空。\n2. 打开 Director。默认已放入白模方块和 5 秒温和前推/右移轨迹，可直接改相机关键帧或 Draw Camera Path。\n3. 在 Monitor 的 base_prompt 写主体与画面内容。final_prompt 已连到正向文本编码节点。\n4. 安装文件说明中的 6 个模型。生成链已启用，按 Run 会加载模型并实际生成。\n\n此分支读取相机几何，无需先录白模视频。白模对象不会自动变成最终画面中的物体；首帧与提示词负责成品内容。\n\n时长：Director 16fps × 5s = 80个编辑帧，关键帧在0..79；Monitor duration_seconds=0、target_fps=0 继承Director，再按4n+1生成81帧；输出视频约5.0625s。\nMonitor目标宽高832×480同时连接到Wan条件节点；其target_fps已连接CreateVideo，改帧率不会漏改导出。\n\n默认4步Lightning LoRA；高噪声先0→2步，低噪声接2→4步，保留原作者采样配置。固定seed便于比较运镜。\n\n场景预设来自作者Layout-to-Render示例的有效schema，已重定时至16fps/80帧并清空录制路径。\n需安装 OmniCam。按ComfyUI核心源码做静态端口与widget校验；未在目标UI或GPU运行。先做短片验证。\n\n请勿把此workflow的16fps帧索引原样复制到24fps场景；按目标时长重定时并重新录制。详见notes/wan_build.md。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "id": 118,
+      "flags": {},
+      "mode": 0,
+      "order": 7,
+      "inputs": [],
+      "outputs": [],
+      "title": "04 · 先读这里：Wan 显式相机控制"
+    }
+  ],
+  "links": [
+    [
+      149,
+      76,
+      0,
+      71,
+      0,
+      "MODEL"
+    ],
+    [
+      150,
+      80,
+      0,
+      71,
+      7,
+      "CONDITIONING"
+    ],
+    [
+      151,
+      80,
+      1,
+      71,
+      8,
+      "CONDITIONING"
+    ],
+    [
+      152,
+      80,
+      2,
+      71,
+      9,
+      "LATENT"
+    ],
+    [
+      153,
+      83,
+      0,
+      73,
+      0,
+      "VIDEO"
+    ],
+    [
+      154,
+      85,
+      0,
+      74,
+      1,
+      "CLIP"
+    ],
+    [
+      157,
+      77,
+      0,
+      78,
+      0,
+      "MODEL"
+    ],
+    [
+      158,
+      80,
+      0,
+      78,
+      7,
+      "CONDITIONING"
+    ],
+    [
+      159,
+      80,
+      1,
+      78,
+      8,
+      "CONDITIONING"
+    ],
+    [
+      160,
+      71,
+      0,
+      78,
+      9,
+      "LATENT"
+    ],
+    [
+      161,
+      81,
+      0,
+      80,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      162,
+      74,
+      0,
+      80,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      163,
+      86,
+      0,
+      80,
+      2,
+      "VAE"
+    ],
+    [
+      164,
+      79,
+      0,
+      80,
+      8,
+      "IMAGE"
+    ],
+    [
+      169,
+      85,
+      0,
+      81,
+      1,
+      "CLIP"
+    ],
+    [
+      170,
+      78,
+      0,
+      82,
+      0,
+      "LATENT"
+    ],
+    [
+      171,
+      86,
+      0,
+      82,
+      1,
+      "VAE"
+    ],
+    [
+      172,
+      82,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      173,
+      75,
+      0,
+      88,
+      0,
+      "MODEL"
+    ],
+    [
+      174,
+      88,
+      0,
+      76,
+      0,
+      "MODEL"
+    ],
+    [
+      176,
+      90,
+      0,
+      77,
+      0,
+      "MODEL"
+    ],
+    [
+      177,
+      72,
+      0,
+      90,
+      0,
+      "MODEL"
+    ],
+    [
+      178,
+      116,
+      0,
+      117,
+      0,
+      "OMNICAM_MOTION_SCENE"
+    ],
+    [
+      180,
+      117,
+      3,
+      80,
+      9,
+      "WAN_CAMERA_EMBEDDING"
+    ],
+    [
+      181,
+      117,
+      6,
+      80,
+      3,
+      "INT"
+    ],
+    [
+      182,
+      117,
+      7,
+      80,
+      4,
+      "INT"
+    ],
+    [
+      183,
+      117,
+      8,
+      80,
+      5,
+      "INT"
+    ],
+    [
+      184,
+      117,
+      10,
+      83,
+      1,
+      "FLOAT"
+    ],
+    [
+      185,
+      117,
+      0,
+      81,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.34,
+      "offset": [
+        1550,
+        500
+      ]
+    },
+    "frontendVersion": "1.53.10",
+    "omnicam_bundle": {
+      "branch": "04_wan_fun_camera",
+      "source_repository": "MajoorWaldi/ComfyUI-Majoor-OmniCam",
+      "source_commit": "e720a05143a3c2ed42f796bf0d4c7efefcb3602e",
+      "source_path": "examples/workflows/01_wan22_fun_camera_embedding.json",
+      "scene_source_path": "examples/workflows/10_ltx25_layout_to_render.json",
+      "schema_reference": "ComfyUI v0.39.0 baseline; CreateVideo aligned to current master chroma_subsampling schema",
+      "validation": "static_only_no_ui_or_gpu_execution",
+      "current_core_commit": "74eb0c4b8a1a894e7210326882a8d9a016e37ccb"
+    }
+  },
+  "version": 0.4
+}

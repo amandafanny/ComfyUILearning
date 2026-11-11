@@ -1,0 +1,569 @@
+{
+  "id": "1c29b8eb-8f1e-4f33-9e72-1e4ac70d71c2",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "type": "MajoorOmniCamDirector",
+      "pos": [
+        520,
+        210
+      ],
+      "size": [
+        900,
+        850
+      ],
+      "inputs": [
+        {
+          "name": "state_json",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "state_json"
+          }
+        },
+        {
+          "name": "recording_path",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "recording_path"
+          }
+        },
+        {
+          "name": "card_asset",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "card_asset"
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "fps",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "fps"
+          }
+        },
+        {
+          "name": "duration_seconds",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_seconds"
+          }
+        },
+        {
+          "name": "render_mode",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "render_mode"
+          }
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "VIDEO,IMAGE",
+          "link": null
+        },
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO,IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "scene_3d",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "solved_scene",
+          "shape": 7,
+          "type": "OMNICAM_MOTION_SCENE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "motion_scene",
+          "type": "OMNICAM_MOTION_SCENE",
+          "slot_index": 0,
+          "links": null
+        },
+        {
+          "name": "playblast_video",
+          "type": "VIDEO",
+          "slot_index": 1,
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 2,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MajoorOmniCamDirector"
+      },
+      "widgets_values": [
+        "{}",
+        "",
+        "",
+        1280,
+        720,
+        24,
+        5,
+        "graybox"
+      ],
+      "id": 1,
+      "flags": {},
+      "mode": 0,
+      "order": 0,
+      "title": "3D 导演台｜先摆景、画路径、REC"
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        30,
+        180
+      ],
+      "size": [
+        370,
+        380
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "title": "参考图 1｜猫的身份与外观"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        30,
+        620
+      ],
+      "size": [
+        370,
+        380
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "title": "参考图 2｜化毛膏产品"
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        30,
+        1060
+      ],
+      "size": [
+        370,
+        380
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "title": "参考图 3｜草坪场景"
+    },
+    {
+      "id": 5,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        520,
+        1140
+      ],
+      "size": [
+        900,
+        570
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "提示词｜图像管外观，白模视频管空间与运镜",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "生成一段 5 秒、16:9 的写实电影广告镜头，一镜到底。\n\n参考素材分工：\n@Image1 提供猫的身份、脸部、毛色和体型。\n@Image2 提供化毛膏的外观、管体比例、颜色、瓶口与旋盖。\n@Image3 提供草坪环境、光线和整体色调。\n@Video1 是 3D 白模预演，只用于参考相机轨迹、速度节奏、构图变化、主体与道具的相对位置以及遮挡关系。不要复制白模的灰色表面、简化几何、网格或编辑器标记。\n\n场景与动作：\n将预演中较大的主体占位物替换为 @Image1 中的猫，将旁边较小的产品占位物替换为 @Image2 中的化毛膏，地面和背景按 @Image3 转化为自然草坪。猫和产品在画面中保持清晰可辨。\n这一版用于验证运镜：猫保持自然站姿，仅有轻微呼吸与眨眼；化毛膏保持静止。根据已经确认的白模预演保持两者的相对位置和比例。\n\n镜头：\n尽量复现 @Video1 的连续相机运动、观察方向、推拉幅度、移动节奏和视差变化，不另外增加切镜、突然变焦或额外环绕。\n\n外观：\n保持猫的毛色和面部特征，保持产品的主要外形与颜色；自然毛发、真实材质、温暖柔和的侧光。\n不显示辅助线、箭头、网格、白模、字幕或水印。\n\n声音：\n只保留轻微自然环境音，无对白、无背景音乐。"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "MinimaxHailuo03ReferenceNode",
+      "pos": [
+        1500,
+        650
+      ],
+      "size": [
+        460,
+        490
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          },
+          "link": 5
+        },
+        {
+          "label": "image_1",
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "label": "image_2",
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "label": "image_3",
+          "name": "model.reference_images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "label": "video_1",
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 1
+        },
+        {
+          "label": "audio_1",
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MinimaxHailuo03ReferenceNode"
+      },
+      "widgets_values": [
+        "MiniMax H3 Max",
+        "",
+        "768P",
+        "16:9",
+        5,
+        "balanced",
+        "standard",
+        3353295271,
+        "randomize",
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "title": "MiniMax H3 Max｜参考视频生成（API）"
+    },
+    {
+      "id": 7,
+      "type": "SaveVideo",
+      "pos": [
+        2050,
+        650
+      ],
+      "size": [
+        700,
+        420
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "video/omnicam_h3_reference",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "title": "保存生成视频"
+    },
+    {
+      "id": 8,
+      "type": "MarkdownNote",
+      "pos": [
+        1500,
+        80
+      ],
+      "size": [
+        1180,
+        470
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "使用顺序｜先预演，后提交 API",
+      "properties": {},
+      "widgets_values": [
+        "## 02 · 白模预演 → MiniMax H3 API\n\n1. 在三个 Load Image 节点分别上传猫、化毛膏、草坪参考图。\n2. 打开 Director，放置主体与产品占位物，设置机位和相机路径。模板从官方默认场景初始化；未预设完整广告场景。\n3. 先用 Space 播放预演，再点 REC 录制 1280×720、24 fps、5 秒的白模视频。修改场景或轨迹后要重新 REC。\n4. 对照预演修改提示词。图像参考提供外观，Video 1 提供运动与空间参考。\n5. 确认后点击 Run。需要 Comfy 账号登录及可用 API 额度；此步骤会调用 MiniMax 并产生费用。\n\n导入本 JSON 不会自动调用视频 API；Director 的播放/录制不是最终 AI 生成。\n\n本模板直接将 Director 的 VIDEO 输出接到当前官方伙伴节点 model.reference_videos.video_1，不依赖 OmniCam Monitor 的 h3_api 检测契约。\n\n交付验证：节点名、输入、控件顺序与连线已按官方源码/模板核对；尚未在你的 ComfyUI 环境加载或提交付费生成。"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      6,
+      4,
+      "VIDEO"
+    ],
+    [
+      2,
+      2,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      6,
+      2,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      6,
+      3,
+      "IMAGE"
+    ],
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1 · 上传视觉参考",
+      "bounding": [
+        10,
+        100,
+        420,
+        1370
+      ],
+      "color": "#497654",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "2 · 3D 导演台与提示词",
+      "bounding": [
+        480,
+        120,
+        980,
+        1630
+      ],
+      "color": "#4267a5",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "3 · API 生成与保存",
+      "bounding": [
+        1470,
+        570,
+        1320,
+        620
+      ],
+      "color": "#8c663a",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.43,
+      "offset": [
+        100,
+        120
+      ]
+    },
+    "frontendVersion": "1.48.7",
+    "omnicam_bundle": {
+      "branch": "h3_reference_api",
+      "created_date": "2026-11-12",
+      "validation": "source-and-graph-static-only",
+      "sources": [
+        "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/api_minimax_h3_max_r2v.json",
+        "https://github.com/MajoorWaldi/ComfyUI-Majoor-OmniCam/blob/main/examples/workflows/05_minimax_h3_api_reference.json",
+        "https://github.com/MajoorWaldi/ComfyUI-Majoor-OmniCam/blob/main/omnicam/nodes/director.py"
+      ]
+    }
+  },
+  "version": 0.4
+}

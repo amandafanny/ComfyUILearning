@@ -1,0 +1,252 @@
+{
+  "id": "ba7d04dd-8e62-448e-bd9c-14065d669b89",
+  "revision": 0,
+  "last_node_id": 3,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "type": "MajoorOmniCamDirector",
+      "pos": [
+        80,
+        100
+      ],
+      "size": [
+        900,
+        850
+      ],
+      "inputs": [
+        {
+          "name": "state_json",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "state_json"
+          }
+        },
+        {
+          "name": "recording_path",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "recording_path"
+          }
+        },
+        {
+          "name": "card_asset",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "card_asset"
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "fps",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "fps"
+          }
+        },
+        {
+          "name": "duration_seconds",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "duration_seconds"
+          }
+        },
+        {
+          "name": "render_mode",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "render_mode"
+          }
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "VIDEO,IMAGE",
+          "link": null
+        },
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO,IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "scene_3d",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
+          "link": null
+        },
+        {
+          "name": "solved_scene",
+          "shape": 7,
+          "type": "OMNICAM_MOTION_SCENE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "motion_scene",
+          "type": "OMNICAM_MOTION_SCENE",
+          "slot_index": 0,
+          "links": null
+        },
+        {
+          "name": "playblast_video",
+          "type": "VIDEO",
+          "slot_index": 1,
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 2,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MajoorOmniCamDirector"
+      },
+      "widgets_values": [
+        "{\"schema_version\":1,\"fps\":24,\"duration_frames\":120,\"width\":1280,\"height\":720,\"render_mode\":\"graybox\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"\",\"duration_frames\":120,\"width\":1280,\"height\":720}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[0,1.5,0],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"白模预演练习｜灰模方块与缓慢前推\"},\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":0,\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":true,\"editor_views\":{\"perspective\":{\"position\":[8,6,8],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,119],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"external_reference_video\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
+        "",
+        "",
+        1280,
+        720,
+        24,
+        5,
+        "graybox"
+      ],
+      "id": 1,
+      "flags": {},
+      "mode": 0,
+      "order": 0,
+      "title": "01｜白模导演台：搭景、画线、预览、REC"
+    },
+    {
+      "id": 2,
+      "type": "SaveVideo",
+      "pos": [
+        1080,
+        180
+      ],
+      "size": [
+        540,
+        420
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "omnicam/previs",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "title": "02｜保存已录制的白模预演"
+    },
+    {
+      "id": 3,
+      "type": "MarkdownNote",
+      "pos": [
+        1080,
+        670
+      ],
+      "size": [
+        560,
+        420
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "从这里开始｜只做预演，不调用生成模型",
+      "properties": {},
+      "widgets_values": [
+        "## 操作顺序\n1. 打开 Director，添加几何体或导入自己的模型。\n2. 用 Draw Camera Path 画相机路线；用 Look At 设定看向的对象。\n3. 按 Space 预览；确认开场、中段和收尾。\n4. 点击 REC / Record Playblast，等待录制完成。\n5. 再运行本图，SaveVideo 保存白模视频。\n\n修改场景或路径后必须重新 REC。没有录制文件时，直接 Run 不能替你凭空生成预演。\n\n默认 1280×720、24 fps、5 秒。此文件只有 OmniCam 和 Comfy 核心保存节点；没有 API、扩散模型或自动下载。\n\n此图已放入一个灰模方块和缓慢前推、轻微右移的相机路径，可先按 Space 预览，再修改或重画。它是运镜练习，不是完整猫广告场景；没有外部模型资产或预录视频。"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      1,
+      2,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.75,
+      "offset": [
+        20,
+        20
+      ]
+    },
+    "bundle": {
+      "name": "OmniCam all workflows",
+      "build_date": "2026-11-12",
+      "validation": "static graph only; no UI or GPU test",
+      "source": "https://github.com/MajoorWaldi/ComfyUI-Majoor-OmniCam"
+    }
+  },
+  "version": 0.4
+}
