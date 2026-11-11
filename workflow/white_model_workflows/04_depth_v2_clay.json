@@ -1,0 +1,926 @@
+{
+  "id": "f7ea9049-cad2-46a3-bf56-cd5eed54efe3",
+  "revision": 0,
+  "last_node_id": 14,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Note",
+      "pos": [
+        40,
+        -45
+      ],
+      "size": [
+        1360,
+        315
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Note"
+      },
+      "title": "使用说明（先读这里）",
+      "widgets_values": [
+        "深度白模 V2｜上传视频后运行，右下角依次输出：原视频、深度、白模。\n默认宽512、12fps、60帧，约5秒；所有导出已自动接载入后的fps。快速动作建议改24fps、120帧，仍约5秒。\n这是原视角的2.5D白模外观，不包含可编辑人体骨骼/完整Mesh。先看深度是否正确，再观察白模：轮廓边缘、手/爪、商品与身体接触、背景闪烁。\n深度与归一化逐帧处理，不保证时间一致性。深度不连续处可能出现厚边、凹凸伪影。用scale调整凹凸，Blur半径=0可关闭平滑。\nRelight不带真实投影阴影/AO；ImageBlend混入白色只是抬亮暗部近似。没有对用户视频运行推理，本文件完成源码与结构校验。\n兼容路线：需安装kijai/ComfyUI-DepthAnythingV2。首次运行自动下载选择的模型；预设vitb_fp32，避免作者指出的fp16精度损失。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        40,
+        360
+      ],
+      "size": [
+        330,
+        380
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            6,
+            11
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            1
+          ],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "title": "01 上传参考视频｜512宽 / 12fps / 60帧",
+      "widgets_values": {
+        "video": "reference.mp4",
+        "force_rate": 12,
+        "custom_width": 512,
+        "custom_height": 0,
+        "frame_load_cap": 60,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "None"
+      }
+    },
+    {
+      "id": 3,
+      "type": "VHS_VideoInfoLoaded",
+      "pos": [
+        40,
+        820
+      ],
+      "size": [
+        330,
+        150
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "fps🟦",
+          "type": "FLOAT",
+          "links": [
+            12,
+            14,
+            16
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count🟦",
+          "type": "INT",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "duration🟦",
+          "type": "FLOAT",
+          "links": [],
+          "slot_index": 2
+        },
+        {
+          "name": "width🟦",
+          "type": "INT",
+          "links": [],
+          "slot_index": 3
+        },
+        {
+          "name": "height🟦",
+          "type": "INT",
+          "links": [],
+          "slot_index": 4
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoInfoLoaded",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "title": "载入后的帧率（自动同步三个导出）"
+    },
+    {
+      "id": 4,
+      "type": "DownloadAndLoadDepthAnythingV2Model",
+      "pos": [
+        450,
+        370
+      ],
+      "size": [
+        620,
+        150
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "da_v2_model",
+          "type": "DAMODEL",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadDepthAnythingV2Model",
+        "aux_id": "kijai/ComfyUI-DepthAnythingV2",
+        "ver": "553187872eeb1d52e50dc53209fa57e569609a72"
+      },
+      "title": "02 下载/加载DepthAnythingV2模型",
+      "widgets_values": [
+        "depth_anything_v2_vitb_fp32.safetensors",
+        "fp32"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "DepthAnything_V2",
+      "pos": [
+        450,
+        640
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "da_model",
+          "type": "DAMODEL",
+          "link": 2
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            4,
+            13
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DepthAnything_V2",
+        "aux_id": "kijai/ComfyUI-DepthAnythingV2",
+        "ver": "553187872eeb1d52e50dc53209fa57e569609a72"
+      },
+      "title": "03 估计深度（逐帧）",
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "Note",
+      "pos": [
+        1470,
+        -45
+      ],
+      "size": [
+        1000,
+        315
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Note"
+      },
+      "title": "使用说明（先读这里）",
+      "widgets_values": [
+        "模型首次自动下载到 ComfyUI/models/depthanything/\n\n模型来源：\nhttps://huggingface.co/Kijai/DepthAnythingV2-safetensors\n\n本工作流使用普通相对深度vitb_fp32。\n也可改vitl_fp32进一步比较细节。\n\n另需 VHS + spacepxl/ComfyUI-Image-Filters。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "BlurImageFast",
+      "pos": [
+        1130,
+        370
+      ],
+      "size": [
+        290,
+        150
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BlurImageFast",
+        "aux_id": "spacepxl/ComfyUI-Image-Filters",
+        "ver": "bbb3fb0045461adf3602faeedaf40af57090d4e2"
+      },
+      "title": "04 轻微平滑深度｜半径1可改0关闭",
+      "widgets_values": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DepthToNormals",
+      "pos": [
+        1470,
+        370
+      ],
+      "size": [
+        310,
+        150
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "depth",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "normals",
+          "type": "IMAGE",
+          "links": [
+            8
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DepthToNormals",
+        "aux_id": "spacepxl/ComfyUI-Image-Filters",
+        "ver": "bbb3fb0045461adf3602faeedaf40af57090d4e2"
+      },
+      "title": "05 深度转法线｜scale越大凹凸越强",
+      "widgets_values": [
+        0.6,
+        "Standard"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "ShuffleChannels",
+      "pos": [
+        1470,
+        640
+      ],
+      "size": [
+        310,
+        190
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            10
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShuffleChannels",
+        "aux_id": "spacepxl/ComfyUI-Image-Filters",
+        "ver": "bbb3fb0045461adf3602faeedaf40af57090d4e2"
+      },
+      "title": "06 同批全白帧｜去掉原视频颜色",
+      "widgets_values": [
+        "white",
+        "white",
+        "white",
+        "none"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "RelightSimple",
+      "pos": [
+        1820,
+        370
+      ],
+      "size": [
+        310,
+        215
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "normals",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RelightSimple",
+        "aux_id": "spacepxl/ComfyUI-Image-Filters",
+        "ver": "bbb3fb0045461adf3602faeedaf40af57090d4e2"
+      },
+      "title": "07 白模明暗｜光方向固定整段",
+      "widgets_values": [
+        -0.35,
+        -0.45,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "id": 11,
+      "type": "ImageBlend",
+      "pos": [
+        2170,
+        370
+      ],
+      "size": [
+        310,
+        155
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBlend",
+        "cnr_id": "comfy-core",
+        "ver": "74eb0c4b8a1a894e7210326882a8d9a016e37ccb"
+      },
+      "title": "08 混入18%白色｜抬亮暗部",
+      "widgets_values": [
+        0.18,
+        "normal"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1110,
+        1010
+      ],
+      "size": [
+        345,
+        360
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 12,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "title": "A 原视频（同样的帧率、尺寸与片段）",
+      "widgets_values": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/04_v2/01_reference",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true
+      }
+    },
+    {
+      "id": 13,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1510,
+        1010
+      ],
+      "size": [
+        345,
+        360
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 14,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "title": "B 深度视频（还不是白模）",
+      "widgets_values": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/04_v2/02_depth",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true
+      }
+    },
+    {
+      "id": 14,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1910,
+        1010
+      ],
+      "size": [
+        345,
+        360
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 16,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "title": "C 白模外观视频（下载这个观察效果）",
+      "widgets_values": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/04_v2/03_clay",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      3,
+      3,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "DAMODEL"
+    ],
+    [
+      3,
+      2,
+      0,
+      5,
+      1,
+      "IMAGE"
+    ],
+    [
+      4,
+      5,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      2,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      8,
+      0,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      9,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      11,
+      2,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      3,
+      0,
+      12,
+      4,
+      "FLOAT"
+    ],
+    [
+      13,
+      5,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      3,
+      0,
+      13,
+      4,
+      "FLOAT"
+    ],
+    [
+      15,
+      11,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      3,
+      0,
+      14,
+      4,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1 载入同一段参考视频",
+      "bounding": [
+        15,
+        315,
+        390,
+        695
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "2 估计深度",
+      "bounding": [
+        425,
+        315,
+        680,
+        665
+      ],
+      "color": "#466d50",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "3 深度 → 法线 → 白模着色",
+      "bounding": [
+        1105,
+        315,
+        1410,
+        570
+      ],
+      "color": "#8e6741",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "4 三路视频输出（右键预览可同步播放）",
+      "bounding": [
+        1080,
+        950,
+        1195,
+        470
+      ],
+      "color": "#665583",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.72,
+      "offset": [
+        55,
+        90
+      ]
+    },
+    "workflow_name": "04 | Depth V2 to clay video",
+    "validated_as": "Source-grounded static workflow; no model inference performed"
+  },
+  "version": 0.4
+}

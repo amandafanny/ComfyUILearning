@@ -1,0 +1,753 @@
+{
+  "id": "ececf7e2-75ab-4d0c-aea1-a89334f58dc9",
+  "revision": 0,
+  "last_node_id": 23,
+  "last_link_id": 11,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadVideo",
+      "title": "① 上传单人参考视频（先用3–5秒）",
+      "pos": [
+        20,
+        40
+      ],
+      "size": [
+        310,
+        310
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "file",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "file"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            1,
+            2,
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "cnr_id": "comfy-core",
+        "ver": "74eb0c4b8a1a894e7210326882a8d9a016e37ccb"
+      },
+      "widgets_values": [
+        "reference.mp4"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadVideo",
+      "title": "可选：真实人物mask（使用时接到②）",
+      "pos": [
+        20,
+        480
+      ],
+      "size": [
+        310,
+        310
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "file",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "file"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "cnr_id": "comfy-core",
+        "ver": "74eb0c4b8a1a894e7210326882a8d9a016e37ccb"
+      },
+      "widgets_values": [
+        "person_mask.mp4"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadGVHMRModels",
+      "title": "③ 加载人体动作模型（首次下载）",
+      "pos": [
+        400,
+        400
+      ],
+      "size": [
+        300,
+        190
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model_path_override",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "model_path_override"
+          },
+          "shape": 7
+        },
+        {
+          "name": "precision",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "precision"
+          },
+          "shape": 7
+        },
+        {
+          "name": "attention",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "attention"
+          },
+          "shape": 7
+        },
+        {
+          "name": "load_dpvo",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "load_dpvo"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "config",
+          "type": "GVHMR_CONFIG",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadGVHMRModels",
+        "cnr_id": "comfyui-motioncapture",
+        "ver": "09e90d86ec0eb9bca1edba17673231490380957a",
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionCapture"
+      },
+      "widgets_values": [
+        "",
+        "auto",
+        "sdpa",
+        false
+      ]
+    },
+    {
+      "id": 4,
+      "type": "GVHMRInference",
+      "title": "④ 恢复人体动作（静止相机）",
+      "pos": [
+        790,
+        40
+      ],
+      "size": [
+        310,
+        350
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 2
+        },
+        {
+          "name": "video_mask",
+          "type": "VIDEO",
+          "link": 3
+        },
+        {
+          "name": "config",
+          "type": "GVHMR_CONFIG",
+          "link": 4
+        },
+        {
+          "name": "intrinsics",
+          "type": "INTRINSICS",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "moving_camera",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "moving_camera"
+          }
+        },
+        {
+          "name": "focal_length_mm",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "focal_length_mm"
+          },
+          "shape": 7
+        },
+        {
+          "name": "bbox_scale",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "bbox_scale"
+          },
+          "shape": 7
+        },
+        {
+          "name": "vo_method",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "vo_method"
+          },
+          "shape": 7
+        },
+        {
+          "name": "vo_scale",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "vo_scale"
+          },
+          "shape": 7
+        },
+        {
+          "name": "vo_step",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "vo_step"
+          },
+          "shape": 7
+        },
+        {
+          "name": "chunk_size",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "chunk_size"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "npz_path",
+          "type": "STRING",
+          "links": [
+            5
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "camera_npz_path",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GVHMRInference",
+        "cnr_id": "comfyui-motioncapture",
+        "ver": "09e90d86ec0eb9bca1edba17673231490380957a",
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionCapture"
+      },
+      "widgets_values": [
+        false,
+        0,
+        1.2,
+        "simple_vo",
+        0.5,
+        8,
+        16
+      ]
+    },
+    {
+      "id": 5,
+      "type": "SMPLViewer",
+      "title": "⑤ 官方3D查看器：白模动作",
+      "pos": [
+        1170,
+        40
+      ],
+      "size": [
+        440,
+        640
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "npz_path",
+          "type": "STRING",
+          "link": 5,
+          "widget": {
+            "name": "npz_path"
+          }
+        },
+        {
+          "name": "frame_skip",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_skip"
+          },
+          "shape": 7
+        },
+        {
+          "name": "mesh_color",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "mesh_color"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mesh_file",
+          "type": "STRING",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SMPLViewer",
+        "cnr_id": "comfyui-motioncapture",
+        "ver": "09e90d86ec0eb9bca1edba17673231490380957a",
+        "aux_id": "PozzettiAndrea/ComfyUI-MotionCapture"
+      },
+      "widgets_values": [
+        "",
+        1,
+        "#f2f2f2"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "WMRenderSMPLCache",
+      "title": "⑥ 白模渲染（新的观察机位）",
+      "pos": [
+        1680,
+        40
+      ],
+      "size": [
+        330,
+        370
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mesh_file",
+          "type": "STRING",
+          "link": 6
+        },
+        {
+          "name": "source_video",
+          "type": "VIDEO",
+          "link": 7,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            11
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WMRenderSMPLCache",
+        "white_model_helper_version": "0.1.0"
+      },
+      "widgets_values": [
+        "world",
+        512,
+        512,
+        25,
+        12,
+        150,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 7,
+      "type": "VHS_VideoCombine",
+      "title": "⑦ 保存白模MP4并观察动作",
+      "pos": [
+        2080,
+        40
+      ],
+      "size": [
+        380,
+        560
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "link": 11,
+          "widget": {
+            "name": "frame_rate"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "white_model/motion_static",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true
+      }
+    },
+    {
+      "id": 10,
+      "type": "WMChoosePersonMask",
+      "title": "② 快速单人bbox / 使用真实mask",
+      "pos": [
+        400,
+        40
+      ],
+      "size": [
+        310,
+        240
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video",
+          "type": "VIDEO",
+          "link": 1
+        },
+        {
+          "name": "mask_video",
+          "type": "VIDEO",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_mask",
+          "type": "VIDEO",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WMChoosePersonMask",
+        "white_model_helper_version": "0.1.0"
+      },
+      "widgets_values": [
+        "single_person_bbox_test",
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "type": "Note",
+      "title": "先运行：只需上传一个单人视频",
+      "pos": [
+        20,
+        850
+      ],
+      "size": [
+        680,
+        210
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "这是可运行的测试流程，含随包自写helper。先将 custom_nodes/ComfyUI-WhiteModel-MotionPreview 复制到自己的 ComfyUI/custom_nodes 并重启。安装 ComfyUI-MotionCapture 和 VideoHelperSuite。只上传①的3–5秒单人居中视频即可试跑；②默认以整帧作为人体检测框，不做人物分割。首次③会下载模型，未随包提供权重。"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Note",
+      "title": "整帧bbox的限制与真实mask接法",
+      "pos": [
+        790,
+        760
+      ],
+      "size": [
+        690,
+        230
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "整帧模式仅供单人、全身清晰、人物占画面主要部分的快速试验。多人、小人物、背景复杂、遮挡会误检。正式测试：用SAM2/SAM3视频分割生成“目标人白、背景黑”的mask视频（帧数/尺寸/fps严格等于原片）；把左侧可选LoadVideo输出接② mask_video，并将mode改use_mask_video。若不用真实mask，左侧可选加载器保持不连接。"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Note",
+      "title": "输出是什么 / 当前没有实机GPU验证",
+      "pos": [
+        1540,
+        760
+      ],
+      "size": [
+        630,
+        180
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "官方查看器先输出SMPL二进制网格缓存；⑥读取逐帧顶点，用z-buffer转IMAGE，再由⑦保存MP4。world为新设的固定观察机位，可调yaw/elevation，未复制原镜头。"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Note",
+      "title": "渲染参数与适用范围",
+      "pos": [
+        2230,
+        760
+      ],
+      "size": [
+        590,
+        220
+      ],
+      "flags": {},
+      "order": 99,
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "⑥默认512×512、最多输入前150帧；max_frames=0处理全部，frame_step=1不抽帧。fps由原片自动传入；frame_step>1会同步降低fps以保留动作时长。CPU预览是白材质人体+灰背景，无原场景/投影阴影/AO。此路线用于人体，不适用于猫骨架、商品或拧盖接触的完整三维重建。"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      10,
+      0,
+      "VIDEO"
+    ],
+    [
+      2,
+      1,
+      0,
+      4,
+      0,
+      "VIDEO"
+    ],
+    [
+      3,
+      10,
+      0,
+      4,
+      1,
+      "VIDEO"
+    ],
+    [
+      4,
+      3,
+      0,
+      4,
+      2,
+      "GVHMR_CONFIG"
+    ],
+    [
+      5,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      5,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      7,
+      1,
+      0,
+      6,
+      1,
+      "VIDEO"
+    ],
+    [
+      10,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      6,
+      2,
+      7,
+      4,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6,
+      "offset": [
+        20,
+        20
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "white_model_provenance": {
+      "motioncapture_commit": "09e90d86ec0eb9bca1edba17673231490380957a",
+      "videohelpersuite_commit": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+      "core_commit": "74eb0c4b8a1a894e7210326882a8d9a016e37ccb",
+      "helper": "locally-authored 0.1.0",
+      "gpu_inference_tested": false
+    }
+  },
+  "version": 0.4
+}
