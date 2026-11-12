@@ -5,6 +5,7 @@
   "last_link_id": 30,
   "nodes": [
     {
+      "id": 1,
       "type": "MajoorOmniCamDirector",
       "pos": [
         -1900,
@@ -14,71 +15,10 @@
         880,
         830
       ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
       "inputs": [
-        {
-          "name": "state_json",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "state_json"
-          }
-        },
-        {
-          "name": "recording_path",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "recording_path"
-          }
-        },
-        {
-          "name": "card_asset",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "card_asset"
-          }
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "height"
-          }
-        },
-        {
-          "name": "fps",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "fps"
-          }
-        },
-        {
-          "name": "duration_seconds",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "duration_seconds"
-          }
-        },
-        {
-          "name": "render_mode",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "render_mode"
-          }
-        },
         {
           "name": "image",
           "shape": 7,
@@ -104,15 +44,15 @@
           "link": null
         },
         {
-          "name": "camera_info",
-          "shape": 7,
-          "type": "LOAD3D_CAMERA",
-          "link": null
-        },
-        {
           "name": "solved_scene",
           "shape": 7,
           "type": "OMNICAM_MOTION_SCENE",
+          "link": null
+        },
+        {
+          "name": "camera_info",
+          "shape": 7,
+          "type": "LOAD3D_CAMERA",
           "link": null
         }
       ],
@@ -140,45 +80,47 @@
           "links": null
         }
       ],
+      "title": "① 白模导演台｜修改运镜后先 REC",
       "properties": {
         "Node name for S&R": "MajoorOmniCamDirector"
       },
       "widgets_values": [
-        "{\"schema_version\":1,\"fps\":24,\"duration_frames\":120,\"width\":864,\"height\":480,\"render_mode\":\"graybox\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"\",\"duration_frames\":120,\"width\":864,\"height\":480}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[0,1.5,0],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"OmniCam 本地 H3 白模练习｜缓慢前推并轻微右移\"},\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":0,\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":true,\"editor_views\":{\"perspective\":{\"position\":[8,6,8],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,119],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"h3_native\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
-        "",
+        "{\"schema_version\":1,\"fps\":24,\"duration_frames\":120,\"width\":864,\"height\":480,\"render_mode\":\"graybox\",\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"omnicam/playblasts/omnicam_playblast_219f8496.mp4 [input]\"}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[-5.272178413959744,-0.9269736012568375,-10.526100652648559],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"OmniCam 本地 H3 白模练习｜缓慢前推并轻微右移\",\"playblast_camera_id\":\"camera_1\",\"playblast_camera_name\":\"Camera 1 · Gentle Dolly\",\"playblast\":{\"format\":\"majoor.omnicam.playblast.v1\",\"encoder\":\"media_recorder\",\"mime_type\":\"video/mp4;codecs=avc1.42001f\",\"fps\":24,\"frame_count\":120,\"duration_seconds\":5,\"width\":1229,\"height\":502,\"aspect_ratio\":2.448207171314741,\"clean_capture\":true,\"drift_ms\":1887.5999999046326,\"cuts\":[],\"motion_scene_fingerprint\":\"a4e7ff08\",\"guide_style\":\"clay\"},\"motion_scene_fingerprint_live\":\"c8fc5b7c\"},\"guides\":true,\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":\"balanced\",\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":false,\"editor_views\":{\"perspective\":{\"position\":[12.180234739536798,9.876821166938022,7.352769403495191],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,119],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"h3_native\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
+        "omnicam/playblasts/omnicam_playblast_219f8496.mp4 [input]",
         "",
         864,
         480,
         24,
         5,
-        "graybox"
+        "graybox",
+        ""
       ],
-      "id": 1,
-      "flags": {},
-      "mode": 0,
-      "order": 0,
-      "title": "① 白模导演台｜修改运镜后先 REC",
       "widgets_values_named": {
-        "state_json": "{\"schema_version\":1,\"fps\":24,\"duration_frames\":120,\"width\":864,\"height\":480,\"render_mode\":\"graybox\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[0.8000000000000002,1.5,8],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"\",\"duration_frames\":120,\"width\":864,\"height\":480}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[0,1.5,0],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"OmniCam 本地 H3 白模练习｜缓慢前推并轻微右移\"},\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":0,\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":true,\"editor_views\":{\"perspective\":{\"position\":[8,6,8],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,119],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"h3_native\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
-        "recording_path": "",
+        "state_json": "{\"schema_version\":1,\"fps\":24,\"duration_frames\":120,\"width\":864,\"height\":480,\"render_mode\":\"graybox\",\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"cameras\":[{\"id\":\"camera_1\",\"name\":\"Camera 1 · Gentle Dolly\",\"color\":\"#4aa3ef\",\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"keyframes\":[{\"frame\":0,\"camera\":{\"position\":[0,1.5,9],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":30,\"camera\":{\"position\":[0.20000000000000004,1.5,8.75],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":60,\"camera\":{\"position\":[0.4000000000000001,1.5,8.5],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":89,\"camera\":{\"position\":[0.6,1.5,8.25],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"},{\"frame\":119,\"camera\":{\"position\":[2.0806364835645863,2.345744218917708,6.190773379611842],\"target\":[0,1.5,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000},\"interpolation\":\"smooth\"}],\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null,\"locked\":false,\"muted\":false,\"solo\":false,\"recording_path\":\"omnicam/playblasts/omnicam_playblast_219f8496.mp4 [input]\"}],\"active_camera_id\":\"camera_1\",\"playblast_camera_id\":\"camera_1\",\"objects\":[{\"id\":\"subject\",\"name\":\"主体白模占位\",\"type\":\"cube\",\"position\":[-5.272178413959744,-0.9269736012568375,-10.526100652648559],\"rotation\":[0,0,0],\"size\":[2,3,1],\"color\":\"#8c929b\",\"material_mode\":\"neutral\",\"keyframes\":[],\"enabled\":true,\"locked\":false,\"parent_id\":null}],\"metadata\":{\"scene_name\":\"OmniCam 本地 H3 白模练习｜缓慢前推并轻微右移\",\"playblast_camera_id\":\"camera_1\",\"playblast_camera_name\":\"Camera 1 · Gentle Dolly\",\"playblast\":{\"format\":\"majoor.omnicam.playblast.v1\",\"encoder\":\"media_recorder\",\"mime_type\":\"video/mp4;codecs=avc1.42001f\",\"fps\":24,\"frame_count\":120,\"duration_seconds\":5,\"width\":1229,\"height\":502,\"aspect_ratio\":2.448207171314741,\"clean_capture\":true,\"drift_ms\":1887.5999999046326,\"cuts\":[],\"motion_scene_fingerprint\":\"a4e7ff08\",\"guide_style\":\"clay\"},\"motion_scene_fingerprint_live\":\"c8fc5b7c\"},\"guides\":true,\"burn_in\":false,\"speed_heatmap\":false,\"playblast_grid\":false,\"playblast_labels\":false,\"playblast_resolution\":\"output\",\"playblast_quality\":\"balanced\",\"guide_capture_style\":\"clay\",\"card_fit\":\"contain\",\"card_asset\":\"\",\"reference_index\":0,\"reconstruction_appearance\":\"source_texture\",\"point_density\":\"balanced\",\"point_spread\":\"all_views\",\"point_color\":\"#cbd5e1\",\"viewport_bg_color\":\"#121212\",\"viewport_bg_image\":\"\",\"viewport_bg_sequence\":[],\"show_grid\":true,\"show_radar\":true,\"show_camera_paths\":true,\"show_camera_gizmos\":true,\"show_look_at\":true,\"show_helper_axes\":true,\"show_gizmo\":true,\"show_wireframe\":false,\"show_vertices\":false,\"backface_culling\":false,\"select_mode\":\"object\",\"gizmo_mode\":\"translate\",\"gizmo_space\":\"world\",\"navigation_profile\":\"simple\",\"spatial_snap_mode\":\"none\",\"spatial_grid_size\":0.5,\"auto_key\":false,\"view_mode\":\"perspective\",\"camera_view_visible\":false,\"editor_views\":{\"perspective\":{\"position\":[12.180234739536798,9.876821166938022,7.352769403495191],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"perspective\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"iso\":{\"position\":[10,11,10],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"front\":{\"position\":[0,1,14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"back\":{\"position\":[0,1,-14],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"top\":{\"position\":[0,14,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,-1]},\"bottom\":{\"position\":[0,-12,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,0,1]},\"right\":{\"position\":[14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]},\"left\":{\"position\":[-14,1,0],\"target\":[0,1,0],\"fov\":35,\"roll\":0,\"camera_type\":\"orthographic\",\"zoom\":1,\"near\":0.01,\"far\":10000,\"up\":[0,1,0]}},\"ui_density\":\"animation\",\"snap_enabled\":true,\"snap_frames\":1,\"timecode_mode\":\"time\",\"loop_playback\":false,\"playback_range\":[0,119],\"markers\":[],\"preview_layout\":\"auto\",\"maximized_camera_id\":null,\"safe_areas\":false,\"resolution_gate\":false,\"aspect_ratio\":\"auto\",\"outliner_height\":220,\"preview_width\":236,\"side_width\":280,\"left_width\":264,\"graph_height\":220,\"assets_height\":340,\"agent_height\":220,\"health_profile\":\"h3_native\",\"motion_layers\":[],\"selected_motion_layer_id\":null,\"motion_tool\":\"select\",\"sequence\":{\"enabled\":false,\"cuts\":[],\"recording_path\":\"\"},\"target_object_id\":null,\"target_offset\":[0,0,0],\"aim_bone\":null}",
+        "recording_path": "omnicam/playblasts/omnicam_playblast_219f8496.mp4 [input]",
         "card_asset": "",
         "width": 864,
         "height": 480,
         "fps": 24,
         "duration_seconds": 5,
-        "render_mode": "graybox"
+        "render_mode": "graybox",
+        "majoor_omnicam_director_shell": ""
       }
     },
     {
+      "id": 2,
       "type": "MajoorOmniCamMonitor",
       "pos": [
         -940,
         60
       ],
       "size": [
-        480,
-        560
+        640,
+        846
       ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
       "inputs": [
         {
           "name": "motion_scene",
@@ -186,166 +128,102 @@
           "link": 1
         },
         {
-          "name": "target_profile",
-          "type": "COMBO",
-          "widget": {
-            "name": "target_profile"
-          },
-          "link": null
-        },
-        {
-          "name": "target_width",
-          "type": "INT",
-          "widget": {
-            "name": "target_width"
-          },
-          "link": null
-        },
-        {
-          "name": "target_height",
-          "type": "INT",
-          "widget": {
-            "name": "target_height"
-          },
-          "link": null
-        },
-        {
-          "name": "duration_seconds",
-          "type": "FLOAT",
-          "widget": {
-            "name": "duration_seconds"
-          },
-          "link": null
-        },
-        {
-          "name": "target_fps",
-          "type": "FLOAT",
-          "widget": {
-            "name": "target_fps"
-          },
-          "link": null
-        },
-        {
-          "name": "guide_reference_index",
-          "type": "INT",
-          "widget": {
-            "name": "guide_reference_index"
-          },
-          "link": null
-        },
-        {
-          "name": "guide_style",
-          "type": "COMBO",
-          "widget": {
-            "name": "guide_style"
-          },
-          "link": null
-        },
-        {
           "name": "playblast_video",
-          "type": "VIDEO,IMAGE",
           "shape": 7,
+          "type": "VIDEO,IMAGE",
           "link": 2
         },
         {
           "name": "base_prompt",
-          "type": "STRING",
           "shape": 7,
+          "type": "STRING",
           "widget": {
             "name": "base_prompt"
           },
           "link": 3
-        },
-        {
-          "name": "reference_plan_json",
-          "type": "STRING",
-          "shape": 7,
-          "widget": {
-            "name": "reference_plan_json"
-          },
-          "link": null
         }
       ],
       "outputs": [
         {
           "name": "final_prompt",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             4
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "reference_video",
           "type": "VIDEO",
-          "links": null,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": null
         },
         {
           "name": "reference_frames",
           "type": "IMAGE",
+          "slot_index": 2,
           "links": [
             5
-          ],
-          "slot_index": 2
+          ]
         },
         {
           "name": "camera_embedding",
           "type": "WAN_CAMERA_EMBEDDING",
-          "links": null,
-          "slot_index": 3
+          "slot_index": 3,
+          "links": null
         },
         {
           "name": "native_tracks",
           "type": "TRACKS",
-          "links": null,
-          "slot_index": 4
+          "slot_index": 4,
+          "links": null
         },
         {
           "name": "tracks_json",
           "type": "STRING",
-          "links": null,
-          "slot_index": 5
+          "slot_index": 5,
+          "links": null
         },
         {
           "name": "target_width",
           "type": "INT",
+          "slot_index": 6,
           "links": [
             6
-          ],
-          "slot_index": 6
+          ]
         },
         {
           "name": "target_height",
           "type": "INT",
+          "slot_index": 7,
           "links": [
             7
-          ],
-          "slot_index": 7
+          ]
         },
         {
           "name": "target_length",
           "type": "INT",
+          "slot_index": 8,
           "links": [
             8
-          ],
-          "slot_index": 8
+          ]
         },
         {
           "name": "h3edit_options",
           "type": "H3EDIT_OPTIONS",
-          "links": null,
-          "slot_index": 9
+          "slot_index": 9,
+          "links": null
         },
         {
           "name": "target_fps",
           "type": "FLOAT",
+          "slot_index": 10,
           "links": [
             9
-          ],
-          "slot_index": 10
+          ]
         }
       ],
+      "title": "② 编译 H3 本地参考｜h3_native",
       "properties": {
         "Node name for S&R": "MajoorOmniCamMonitor"
       },
@@ -358,13 +236,9 @@
         1,
         "auto",
         "",
+        "",
         ""
       ],
-      "id": 2,
-      "flags": {},
-      "mode": 0,
-      "order": 13,
-      "title": "② 编译 H3 本地参考｜h3_native",
       "widgets_values_named": {
         "target_profile": "h3_native",
         "target_width": 864,
@@ -374,7 +248,8 @@
         "guide_reference_index": 1,
         "guide_style": "auto",
         "base_prompt": "",
-        "reference_plan_json": ""
+        "reference_plan_json": "",
+        "majoor_omnicam_monitor": ""
       }
     },
     {
@@ -391,31 +266,22 @@
       "flags": {},
       "order": 1,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "value",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "value"
-          }
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             3
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "title": "③ 独立内容提示词｜Picture 1–3 / Video 1",
       "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "PrimitiveStringMultiline"
+        "ver": "0.33.0"
       },
       "widgets_values": [
         "写实电影感的猫与产品短片，保持画面连续。\n以 <Picture 1> 中猫的毛色、面部、体型作为主体身份参考；以 <Picture 2> 中产品的形状、材质、颜色作为产品参考；以 <Picture 3> 作为场景、光线与环境风格参考。猫与产品自然地处于同一场景中，主体动作轻微，产品外形保持稳定。\n<Video 1> 是白模预演，只参考其构图、空间关系和缓慢前推并轻微横移的相机运动，不复制灰色方块、辅助线或白模材质。单镜头，无字幕、无水印。自然环境声，无旁白。"
@@ -430,8 +296,8 @@
       "id": 4,
       "type": "LoadImage",
       "pos": [
-        -940,
-        720
+        -2198.6552502692684,
+        352.05143135355144
       ],
       "size": [
         310,
@@ -445,39 +311,39 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             10
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "MASK",
           "type": "MASK",
-          "links": null,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": null
         }
       ],
+      "title": "Picture 1｜上传猫的身份图",
       "properties": {
+        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "LoadImage"
+        "ver": "0.33.0"
       },
       "widgets_values": [
-        "",
+        "cat.JPG",
         "image"
       ],
       "widgets_values_named": {
-        "image": "",
+        "image": "cat.JPG",
         "upload": "image"
-      },
-      "title": "Picture 1｜上传猫的身份图"
+      }
     },
     {
       "id": 5,
       "type": "LoadImage",
       "pos": [
-        -600,
-        720
+        -2218.4793235876336,
+        778.3070490221398
       ],
       "size": [
         310,
@@ -491,39 +357,39 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             11
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "MASK",
           "type": "MASK",
-          "links": null,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": null
         }
       ],
+      "title": "Picture 2｜上传产品图",
       "properties": {
+        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "LoadImage"
+        "ver": "0.33.0"
       },
       "widgets_values": [
-        "",
+        "闭盖朝上的喵喵化毛膏软管.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "",
+        "image": "闭盖朝上的喵喵化毛膏软管.png",
         "upload": "image"
-      },
-      "title": "Picture 2｜上传产品图"
+      }
     },
     {
       "id": 6,
       "type": "LoadImage",
       "pos": [
-        -260,
-        720
+        -2237.1235281753084,
+        1195.23587166749
       ],
       "size": [
         310,
@@ -537,32 +403,32 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             12
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "MASK",
           "type": "MASK",
-          "links": null,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": null
         }
       ],
+      "title": "Picture 3｜上传场景图",
       "properties": {
+        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "LoadImage"
+        "ver": "0.33.0"
       },
       "widgets_values": [
-        "",
+        "草坪.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "",
+        "image": "草坪.png",
         "upload": "image"
-      },
-      "title": "Picture 3｜上传场景图"
+      }
     },
     {
       "id": 10,
@@ -583,17 +449,18 @@
         {
           "name": "MODEL",
           "type": "MODEL",
+          "slot_index": 0,
           "links": [
             16,
             17
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "本地扩散｜H3 ref2va pruned INT8",
       "properties": {
+        "Node name for S&R": "UNETLoader",
         "cnr_id": "comfy-core",
         "ver": "0.33.0",
-        "Node name for S&R": "UNETLoader",
         "models": [
           {
             "name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
@@ -609,8 +476,7 @@
       "widgets_values_named": {
         "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
         "weight_dtype": "default"
-      },
-      "title": "本地扩散｜H3 ref2va pruned INT8"
+      }
     },
     {
       "id": 11,
@@ -631,16 +497,17 @@
         {
           "name": "CLIP",
           "type": "CLIP",
+          "slot_index": 0,
           "links": [
             13
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "本地文本编码｜Qwen3-VL 32B NVFP4 AWQ",
       "properties": {
+        "Node name for S&R": "CLIPLoader",
         "cnr_id": "comfy-core",
         "ver": "0.33.0",
-        "Node name for S&R": "CLIPLoader",
         "models": [
           {
             "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
@@ -658,8 +525,7 @@
         "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
         "type": "minimax",
         "device": "default"
-      },
-      "title": "本地文本编码｜Qwen3-VL 32B NVFP4 AWQ"
+      }
     },
     {
       "id": 12,
@@ -680,17 +546,18 @@
         {
           "name": "VAE",
           "type": "VAE",
+          "slot_index": 0,
           "links": [
             14,
             26
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "本地视频 VAE｜INT8 ConvRot",
       "properties": {
+        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.33.0",
-        "Node name for S&R": "VAELoader",
         "models": [
           {
             "name": "minimax_h3_video_vae_int8_convrot.safetensors",
@@ -704,8 +571,7 @@
       ],
       "widgets_values_named": {
         "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
-      },
-      "title": "本地视频 VAE｜INT8 ConvRot"
+      }
     },
     {
       "id": 13,
@@ -726,17 +592,18 @@
         {
           "name": "VAE",
           "type": "VAE",
+          "slot_index": 0,
           "links": [
             15,
             27
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "本地音频 VAE｜FP32",
       "properties": {
+        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.33.0",
-        "Node name for S&R": "VAELoader",
         "models": [
           {
             "name": "minimax_h3_audio_vae_fp32.safetensors",
@@ -750,8 +617,7 @@
       ],
       "widgets_values_named": {
         "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
-      },
-      "title": "本地音频 VAE｜FP32"
+      }
     },
     {
       "id": 20,
@@ -774,136 +640,153 @@
           "link": 13
         },
         {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 14
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 15
+        },
+        {
+          "label": "ref_image_0",
+          "name": "ref_images.ref_image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "label": "ref_image_1",
+          "name": "ref_images.ref_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "label": "ref_image_2",
+          "name": "ref_images.ref_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "label": "ref_image_3",
+          "name": "ref_images.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "ref_images.ref_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "ref_video_0",
+          "name": "ref_videos.ref_video_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "label": "ref_video_audio_0",
+          "name": "ref_video_audios.ref_video_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_video_audios.ref_video_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_video_audios.ref_video_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "ref_audio_0",
+          "name": "ref_audios.ref_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_audios.ref_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
           "name": "prompt",
           "type": "STRING",
-          "link": 4,
           "widget": {
             "name": "prompt"
-          }
+          },
+          "link": 4
         },
         {
           "name": "width",
           "type": "INT",
-          "link": 6,
           "widget": {
             "name": "width"
-          }
+          },
+          "link": 6
         },
         {
           "name": "height",
           "type": "INT",
-          "link": 7,
           "widget": {
             "name": "height"
-          }
+          },
+          "link": 7
         },
         {
           "name": "length",
           "type": "INT",
-          "link": 8,
           "widget": {
             "name": "length"
-          }
+          },
+          "link": 8
         },
         {
-          "name": "ref_image_size",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "ref_image_size"
-          }
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 14,
-          "shape": 7
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 15,
-          "shape": 7
-        },
-        {
-          "name": "ref_images.ref_image_0",
-          "type": "IMAGE",
-          "link": 10,
-          "shape": 7,
-          "label": "ref_image_0"
-        },
-        {
-          "name": "ref_images.ref_image_1",
-          "type": "IMAGE",
-          "link": 11,
-          "shape": 7,
-          "label": "ref_image_1"
-        },
-        {
-          "name": "ref_images.ref_image_2",
-          "type": "IMAGE",
-          "link": 12,
-          "shape": 7,
-          "label": "ref_image_2"
-        },
-        {
-          "name": "ref_images.ref_image_3",
-          "type": "IMAGE",
-          "link": null,
-          "shape": 7,
-          "label": "ref_image_3"
-        },
-        {
-          "name": "ref_videos.ref_video_0",
-          "type": "IMAGE",
-          "link": 5,
-          "shape": 7,
-          "label": "ref_video_0"
-        },
-        {
+          "label": "ref_video_1",
           "name": "ref_videos.ref_video_1",
+          "shape": 7,
           "type": "IMAGE",
-          "link": null,
-          "shape": 7,
-          "label": "ref_video_1"
-        },
-        {
-          "name": "ref_video_audios.ref_video_audio_0",
-          "type": "AUDIO",
-          "link": null,
-          "shape": 7,
-          "label": "ref_video_audio_0"
-        },
-        {
-          "name": "ref_audios.ref_audio_0",
-          "type": "AUDIO",
-          "link": null,
-          "shape": 7,
-          "label": "ref_audio_0"
+          "link": null
         }
       ],
       "outputs": [
         {
           "name": "positive",
           "type": "CONDITIONING",
+          "slot_index": 0,
           "links": [
             18
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "LATENT",
           "type": "LATENT",
+          "slot_index": 1,
           "links": [
             23
-          ],
-          "slot_index": 1
+          ]
         }
       ],
+      "title": "④ MiniMax H3 本地多参考条件",
       "properties": {
+        "Node name for S&R": "MiniMaxH3ReferenceToVideo",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "MiniMaxH3ReferenceToVideo"
+        "ver": "0.33.0"
       },
       "widgets_values": [
         "",
@@ -918,8 +801,7 @@
         "height": 480,
         "length": 124,
         "ref_image_size": "match"
-      },
-      "title": "④ MiniMax H3 本地多参考条件"
+      }
     },
     {
       "id": 30,
@@ -940,26 +822,26 @@
         {
           "name": "NOISE",
           "type": "NOISE",
+          "slot_index": 0,
           "links": [
             19
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "随机噪声｜生成后随机种子",
       "properties": {
+        "Node name for S&R": "RandomNoise",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "RandomNoise"
+        "ver": "0.33.0"
       },
       "widgets_values": [
-        261662374822964,
+        355112107703079,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 261662374822964,
+        "noise_seed": 355112107703079,
         "control_after_generate": "randomize"
-      },
-      "title": "随机噪声｜生成后随机种子"
+      }
     },
     {
       "id": 31,
@@ -991,18 +873,18 @@
         {
           "name": "GUIDER",
           "type": "GUIDER",
+          "slot_index": 0,
           "links": [
             20
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "正向条件引导｜无 CFG 分支",
       "properties": {
+        "Node name for S&R": "BasicGuider",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "BasicGuider"
-      },
-      "title": "正向条件引导｜无 CFG 分支"
+        "ver": "0.33.0"
+      }
     },
     {
       "id": 32,
@@ -1023,24 +905,24 @@
         {
           "name": "SAMPLER",
           "type": "SAMPLER",
+          "slot_index": 0,
           "links": [
             21
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "采样器｜res_multistep",
       "properties": {
+        "Node name for S&R": "KSamplerSelect",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "KSamplerSelect"
+        "ver": "0.33.0"
       },
       "widgets_values": [
         "res_multistep"
       ],
       "widgets_values_named": {
         "sampler_name": "res_multistep"
-      },
-      "title": "采样器｜res_multistep"
+      }
     },
     {
       "id": 33,
@@ -1061,46 +943,23 @@
           "name": "model",
           "type": "MODEL",
           "link": 17
-        },
-        {
-          "name": "scheduler",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "scheduler"
-          }
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "steps"
-          }
-        },
-        {
-          "name": "denoise",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "denoise"
-          }
         }
       ],
       "outputs": [
         {
           "name": "SIGMAS",
           "type": "SIGMAS",
+          "slot_index": 0,
           "links": [
             22
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "调度｜simple · 20 步",
       "properties": {
+        "Node name for S&R": "BasicScheduler",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "BasicScheduler"
+        "ver": "0.33.0"
       },
       "widgets_values": [
         "simple",
@@ -1111,8 +970,7 @@
         "scheduler": "simple",
         "steps": 20,
         "denoise": 1
-      },
-      "title": "调度｜simple · 20 步"
+      }
     },
     {
       "id": 34,
@@ -1159,25 +1017,25 @@
         {
           "name": "output",
           "type": "LATENT",
+          "slot_index": 0,
           "links": [
             24,
             25
-          ],
-          "slot_index": 0
+          ]
         },
         {
           "name": "denoised_output",
           "type": "LATENT",
-          "links": null,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": null
         }
       ],
+      "title": "⑤ 本地音视频联合采样",
       "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "SamplerCustomAdvanced"
-      },
-      "title": "⑤ 本地音视频联合采样"
+        "ver": "0.33.0"
+      }
     },
     {
       "id": 40,
@@ -1209,18 +1067,18 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
+          "slot_index": 0,
           "links": [
             28
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "解码画面",
       "properties": {
+        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "VAEDecode"
-      },
-      "title": "解码画面"
+        "ver": "0.33.0"
+      }
     },
     {
       "id": 41,
@@ -1252,18 +1110,18 @@
         {
           "name": "AUDIO",
           "type": "AUDIO",
+          "slot_index": 0,
           "links": [
             29
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "解码音频",
       "properties": {
+        "Node name for S&R": "VAEDecodeAudio",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "VAEDecodeAudio"
-      },
-      "title": "解码音频"
+        "ver": "0.33.0"
+      }
     },
     {
       "id": 42,
@@ -1286,70 +1144,35 @@
           "link": 28
         },
         {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 29
+        },
+        {
           "name": "fps",
           "type": "FLOAT",
-          "link": 9,
           "widget": {
             "name": "fps"
-          }
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 29,
-          "shape": 7
-        },
-        {
-          "name": "bit_depth",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "bit_depth"
           },
-          "shape": 7
-        },
-        {
-          "name": "color_space",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "color_space"
-          },
-          "shape": 7
-        },
-        {
-          "name": "chroma_subsampling",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "chroma_subsampling"
-          },
-          "shape": 7
-        },
-        {
-          "name": "codec",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "codec"
-          },
-          "shape": 7
+          "link": 9
         }
       ],
       "outputs": [
         {
           "name": "VIDEO",
           "type": "VIDEO",
+          "slot_index": 0,
           "links": [
             30
-          ],
-          "slot_index": 0
+          ]
         }
       ],
+      "title": "⑥ 合成音视频｜24 fps",
       "properties": {
+        "Node name for S&R": "CreateVideo",
         "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "CreateVideo"
+        "ver": "0.33.0"
       },
       "widgets_values": [
         24,
@@ -1364,8 +1187,7 @@
         "color_space": "sRGB",
         "chroma_subsampling": "auto",
         "codec": "none"
-      },
-      "title": "⑥ 合成音视频｜24 fps"
+      }
     },
     {
       "id": 43,
@@ -1392,18 +1214,20 @@
         {
           "name": "video",
           "type": "VIDEO",
-          "links": null,
-          "slot_index": 0
+          "slot_index": 0,
+          "links": null
         }
       ],
-      "properties": {},
+      "title": "⑦ 保存本地 H3 成片",
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
       "widgets_values": [
         "omnicam/h3_local",
         "auto",
         "auto",
         "auto"
       ],
-      "title": "⑦ 保存本地 H3 成片",
       "widgets_values_named": {
         "filename_prefix": "omnicam/h3_local",
         "format": "auto",
@@ -1414,7 +1238,6 @@
     {
       "id": 50,
       "type": "Note",
-      "title": "使用顺序与验证边界",
       "pos": [
         -940,
         1190
@@ -1428,19 +1251,22 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
+      "title": "使用顺序与验证边界",
       "properties": {
         "text": ""
       },
       "widgets_values": [
         "这是本地 MiniMax H3 ref2va 工作流；没有合作伙伴 API 节点。\n\n1. 安装当前 ComfyUI 与 Majoor OmniCam，下载左下四个模型。\n2. 给三张 LoadImage 上传猫、产品、场景参考图；不需要的参考请断开或删除，并同步修改提示词。空白占位不能直接运行。\n3. Director 内预览/编辑白模与相机线。当前仅提供灰色方块和五个相机关键帧，须按自己的镜头摆景；它不是猫与产品成片场景。\n4. 先完成 REC/Playblast。修改相机、场景、分辨率或时长后重新录制，等待 Monitor 检查通过，再 Queue。\n5. 用独立提示词描述身份、产品和场景。Monitor 自动补充运动说明；reference_frames 接入本地 H3 的 ref_video_0。\n\n默认 864×480 是连通测试起点，不代表已验证质量或显存占用。采样 20 步、simple/res_multistep，没有 4 步 LoRA。两张显卡不会自动合并显存；硬件条件见 notes/h3_hardware.md。\n\nDirector：120 帧 / 24 fps = 5 s；H3：向上对齐到 124 帧（17×7+5），24 fps 封装约 5.167 s。请保留末尾余量。\n\n只做过源码与 JSON 静态检查；未在你的环境导入、录制或执行推理。导入不会自动生成，Queue 将使用本地算力。参考视频属于生成条件，运动/身份跟随仍需实测。"
       ],
+      "widgets_values_named": {
+        "text": "这是本地 MiniMax H3 ref2va 工作流；没有合作伙伴 API 节点。\n\n1. 安装当前 ComfyUI 与 Majoor OmniCam，下载左下四个模型。\n2. 给三张 LoadImage 上传猫、产品、场景参考图；不需要的参考请断开或删除，并同步修改提示词。空白占位不能直接运行。\n3. Director 内预览/编辑白模与相机线。当前仅提供灰色方块和五个相机关键帧，须按自己的镜头摆景；它不是猫与产品成片场景。\n4. 先完成 REC/Playblast。修改相机、场景、分辨率或时长后重新录制，等待 Monitor 检查通过，再 Queue。\n5. 用独立提示词描述身份、产品和场景。Monitor 自动补充运动说明；reference_frames 接入本地 H3 的 ref_video_0。\n\n默认 864×480 是连通测试起点，不代表已验证质量或显存占用。采样 20 步、simple/res_multistep，没有 4 步 LoRA。两张显卡不会自动合并显存；硬件条件见 notes/h3_hardware.md。\n\nDirector：120 帧 / 24 fps = 5 s；H3：向上对齐到 124 帧（17×7+5），24 fps 封装约 5.167 s。请保留末尾余量。\n\n只做过源码与 JSON 静态检查；未在你的环境导入、录制或执行推理。导入不会自动生成，Queue 将使用本地算力。参考视频属于生成条件，运动/身份跟随仍需实测。"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 51,
       "type": "Note",
-      "title": "本地模型与版本",
       "pos": [
         -1150,
         1810
@@ -1454,12 +1280,16 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
+      "title": "本地模型与版本",
       "properties": {
         "text": ""
       },
       "widgets_values": [
         "四个模型均来自 Comfy-Org/MiniMax-H3：\nmodels/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors\nmodels/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\nmodels/vae/minimax_h3_video_vae_int8_convrot.safetensors\nmodels/vae/minimax_h3_audio_vae_fp32.safetensors\n\n默认 int8 视频 VAE 与当前官方 video_minimax_h3_r2v.json 一致。NVFP4 AWQ 文本编码器不限定 Blackwell；INT8 ConvRot 环境要求与未实测的显存边界请读 notes/h3_hardware.md。若模型列表里缺少名字，先安装对应本地权重；文件 URL 仅用于查找/下载，不是远程推理。\n\n本文件依据 Majoor OmniCam 官方原生 H3 示例与 Comfy-Org 当前模板整理；移除可选 Turbo LoRA、模型/步数切换节点和额外插件分辨率选择器。\n支持新原生节点的 ComfyUI 与新前端为前提。优先使用匹配版本的传统节点视图；缺节点时核对依赖，不要改用同名付费 API 节点。"
       ],
+      "widgets_values_named": {
+        "text": "四个模型均来自 Comfy-Org/MiniMax-H3：\nmodels/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors\nmodels/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\nmodels/vae/minimax_h3_video_vae_int8_convrot.safetensors\nmodels/vae/minimax_h3_audio_vae_fp32.safetensors\n\n默认 int8 视频 VAE 与当前官方 video_minimax_h3_r2v.json 一致。NVFP4 AWQ 文本编码器不限定 Blackwell；INT8 ConvRot 环境要求与未实测的显存边界请读 notes/h3_hardware.md。若模型列表里缺少名字，先安装对应本地权重；文件 URL 仅用于查找/下载，不是远程推理。\n\n本文件依据 Majoor OmniCam 官方原生 H3 示例与 Comfy-Org 当前模板整理；移除可选 Turbo LoRA、模型/步数切换节点和额外插件分辨率选择器。\n支持新原生节点的 ComfyUI 与新前端为前提。优先使用匹配版本的传统节点视图；缺节点时核对依赖，不要改用同名付费 API 节点。"
+      },
       "color": "#432",
       "bgcolor": "#653"
     }
@@ -1474,116 +1304,12 @@
       "OMNICAM_MOTION_SCENE"
     ],
     [
-      2,
-      1,
-      1,
-      2,
-      8,
-      "VIDEO"
-    ],
-    [
       3,
       3,
       0,
       2,
-      9,
+      2,
       "STRING"
-    ],
-    [
-      4,
-      2,
-      0,
-      20,
-      1,
-      "STRING"
-    ],
-    [
-      5,
-      2,
-      2,
-      20,
-      12,
-      "IMAGE"
-    ],
-    [
-      6,
-      2,
-      6,
-      20,
-      2,
-      "INT"
-    ],
-    [
-      7,
-      2,
-      7,
-      20,
-      3,
-      "INT"
-    ],
-    [
-      8,
-      2,
-      8,
-      20,
-      4,
-      "INT"
-    ],
-    [
-      9,
-      2,
-      10,
-      42,
-      1,
-      "FLOAT"
-    ],
-    [
-      10,
-      4,
-      0,
-      20,
-      8,
-      "IMAGE"
-    ],
-    [
-      11,
-      5,
-      0,
-      20,
-      9,
-      "IMAGE"
-    ],
-    [
-      12,
-      6,
-      0,
-      20,
-      10,
-      "IMAGE"
-    ],
-    [
-      13,
-      11,
-      0,
-      20,
-      0,
-      "CLIP"
-    ],
-    [
-      14,
-      12,
-      0,
-      20,
-      6,
-      "VAE"
-    ],
-    [
-      15,
-      13,
-      0,
-      20,
-      7,
-      "VAE"
     ],
     [
       16,
@@ -1690,20 +1416,124 @@
       "IMAGE"
     ],
     [
-      29,
-      41,
-      0,
-      42,
-      2,
-      "AUDIO"
-    ],
-    [
       30,
       42,
       0,
       43,
       0,
       "VIDEO"
+    ],
+    [
+      2,
+      1,
+      1,
+      2,
+      1,
+      "VIDEO"
+    ],
+    [
+      13,
+      11,
+      0,
+      20,
+      0,
+      "CLIP"
+    ],
+    [
+      14,
+      12,
+      0,
+      20,
+      1,
+      "VAE"
+    ],
+    [
+      15,
+      13,
+      0,
+      20,
+      2,
+      "VAE"
+    ],
+    [
+      10,
+      4,
+      0,
+      20,
+      3,
+      "IMAGE"
+    ],
+    [
+      11,
+      5,
+      0,
+      20,
+      4,
+      "IMAGE"
+    ],
+    [
+      12,
+      6,
+      0,
+      20,
+      5,
+      "IMAGE"
+    ],
+    [
+      5,
+      2,
+      2,
+      20,
+      8,
+      "IMAGE"
+    ],
+    [
+      4,
+      2,
+      0,
+      20,
+      14,
+      "STRING"
+    ],
+    [
+      6,
+      2,
+      6,
+      20,
+      15,
+      "INT"
+    ],
+    [
+      7,
+      2,
+      7,
+      20,
+      16,
+      "INT"
+    ],
+    [
+      8,
+      2,
+      8,
+      20,
+      17,
+      "INT"
+    ],
+    [
+      9,
+      2,
+      10,
+      42,
+      2,
+      "FLOAT"
+    ],
+    [
+      29,
+      41,
+      0,
+      42,
+      1,
+      "AUDIO"
     ]
   ],
   "groups": [
@@ -1717,7 +1547,6 @@
         1390
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1730,7 +1559,6 @@
         760
       ],
       "color": "#526c4d",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1743,7 +1571,6 @@
         810
       ],
       "color": "#8b6852",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1756,21 +1583,28 @@
         720
       ],
       "color": "#67649a",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.35,
+      "scale": 0.7561501502122071,
       "offset": [
-        2000,
-        100
+        2700.0491229466443,
+        337.13920781928056
       ]
     },
     "omnicam_local_bundle": "1.0",
-    "source_template": "video_minimax_h3_r2v.json"
+    "source_template": "video_minimax_h3_r2v.json",
+    "frontendVersion": "1.57.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "30": 0
+  }
 }
