@@ -1,13 +1,12 @@
 {
   "id": "3add8fd1-27d8-5f78-b9cd-3c86ee3a540b",
   "revision": 0,
-  "last_node_id": 14,
-  "last_link_id": 17,
+  "last_node_id": 19,
+  "last_link_id": 22,
   "nodes": [
     {
       "id": 1,
       "type": "Note",
-      "title": "先读这里｜5 秒试片",
       "pos": [
         0,
         0
@@ -21,17 +20,22 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
+      "title": "先读这里｜5 秒试片",
       "properties": {
         "Node name for S&R": "Note"
       },
       "widgets_values": [
         "操作：先安装右侧三个节点包并下载完整模型，再上传自己的参考视频，然后 Queue。\n\n本图默认只读前 60 帧，force_rate=12，即约 5 秒；输出使用 loaded_fps 自动同步，不改变这段素材的播放速度。加载宽度 512，保持长宽比；法线推理最长边 512。\n\n12 fps 是快速观察起点。旋盖、手指、快速动作建议改 force_rate=24、frame_load_cap=120；或 force_rate=0 保留原 FPS，并相应调整帧数上限。\n\n同一段只运行一次 NormalCrafter。底部各 Video Combine 保存独立的原片、法线、白模对照视频；不是横向拼接视频。先看 +Z 和 -Z 两种灯光结果，选择形体明暗正常的一路。\n\n参考视频请使用一个连续镜头；在剪切点拆成不同片段。本包已静态检查节点端口、参数和连线，未执行模型推理，也不附带已生成的视频。"
-      ]
+      ],
+      "widgets_values_named": {
+        "text": "操作：先安装右侧三个节点包并下载完整模型，再上传自己的参考视频，然后 Queue。\n\n本图默认只读前 60 帧，force_rate=12，即约 5 秒；输出使用 loaded_fps 自动同步，不改变这段素材的播放速度。加载宽度 512，保持长宽比；法线推理最长边 512。\n\n12 fps 是快速观察起点。旋盖、手指、快速动作建议改 force_rate=24、frame_load_cap=120；或 force_rate=0 保留原 FPS，并相应调整帧数上限。\n\n同一段只运行一次 NormalCrafter。底部各 Video Combine 保存独立的原片、法线、白模对照视频；不是横向拼接视频。先看 +Z 和 -Z 两种灯光结果，选择形体明暗正常的一路。\n\n参考视频请使用一个连续镜头；在剪切点拆成不同片段。本包已静态检查节点端口、参数和连线，未执行模型推理，也不附带已生成的视频。"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 2,
       "type": "Note",
-      "title": "安装与模型位置",
       "pos": [
         880,
         0
@@ -45,120 +49,49 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
+      "title": "安装与模型位置",
       "properties": {
         "Node name for S&R": "Note"
       },
       "widgets_values": [
         "节点包（在运行 ComfyUI 的同一 Python 环境安装依赖，完成后重启）：\nhttps://github.com/Kosinkadink/ComfyUI-VideoHelperSuite\nhttps://github.com/zuanfilm/ComfyUI-VizClick-NormalCrafter\nhttps://github.com/spacepxl/ComfyUI-Image-Filters\n\n模型：完整下载 https://huggingface.co/Yanrui95/NormalCrafter\n保存到 ComfyUI/models/NormalCrafter/，保留完整仓库目录：\nmodel_index.json；feature_extractor/；image_encoder/；scheduler/；unet/；vae/。\nimage_encoder/model.fp16.safetensors 必须存在；不是只下载一个 safetensors。\n\nVizClick 声明依赖 diffusers、transformers、accelerate、opencv-python>=4.8；Image-Filters 需要其 requirements.txt（包含 opencv-contrib-python）。PyTorch 使用现有 ComfyUI 对应版本。VHS 导出 MP4 还需可用 FFmpeg。\n\n若 Manager 搜不到 VizClick，用上面仓库 URL 手动安装。详细版本和模型核对见 README_normal.md / manifest_normal.json。"
-      ]
+      ],
+      "widgets_values_named": {
+        "text": "节点包（在运行 ComfyUI 的同一 Python 环境安装依赖，完成后重启）：\nhttps://github.com/Kosinkadink/ComfyUI-VideoHelperSuite\nhttps://github.com/zuanfilm/ComfyUI-VizClick-NormalCrafter\nhttps://github.com/spacepxl/ComfyUI-Image-Filters\n\n模型：完整下载 https://huggingface.co/Yanrui95/NormalCrafter\n保存到 ComfyUI/models/NormalCrafter/，保留完整仓库目录：\nmodel_index.json；feature_extractor/；image_encoder/；scheduler/；unet/；vae/。\nimage_encoder/model.fp16.safetensors 必须存在；不是只下载一个 safetensors。\n\nVizClick 声明依赖 diffusers、transformers、accelerate、opencv-python>=4.8；Image-Filters 需要其 requirements.txt（包含 opencv-contrib-python）。PyTorch 使用现有 ComfyUI 对应版本。VHS 导出 MP4 还需可用 FFmpeg。\n\n若 Manager 搜不到 VizClick，用上面仓库 URL 手动安装。详细版本和模型核对见 README_normal.md / manifest_normal.json。"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 3,
       "type": "VHS_LoadVideo",
-      "title": "1 上传参考视频｜12 fps / 60 帧试片",
       "pos": [
-        0,
-        520
+        -5.706495677766325,
+        565.8300946071665
       ],
       "size": [
         330,
-        430
+        875
       ],
       "flags": {},
       "order": 2,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "meta_batch",
           "name": "meta_batch",
           "shape": 7,
           "type": "VHS_BatchManager",
           "link": null
         },
         {
-          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
-          "link": null
-        },
-        {
-          "localized_name": "video",
-          "name": "video",
-          "type": "COMBO",
-          "widget": {
-            "name": "video"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "force_rate",
-          "name": "force_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "force_rate"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "custom_width",
-          "name": "custom_width",
-          "type": "INT",
-          "widget": {
-            "name": "custom_width"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "custom_height",
-          "name": "custom_height",
-          "type": "INT",
-          "widget": {
-            "name": "custom_height"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "frame_load_cap",
-          "name": "frame_load_cap",
-          "type": "INT",
-          "widget": {
-            "name": "frame_load_cap"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "skip_first_frames",
-          "name": "skip_first_frames",
-          "type": "INT",
-          "widget": {
-            "name": "skip_first_frames"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "select_every_nth",
-          "name": "select_every_nth",
-          "type": "INT",
-          "widget": {
-            "name": "select_every_nth"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "format",
-          "name": "format",
-          "shape": 7,
-          "type": "COMBO",
-          "widget": {
-            "name": "format"
-          },
           "link": null
         }
       ],
       "outputs": [
         {
-          "localized_name": "IMAGE",
           "name": "IMAGE",
           "type": "IMAGE",
           "slot_index": 0,
@@ -168,13 +101,11 @@
           ]
         },
         {
-          "localized_name": "frame_count",
           "name": "frame_count",
           "type": "INT",
           "links": []
         },
         {
-          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -182,7 +113,6 @@
           ]
         },
         {
-          "localized_name": "video_info",
           "name": "video_info",
           "type": "VHS_VIDEOINFO",
           "slot_index": 3,
@@ -191,15 +121,16 @@
           ]
         }
       ],
+      "title": "1 上传参考视频｜12 fps / 60 帧试片",
       "properties": {
+        "Node name for S&R": "VHS_LoadVideo",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
-        "Node name for S&R": "VHS_LoadVideo"
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
       "widgets_values": {
-        "video": "reference.mp4",
+        "video": "a9f49239cac404687da0230f794e1591.mp4",
         "force_rate": 12,
-        "custom_width": 512,
+        "custom_width": 0,
         "custom_height": 0,
         "frame_load_cap": 60,
         "skip_first_frames": 0,
@@ -209,24 +140,47 @@
         "videopreview": {
           "hidden": false,
           "paused": true,
-          "params": {}
+          "params": {
+            "filename": "a9f49239cac404687da0230f794e1591.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "video": "a9f49239cac404687da0230f794e1591.mp4",
+        "force_rate": 12,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 60,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "None",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "filename": "a9f49239cac404687da0230f794e1591.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
         }
       }
     },
     {
       "id": 4,
       "type": "VHS_VideoInfoLoaded",
-      "title": "读取实际载入 FPS",
       "pos": [
-        360,
-        520
+        364.9106803371012,
+        551.8697807880611
       ],
       "size": [
         300,
         160
       ],
       "flags": {},
-      "order": 4,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -240,10 +194,7 @@
           "name": "fps🟦",
           "type": "FLOAT",
           "links": [
-            10,
-            13,
-            15,
-            17
+            18
           ]
         },
         {
@@ -267,93 +218,37 @@
           "links": []
         }
       ],
+      "title": "读取实际载入 FPS",
       "properties": {
         "Node name for S&R": "VHS_VideoInfoLoaded",
         "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
-      "widgets_values": []
+      "widgets_values": {}
     },
     {
       "id": 5,
       "type": "VizClickNormalCrafter",
-      "title": "2 一次推理｜视频 → 法线",
       "pos": [
-        360,
-        740
+        357.3346385106554,
+        776.551346957024
       ],
       "size": [
         340,
         260
       ],
       "flags": {},
-      "order": 5,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 2
-        },
-        {
-          "localized_name": "seed",
-          "name": "seed",
-          "type": "INT",
-          "widget": {
-            "name": "seed"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "max_res_dimension",
-          "name": "max_res_dimension",
-          "type": "INT",
-          "widget": {
-            "name": "max_res_dimension"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "window_size",
-          "name": "window_size",
-          "type": "INT",
-          "widget": {
-            "name": "window_size"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "time_step_size",
-          "name": "time_step_size",
-          "type": "INT",
-          "widget": {
-            "name": "time_step_size"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "decode_chunk_size",
-          "name": "decode_chunk_size",
-          "type": "INT",
-          "widget": {
-            "name": "decode_chunk_size"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "offload_after",
-          "name": "offload_after",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "offload_after"
-          },
-          "link": null
         }
       ],
       "outputs": [
         {
-          "localized_name": "normal_video",
           "name": "normal_video",
           "type": "IMAGE",
           "slot_index": 0,
@@ -362,6 +257,7 @@
           ]
         }
       ],
+      "title": "2 一次推理｜视频 → 法线",
       "properties": {
         "Node name for S&R": "VizClickNormalCrafter",
         "aux_id": "zuanfilm/ComfyUI-VizClick-NormalCrafter",
@@ -375,22 +271,30 @@
         10,
         4,
         true
-      ]
+      ],
+      "widgets_values_named": {
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "max_res_dimension": 512,
+        "window_size": 14,
+        "time_step_size": 10,
+        "decode_chunk_size": 4,
+        "offload_after": true
+      }
     },
     {
       "id": 6,
       "type": "ConvertNormals",
-      "title": "3 归一化法线｜保持坐标约定",
       "pos": [
-        740,
-        740
+        735.8110292925348,
+        787.2357043312148
       ],
       "size": [
         300,
         235
       ],
       "flags": {},
-      "order": 6,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -400,49 +304,9 @@
         },
         {
           "name": "optional_fill",
+          "shape": 7,
           "type": "IMAGE",
-          "link": null,
-          "shape": 7
-        },
-        {
-          "name": "input_mode",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "input_mode"
-          }
-        },
-        {
-          "name": "output_mode",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "output_mode"
-          }
-        },
-        {
-          "name": "scale_XY",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "scale_XY"
-          }
-        },
-        {
-          "name": "normalize",
-          "type": "BOOLEAN",
-          "link": null,
-          "widget": {
-            "name": "normalize"
-          }
-        },
-        {
-          "name": "fix_black",
-          "type": "BOOLEAN",
-          "link": null,
-          "widget": {
-            "name": "fix_black"
-          }
+          "link": null
         }
       ],
       "outputs": [
@@ -457,6 +321,7 @@
           ]
         }
       ],
+      "title": "3 归一化法线｜保持坐标约定",
       "properties": {
         "Node name for S&R": "ConvertNormals",
         "aux_id": "spacepxl/ComfyUI-Image-Filters",
@@ -465,63 +330,37 @@
       "widgets_values": [
         "Standard",
         "Standard",
-        1.0,
+        1,
         true,
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "input_mode": "Standard",
+        "output_mode": "Standard",
+        "scale_XY": 1,
+        "normalize": true,
+        "fix_black": false
+      }
     },
     {
       "id": 7,
       "type": "ShuffleChannels",
-      "title": "纯白底色｜同尺寸、同帧数",
       "pos": [
-        740,
-        520
+        1125.349996244509,
+        789.6772309505006
       ],
       "size": [
         300,
         170
       ],
       "flags": {},
-      "order": 8,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
           "link": 4
-        },
-        {
-          "name": "red",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "red"
-          }
-        },
-        {
-          "name": "green",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "green"
-          }
-        },
-        {
-          "name": "blue",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "blue"
-          }
-        },
-        {
-          "name": "alpha",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "alpha"
-          }
         }
       ],
       "outputs": [
@@ -534,6 +373,7 @@
           ]
         }
       ],
+      "title": "纯白底色｜同尺寸、同帧数",
       "properties": {
         "Node name for S&R": "ShuffleChannels",
         "aux_id": "spacepxl/ComfyUI-Image-Filters",
@@ -544,22 +384,27 @@
         "white",
         "white",
         "none"
-      ]
+      ],
+      "widgets_values_named": {
+        "red": "white",
+        "green": "white",
+        "blue": "white",
+        "alpha": "none"
+      }
     },
     {
       "id": 8,
       "type": "RelightSimple",
-      "title": "白模灯光 +Z｜固定方向",
       "pos": [
-        1080,
-        520
+        1530.6565992436226,
+        604.6155913768279
       ],
       "size": [
         280,
         225
       ],
       "flags": {},
-      "order": 10,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -571,38 +416,6 @@
           "name": "normals",
           "type": "IMAGE",
           "link": 6
-        },
-        {
-          "name": "x",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "x"
-          }
-        },
-        {
-          "name": "y",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "y"
-          }
-        },
-        {
-          "name": "z",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "z"
-          }
-        },
-        {
-          "name": "brightness",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "brightness"
-          }
         }
       ],
       "outputs": [
@@ -614,6 +427,7 @@
           ]
         }
       ],
+      "title": "白模灯光 +Z｜固定方向",
       "properties": {
         "Node name for S&R": "RelightSimple",
         "aux_id": "spacepxl/ComfyUI-Image-Filters",
@@ -622,24 +436,29 @@
       "widgets_values": [
         -0.35,
         0.45,
-        1.0,
+        1,
         1.15
-      ]
+      ],
+      "widgets_values_named": {
+        "x": -0.35,
+        "y": 0.45,
+        "z": 1,
+        "brightness": 1.15
+      }
     },
     {
       "id": 9,
       "type": "RelightSimple",
-      "title": "白模灯光 -Z｜坐标对照",
       "pos": [
-        1080,
-        800
+        1533.3356175924796,
+        880.3483846889133
       ],
       "size": [
         280,
         225
       ],
       "flags": {},
-      "order": 11,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -651,38 +470,6 @@
           "name": "normals",
           "type": "IMAGE",
           "link": 8
-        },
-        {
-          "name": "x",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "x"
-          }
-        },
-        {
-          "name": "y",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "y"
-          }
-        },
-        {
-          "name": "z",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "z"
-          }
-        },
-        {
-          "name": "brightness",
-          "type": "FLOAT",
-          "link": null,
-          "widget": {
-            "name": "brightness"
-          }
         }
       ],
       "outputs": [
@@ -694,6 +481,7 @@
           ]
         }
       ],
+      "title": "白模灯光 -Z｜坐标对照",
       "properties": {
         "Node name for S&R": "RelightSimple",
         "aux_id": "spacepxl/ComfyUI-Image-Filters",
@@ -702,17 +490,22 @@
       "widgets_values": [
         -0.35,
         0.45,
-        -1.0,
+        -1,
         1.15
-      ]
+      ],
+      "widgets_values_named": {
+        "x": -0.35,
+        "y": 0.45,
+        "z": -1,
+        "brightness": 1.15
+      }
     },
     {
       "id": 10,
       "type": "Note",
-      "title": "如何判断结果",
       "pos": [
-        1410,
-        520
+        2217.2613266971607,
+        555.7558101216331
       ],
       "size": [
         530,
@@ -723,158 +516,78 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
+      "title": "如何判断结果",
       "properties": {
         "Node name for S&R": "Note"
       },
       "widgets_values": [
         "白模原理：法线 → 单位向量 → 纯白底色 × Lambert 明暗。\nShuffle Channels 把法线帧的 RGB 全部设为 white；只借用它的尺寸/帧数，不把彩色法线当材质。因此不会把原视频颜色带入白模。\n\n两路 Relight 的 x/y 相同，z 分别为 +1 / -1，用于检查不同法线坐标约定。先选大面积朝向镜头表面有合理明暗的一路，再调 x、y、brightness。灯光参数在整个视频期间固定。\n\nConvert Normals 使用 Standard→Standard、scale_XY=1、normalize=true、fix_black=false；只归一化，不猜测输入坐标约定，不把负 Z 分量改成其他值。\n\n本图输出 2.5D 白模外观，没有 Mesh、骨骼或可自由换机位的三维场景。简单重照不含 AO、真正的投影阴影和环境光参数。毛发、透明/反光物、遮挡可能出现法线估计误差。\n\n如果只要最终一路，可在选定结果后禁用其他 Video Combine 的输出。不要把原片接到 Relight.image，否则会保留原材质颜色。"
-      ]
+      ],
+      "widgets_values_named": {
+        "text": "白模原理：法线 → 单位向量 → 纯白底色 × Lambert 明暗。\nShuffle Channels 把法线帧的 RGB 全部设为 white；只借用它的尺寸/帧数，不把彩色法线当材质。因此不会把原视频颜色带入白模。\n\n两路 Relight 的 x/y 相同，z 分别为 +1 / -1，用于检查不同法线坐标约定。先选大面积朝向镜头表面有合理明暗的一路，再调 x、y、brightness。灯光参数在整个视频期间固定。\n\nConvert Normals 使用 Standard→Standard、scale_XY=1、normalize=true、fix_black=false；只归一化，不猜测输入坐标约定，不把负 Z 分量改成其他值。\n\n本图输出 2.5D 白模外观，没有 Mesh、骨骼或可自由换机位的三维场景。简单重照不含 AO、真正的投影阴影和环境光参数。毛发、透明/反光物、遮挡可能出现法线估计误差。\n\n如果只要最终一路，可在选定结果后禁用其他 Video Combine 的输出。不要把原片接到 Relight.image，否则会保留原材质颜色。"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 11,
       "type": "VHS_VideoCombine",
-      "title": "A 原片试片",
       "pos": [
-        0,
-        1150
+        11.475394011177466,
+        1771.3465300912865
       ],
       "size": [
         350,
-        390
+        934.6666666666666
       ],
       "flags": {},
-      "order": 7,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 9
         },
         {
-          "localized_name": "audio",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": 11
         },
         {
-          "localized_name": "meta_batch",
           "name": "meta_batch",
           "shape": 7,
           "type": "VHS_BatchManager",
           "link": null
         },
         {
-          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": null
         },
         {
-          "localized_name": "frame_rate",
           "name": "frame_rate",
           "type": "FLOAT",
           "widget": {
             "name": "frame_rate"
           },
-          "link": 10
-        },
-        {
-          "localized_name": "loop_count",
-          "name": "loop_count",
-          "type": "INT",
-          "widget": {
-            "name": "loop_count"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "filename_prefix",
-          "name": "filename_prefix",
-          "type": "STRING",
-          "widget": {
-            "name": "filename_prefix"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "format",
-          "name": "format",
-          "type": "COMBO",
-          "widget": {
-            "name": "format"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "pingpong",
-          "name": "pingpong",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "pingpong"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "save_output",
-          "name": "save_output",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_output"
-          },
-          "link": null
-        },
-        {
-          "name": "pix_fmt",
-          "type": [
-            "yuv420p",
-            "yuv420p10le"
-          ],
-          "widget": {
-            "name": "pix_fmt"
-          },
-          "link": null
-        },
-        {
-          "name": "crf",
-          "type": "INT",
-          "widget": {
-            "name": "crf"
-          },
-          "link": null
-        },
-        {
-          "name": "save_metadata",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_metadata"
-          },
-          "link": null
-        },
-        {
-          "name": "trim_to_audio",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "trim_to_audio"
-          },
-          "link": null
+          "link": 19
         }
       ],
       "outputs": [
         {
-          "localized_name": "Filenames",
           "name": "Filenames",
           "type": "VHS_FILENAMES",
           "links": []
         }
       ],
+      "title": "A 原片试片",
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
-        "Node name for S&R": "VHS_VideoCombine"
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
       "widgets_values": {
         "frame_rate": 12,
@@ -890,155 +603,120 @@
         "videopreview": {
           "hidden": false,
           "paused": true,
-          "params": {}
+          "params": {
+            "filename": "00_source_00002-audio.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "00_source_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\00_source_00002-audio.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "6c514df8-f590-41f6-9aa1-393c1fed6949"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/01_normalcrafter/00_source",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "filename": "00_source_00002-audio.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "00_source_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\00_source_00002-audio.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "6c514df8-f590-41f6-9aa1-393c1fed6949"
+          }
         }
       }
     },
     {
       "id": 12,
       "type": "VHS_VideoCombine",
-      "title": "B 归一化法线",
       "pos": [
-        410,
-        1150
+        471.4694016745428,
+        1757.123755923437
       ],
       "size": [
         350,
-        390
+        934.6666666666666
       ],
       "flags": {},
-      "order": 9,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 12
         },
         {
-          "localized_name": "audio",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
-          "localized_name": "meta_batch",
           "name": "meta_batch",
           "shape": 7,
           "type": "VHS_BatchManager",
           "link": null
         },
         {
-          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": null
         },
         {
-          "localized_name": "frame_rate",
           "name": "frame_rate",
           "type": "FLOAT",
           "widget": {
             "name": "frame_rate"
           },
-          "link": 13
-        },
-        {
-          "localized_name": "loop_count",
-          "name": "loop_count",
-          "type": "INT",
-          "widget": {
-            "name": "loop_count"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "filename_prefix",
-          "name": "filename_prefix",
-          "type": "STRING",
-          "widget": {
-            "name": "filename_prefix"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "format",
-          "name": "format",
-          "type": "COMBO",
-          "widget": {
-            "name": "format"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "pingpong",
-          "name": "pingpong",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "pingpong"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "save_output",
-          "name": "save_output",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_output"
-          },
-          "link": null
-        },
-        {
-          "name": "pix_fmt",
-          "type": [
-            "yuv420p",
-            "yuv420p10le"
-          ],
-          "widget": {
-            "name": "pix_fmt"
-          },
-          "link": null
-        },
-        {
-          "name": "crf",
-          "type": "INT",
-          "widget": {
-            "name": "crf"
-          },
-          "link": null
-        },
-        {
-          "name": "save_metadata",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_metadata"
-          },
-          "link": null
-        },
-        {
-          "name": "trim_to_audio",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "trim_to_audio"
-          },
-          "link": null
+          "link": 20
         }
       ],
       "outputs": [
         {
-          "localized_name": "Filenames",
           "name": "Filenames",
           "type": "VHS_FILENAMES",
           "links": []
         }
       ],
+      "title": "B 归一化法线",
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
-        "Node name for S&R": "VHS_VideoCombine"
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
       "widgets_values": {
         "frame_rate": 12,
@@ -1054,155 +732,120 @@
         "videopreview": {
           "hidden": false,
           "paused": true,
-          "params": {}
+          "params": {
+            "filename": "01_normals_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "01_normals_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\01_normals_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "dc3e4f3f-2a40-4448-8a84-279b0d1a874b"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/01_normalcrafter/01_normals",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "filename": "01_normals_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "01_normals_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\01_normals_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "dc3e4f3f-2a40-4448-8a84-279b0d1a874b"
+          }
         }
       }
     },
     {
       "id": 13,
       "type": "VHS_VideoCombine",
-      "title": "C 白模 +Z",
       "pos": [
-        820,
-        1150
+        926.4601990705839,
+        1748.8425163071229
       ],
       "size": [
         350,
-        390
+        934.6666666666666
       ],
       "flags": {},
-      "order": 12,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 14
         },
         {
-          "localized_name": "audio",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
-          "localized_name": "meta_batch",
           "name": "meta_batch",
           "shape": 7,
           "type": "VHS_BatchManager",
           "link": null
         },
         {
-          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": null
         },
         {
-          "localized_name": "frame_rate",
           "name": "frame_rate",
           "type": "FLOAT",
           "widget": {
             "name": "frame_rate"
           },
-          "link": 15
-        },
-        {
-          "localized_name": "loop_count",
-          "name": "loop_count",
-          "type": "INT",
-          "widget": {
-            "name": "loop_count"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "filename_prefix",
-          "name": "filename_prefix",
-          "type": "STRING",
-          "widget": {
-            "name": "filename_prefix"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "format",
-          "name": "format",
-          "type": "COMBO",
-          "widget": {
-            "name": "format"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "pingpong",
-          "name": "pingpong",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "pingpong"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "save_output",
-          "name": "save_output",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_output"
-          },
-          "link": null
-        },
-        {
-          "name": "pix_fmt",
-          "type": [
-            "yuv420p",
-            "yuv420p10le"
-          ],
-          "widget": {
-            "name": "pix_fmt"
-          },
-          "link": null
-        },
-        {
-          "name": "crf",
-          "type": "INT",
-          "widget": {
-            "name": "crf"
-          },
-          "link": null
-        },
-        {
-          "name": "save_metadata",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_metadata"
-          },
-          "link": null
-        },
-        {
-          "name": "trim_to_audio",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "trim_to_audio"
-          },
-          "link": null
+          "link": 22
         }
       ],
       "outputs": [
         {
-          "localized_name": "Filenames",
           "name": "Filenames",
           "type": "VHS_FILENAMES",
           "links": []
         }
       ],
+      "title": "C 白模 +Z",
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
-        "Node name for S&R": "VHS_VideoCombine"
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
       "widgets_values": {
         "frame_rate": 12,
@@ -1218,155 +861,120 @@
         "videopreview": {
           "hidden": false,
           "paused": true,
-          "params": {}
+          "params": {
+            "filename": "02_clay_plusZ_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "02_clay_plusZ_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\02_clay_plusZ_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "24d1c769-68c8-4e61-8723-7cdb0a8af087"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/01_normalcrafter/02_clay_plusZ",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "filename": "02_clay_plusZ_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "02_clay_plusZ_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\02_clay_plusZ_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "24d1c769-68c8-4e61-8723-7cdb0a8af087"
+          }
         }
       }
     },
     {
       "id": 14,
       "type": "VHS_VideoCombine",
-      "title": "D 白模 -Z",
       "pos": [
-        1230,
-        1150
+        1372.7780738270267,
+        1783.265684576211
       ],
       "size": [
         350,
-        390
+        934.6666666666666
       ],
       "flags": {},
-      "order": 13,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
-          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "link": 16
         },
         {
-          "localized_name": "audio",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
-          "localized_name": "meta_batch",
           "name": "meta_batch",
           "shape": 7,
           "type": "VHS_BatchManager",
           "link": null
         },
         {
-          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": null
         },
         {
-          "localized_name": "frame_rate",
           "name": "frame_rate",
           "type": "FLOAT",
           "widget": {
             "name": "frame_rate"
           },
-          "link": 17
-        },
-        {
-          "localized_name": "loop_count",
-          "name": "loop_count",
-          "type": "INT",
-          "widget": {
-            "name": "loop_count"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "filename_prefix",
-          "name": "filename_prefix",
-          "type": "STRING",
-          "widget": {
-            "name": "filename_prefix"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "format",
-          "name": "format",
-          "type": "COMBO",
-          "widget": {
-            "name": "format"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "pingpong",
-          "name": "pingpong",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "pingpong"
-          },
-          "link": null
-        },
-        {
-          "localized_name": "save_output",
-          "name": "save_output",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_output"
-          },
-          "link": null
-        },
-        {
-          "name": "pix_fmt",
-          "type": [
-            "yuv420p",
-            "yuv420p10le"
-          ],
-          "widget": {
-            "name": "pix_fmt"
-          },
-          "link": null
-        },
-        {
-          "name": "crf",
-          "type": "INT",
-          "widget": {
-            "name": "crf"
-          },
-          "link": null
-        },
-        {
-          "name": "save_metadata",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "save_metadata"
-          },
-          "link": null
-        },
-        {
-          "name": "trim_to_audio",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "trim_to_audio"
-          },
-          "link": null
+          "link": 21
         }
       ],
       "outputs": [
         {
-          "localized_name": "Filenames",
           "name": "Filenames",
           "type": "VHS_FILENAMES",
           "links": []
         }
       ],
+      "title": "D 白模 -Z",
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
-        "Node name for S&R": "VHS_VideoCombine"
+        "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1"
       },
       "widgets_values": {
         "frame_rate": 12,
@@ -1382,9 +990,263 @@
         "videopreview": {
           "hidden": false,
           "paused": true,
-          "params": {}
+          "params": {
+            "filename": "03_clay_minusZ_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "03_clay_minusZ_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\03_clay_minusZ_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "c52fb691-cb71-4046-9fca-367c94da8ad4"
+          }
+        }
+      },
+      "widgets_values_named": {
+        "frame_rate": 12,
+        "loop_count": 0,
+        "filename_prefix": "white_model/01_normalcrafter/03_clay_minusZ",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 18,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "filename": "03_clay_minusZ_00002.mp4",
+            "subfolder": "white_model\\01_normalcrafter",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 12,
+            "workflow": "03_clay_minusZ_00002.png",
+            "fullpath": "C:\\AI\\ComfyUI-Desktop\\shared\\output\\white_model\\01_normalcrafter\\03_clay_minusZ_00002.mp4",
+            "metadata": {
+              "kind": "video",
+              "width": 720,
+              "height": 1280,
+              "duration": 5,
+              "fps": 12,
+              "frame_count": 60
+            },
+            "id": "c52fb691-cb71-4046-9fca-367c94da8ad4"
+          }
         }
       }
+    },
+    {
+      "id": 15,
+      "type": "SetNode",
+      "pos": [
+        767.3663021109592,
+        523.1751106832614
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Set_fps",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "fps"
+      },
+      "widgets_values": [
+        "fps"
+      ],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 16,
+      "type": "GetNode",
+      "pos": [
+        19.805038106937726,
+        1718.2603351699486
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "fps"
+      ],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 17,
+      "type": "GetNode",
+      "pos": [
+        492.9354149382687,
+        1712.212975444912
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "fps"
+      ],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 18,
+      "type": "GetNode",
+      "pos": [
+        952.4065744326548,
+        1704.5509806015418
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "fps"
+      ],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 19,
+      "type": "GetNode",
+      "pos": [
+        1406.6898283516477,
+        1731.8161947430247
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "Get_fps",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "fps"
+      ],
+      "widgets_values_named": {
+        "Constant": "fps"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1461,14 +1323,6 @@
       "IMAGE"
     ],
     [
-      10,
-      4,
-      0,
-      11,
-      4,
-      "FLOAT"
-    ],
-    [
       11,
       3,
       2,
@@ -1485,28 +1339,12 @@
       "IMAGE"
     ],
     [
-      13,
-      4,
-      0,
-      12,
-      4,
-      "FLOAT"
-    ],
-    [
       14,
       8,
       0,
       13,
       0,
       "IMAGE"
-    ],
-    [
-      15,
-      4,
-      0,
-      13,
-      4,
-      "FLOAT"
     ],
     [
       16,
@@ -1517,10 +1355,42 @@
       "IMAGE"
     ],
     [
-      17,
+      18,
       4,
       0,
+      15,
+      0,
+      "FLOAT"
+    ],
+    [
+      19,
+      16,
+      0,
+      11,
+      4,
+      "FLOAT"
+    ],
+    [
+      20,
+      17,
+      0,
+      12,
+      4,
+      "FLOAT"
+    ],
+    [
+      21,
+      19,
+      0,
       14,
+      4,
+      "FLOAT"
+    ],
+    [
+      22,
+      18,
+      0,
+      13,
       4,
       "FLOAT"
     ]
@@ -1544,8 +1414,8 @@
       "bounding": [
         -20,
         480,
-        1980,
-        570
+        2884.561508089484,
+        747.0734142671567
       ],
       "color": "#365546",
       "flags": {}
@@ -1554,30 +1424,82 @@
       "id": 3,
       "title": "03 独立视频对照输出",
       "bounding": [
-        -20,
-        1100,
-        1620,
-        470
+        -19.987111014752344,
+        1595.1179210212276,
+        1853.7775461091928,
+        1221.4241753614178
       ],
       "color": "#6b5135",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Group",
+      "bounding": [
+        1.475394011177465,
+        1648.2603351699486,
+        370,
+        1067.7528615880044
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Group",
+      "bounding": [
+        461.4694016745427,
+        1642.212975444912,
+        370,
+        1059.5774471451919
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Group",
+      "bounding": [
+        916.4601990705839,
+        1634.5509806015418,
+        370,
+        1058.9582023722478
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Group",
+      "bounding": [
+        1364.0412852673105,
+        1637.8334318782197,
+        370,
+        1105.6590556608674
+      ],
+      "color": "#3f789e",
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.57,
+      "scale": 0.5283375780440545,
       "offset": [
-        40,
-        30
+        1120.9190790754622,
+        -354.2494793590698
       ]
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": false,
+    "VHS_KeepIntermediate": true,
     "workflow_title": "01 视频法线 → 白模：基础观察版",
-    "validation_status": "Source and graph static validation only; no model inference performed"
+    "validation_status": "Source and graph static validation only; no model inference performed",
+    "frontendVersion": "1.57.6"
   },
-  "version": 0.4
+  "version": 0.4,
+  "seed_widgets": {
+    "5": 0
+  }
 }
